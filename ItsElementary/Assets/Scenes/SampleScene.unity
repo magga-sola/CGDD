@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 485488026}
   - component: {fileID: 485488025}
   m_Layer: 0
-  m_Name: room0
+  m_Name: Room 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 499827044}
   - component: {fileID: 499827043}
   m_Layer: 0
-  m_Name: decorativeTiles
+  m_Name: Decorative Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 725337476}
   - component: {fileID: 725337475}
   m_Layer: 0
-  m_Name: wallTiles
+  m_Name: Wall Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8036,7 +8036,7 @@ GameObject:
   - component: {fileID: 1209771703}
   - component: {fileID: 1209771702}
   m_Layer: 0
-  m_Name: groundTiles
+  m_Name: Ground Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49469,7 +49469,7 @@ GameObject:
   - component: {fileID: 2102076933}
   - component: {fileID: 2102076932}
   m_Layer: 0
-  m_Name: collisionDecorativeTiles
+  m_Name: Collision Decorative Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

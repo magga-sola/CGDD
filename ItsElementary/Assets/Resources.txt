@@ -3,5 +3,5 @@ All of the resources used in the It's Elementary game:
 
 
 UI Assets:
-https://hoonius.itch.io/generic-dark-pixel-ui
 https://foozlecc.itch.io/pixel-magic-sprite-effects
+https://github.com/Brackeys/Health-Bar

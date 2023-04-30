@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
+    private bool elementalAttack;
+    private bool basicAttack;
 
     // Update is called once per frame
     void Update()
@@ -18,17 +20,34 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        MousePosition();
     }
-
+    // TODO: Nota acceleration
     void ProcessInput()
     {
+        // Movement
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;
+
+        // Attack
+        elementalAttack = Input.GetMouseButton(0);
+        basicAttack = Input.GetMouseButton(1);
+        
     }
     
     void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    void MousePosition()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        if (elementalAttack || basicAttack){
+            Debug.Log(mousePos.x);
+            Debug.Log(mousePos.y);
+        }
+        
     }
 }

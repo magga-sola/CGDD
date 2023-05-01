@@ -8218,7 +8218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5cbbab565920544b147cf57e1f6ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   element: 1
+  spriteRenderer: {fileID: 0}
+  spriteArray: []
 --- !u!50 &1040357953
 Rigidbody2D:
   serializedVersion: 4
@@ -50075,6 +50078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1700286475}
+  elementalMode: 0
   cam: {fileID: 519420031}
   smoothTime: 0.25
 --- !u!61 &1700286474

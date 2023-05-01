@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    public int health = 100;
+    PlayerController.element element;
+    public SpriteRenderer spriteRenderer;
+    public Color[] colorArray = {new Color(255,0,0),new Color(0,0,255),new Color(0,255,0)};
+
     void Start()
     {
-        
+        element = (PlayerController.element)Random.Range(0,3);
+        spriteRenderer.color = colorArray[(int)element];
     }
-
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.name);
         if (col.gameObject.name == "Projectile(Clone)")
         {
-            Destroy(gameObject);
+            PlayerController.element  projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
+            TakeDamage(col.gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -23,5 +29,38 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    int mod(int x, int p)
+    {
+        return (x%p + p)%p; 
+    }
+    void TakeDamage(GameObject projectile)
+    {
+        PlayerController.element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
+        int enum_length = System.Enum.GetValues(typeof(PlayerController.element)).Length;
+        if ((PlayerController.element)(mod(((int)projectileElement - 1),3)) == element){
+            Debug.Log("WEAK");
+            health -= 50;
+        }
+        else if ((PlayerController.element)(mod(((int)projectileElement + 1),3)) == element){
+            Debug.Log("STRONG");
+            health -= 20;
+        }
+        else if (projectileElement == element){
+            Debug.Log("SAME");
+            health -= 34;
+        }
+        Debug.Log(health);
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void FixedUpdate()
+    {
+
     }
 }

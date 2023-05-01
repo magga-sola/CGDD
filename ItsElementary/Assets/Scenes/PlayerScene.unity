@@ -594,6 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1636198191}
+  cam: {fileID: 1335170644}
 --- !u!61 &1636198193
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5cbbab565920544b147cf57e1f6ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 1636198192}
   element: 1
 --- !u!1 &873690053
 GameObject:
@@ -594,6 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1636198191}
+  elementalMode: 0
   cam: {fileID: 1335170644}
   smoothTime: 0.25
 --- !u!61 &1636198193

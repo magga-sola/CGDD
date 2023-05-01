@@ -5,15 +5,24 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    public enum element
+    {
+        fire,
+        water,
+        earth
+    }
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     private bool elementalAttack;
     private bool basicAttack;
+    public element elementalMode = element.fire;
     public Camera cam;
     private Vector3 target;
     private Vector3 playerLastPosition;
     public float smoothTime = 0.25f;
+
+    
 
 
     // Update is called once per frame
@@ -40,6 +49,20 @@ public class PlayerController : MonoBehaviour
         // Attack
         elementalAttack = Input.GetMouseButton(0);
         basicAttack = Input.GetMouseButton(1);
+
+        // Elements
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            elementalMode = element.fire;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            elementalMode = element.water;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            elementalMode = element.earth;
+        }
         
     }
 

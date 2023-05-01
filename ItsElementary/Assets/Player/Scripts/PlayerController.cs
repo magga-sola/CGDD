@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
     {
         SetCameraTarget();
         Move();
-        MousePosition();
     }
     // TODO: Nota acceleration
     void ProcessInput()
@@ -80,15 +79,5 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         cam.transform.position = target;
 
-    }
-
-    void MousePosition()
-    {
-        Vector3 mousePos = Input.mousePosition;
-        if (elementalAttack || basicAttack){
-            Debug.Log(mousePos.x);
-            Debug.Log(mousePos.y);
-        }
-        
     }
 }

@@ -32,7 +32,9 @@ public class PlayerShooting : MonoBehaviour
             {
                 projectileClone.GetComponent<Renderer>().material.color = new Color(0,0,0);
             }
-            projectileClone.transform.position = firePoint.position + direction;
+            //projectileClone.transform.position = firePoint.position + direction;
+            projectileClone.transform.position = firePoint.position;
+
             projectileClone.transform.rotation = Quaternion.Euler(0,0, lookAngle);
 
             projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;

@@ -15,7 +15,13 @@ public class PlayerProjectile : MonoBehaviour
         spriteRenderer.sprite = spriteArray[(int)element];
     }
 
-
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.name != "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

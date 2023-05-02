@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class EnergyBar : MonoBehaviour
 {
-    public int startingHealth = 2;
-    public int maxHealth = 10;
+    public int startingHealth;
+    public int maxHealth;
     public Slider slider;
 
 
@@ -22,10 +22,19 @@ public class HealthBar : MonoBehaviour
         
     }
 
-    public void SetStartingHealth(int maxHealth, int startingHealth)
+    public void InitializeHealth(int maxHealth, int startingHealth)
     {
         slider.maxValue = maxHealth;
         slider.value = startingHealth;
+    }
+
+    public void DecreaseHealthByAttack()
+    {
+        // TODO: Logic for death/empty health?
+        float currentValue = slider.value;
+        if(currentValue >= 10) {
+            slider.value -= 10;
+        }
     }
 
     public void SetHealth(int health)

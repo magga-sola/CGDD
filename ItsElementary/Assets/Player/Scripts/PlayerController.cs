@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public enum element
+    public enum Element
     {
-        fire,
-        water,
-        earth
+        Fire,
+        Water,
+        Earth
     }
+
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     private bool elementalAttack;
     private bool basicAttack;
-    public element elementalMode = element.fire;
+    public Element elementalMode = Element.Fire;
     public Camera cam;
     private Vector3 target;
     private Vector3 playerLastPosition;
     public float smoothTime = 0.25f;
-
     
 
 
@@ -37,6 +36,7 @@ public class PlayerController : MonoBehaviour
         SetCameraTarget();
         Move();
     }
+
     // TODO: Nota acceleration
     void ProcessInput()
     {
@@ -52,15 +52,15 @@ public class PlayerController : MonoBehaviour
         // Elements
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            elementalMode = element.fire;
+            elementalMode = Element.Fire;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            elementalMode = element.water;
+            elementalMode = Element.Water;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            elementalMode = element.earth;
+            elementalMode = Element.Earth;
         }
         
     }
@@ -78,6 +78,5 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         cam.transform.position = target;
-
     }
 }

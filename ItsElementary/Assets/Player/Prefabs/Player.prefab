@@ -269,6 +269,7 @@ MonoBehaviour:
   elementalMode: 0
   cam: {fileID: 0}
   smoothTime: 0.25
+  elementalBars: {fileID: 7123109738037793007, guid: 10f86cb607acc8141863b0fedbe9d0e6, type: 3}
 --- !u!114 &5064989006495143496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92dfea1f0b389946af210ebce405b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 6157575426671919728, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
   firePoint: {fileID: 5064989005212533436}
   projectileSpeed: 10

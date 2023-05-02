@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     public PlayerController playerController;
-    public PlayerController.element element;
+    public PlayerController.Element element;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
 

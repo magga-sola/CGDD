@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public PlayerController player;
+
     public GameObject projectile;
     public Transform firePoint;
     public float projectileSpeed;
     private Vector2 lookDirection;
     private float lookAngle;
     private float timeSinceLastShot;
+    public ElementalBars elementalBars;
 
     void Start()
     {
@@ -32,6 +35,10 @@ public class PlayerShooting : MonoBehaviour
             {
                 projectileClone.GetComponent<Renderer>().material.color = new Color(0,0,0);
             }
+            else // Special attack
+            {
+                DecreaseHealthByAttack();
+            }
             //projectileClone.transform.position = firePoint.position + direction;
             projectileClone.transform.position = firePoint.position;
 
@@ -40,6 +47,24 @@ public class PlayerShooting : MonoBehaviour
             projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
             timeSinceLastShot = Time.realtimeSinceStartup;
 
+        }
+    }
+
+    void DecreaseHealthByAttack()
+    {
+        Debug.Log("DecreaseHealthByAttack");
+        Debug.Log("PlayerController.Element:" + player.elementalMode.ToString());
+        switch (player.elementalMode)
+        {
+            case PlayerController.Element.Fire:
+                elementalBars.fireBar.DecreaseHealthByAttack();
+                break;
+            case PlayerController.Element.Water:
+                elementalBars.waterBar.DecreaseHealthByAttack();
+                break;
+            case PlayerController.Element.Earth:
+                elementalBars.earthBar.DecreaseHealthByAttack();
+                break;
         }
     }
 }

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,10 +30,15 @@ public class EnergyBar : MonoBehaviour
     public void DecreaseHealthByAttack()
     {
         // TODO: Logic for death/empty health?
-        float currentValue = slider.value;
-        if(currentValue >= 10) {
-            slider.value -= 10;
+        slider.value -= 10;
+    }
+
+    public bool IsHealthFinished()
+    {
+        if(slider.value <= 0) {
+            return true;
         }
+        return false;
     }
 
     public void SetHealth(int health)

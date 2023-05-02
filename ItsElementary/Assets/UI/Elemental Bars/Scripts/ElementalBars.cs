@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class ElementalBars : MonoBehaviour
 {
-    public PlayerController.Element currentElement;
+    public PlayerController player;
 
     public EnergyBar fireBar;
     public EnergyBar waterBar;
     public EnergyBar earthBar;
+
+    public GameManager.Element currentElement;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +23,25 @@ public class ElementalBars : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public bool IsHealthFinishedInElement(GameManager.Element element)
+    {
+        switch (element)
+        {
+            case GameManager.Element.Fire:
+                return fireBar.IsHealthFinished();
+            case GameManager.Element.Water:
+                return waterBar.IsHealthFinished();
+            case GameManager.Element.Earth:
+                return earthBar.IsHealthFinished();
+        }
+
+        return false;
+    }
+
+    void SetElementalMode(GameManager.Element element)
+    {
+        Debug.Log("Changing mode to: " + element.ToString());
     }
 }

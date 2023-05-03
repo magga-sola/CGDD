@@ -71,7 +71,6 @@ public class EnemyController : MonoBehaviour
             Debug.Log("SAME");
             health -= 34;
         }
-        Debug.Log(health);
 
         if (health <= 0)
         {

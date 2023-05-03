@@ -18,7 +18,6 @@ public class EnemyProjectile : MonoBehaviour
     {
         if (!col.gameObject.name.Contains("Enemy") && !col.gameObject.name.Contains("Projectile"))
         {
-            Debug.Log(col.gameObject.name);
             Destroy(gameObject);
         }
     }

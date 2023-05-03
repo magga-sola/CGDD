@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float smoothTime = 0.25f;
     public Sprite[] wandSpriteArray;
     public GameObject firePoint;
+    public ElementalBars elementalBars;
  
     
     // Update is called once per frame
@@ -59,6 +60,16 @@ public class PlayerController : MonoBehaviour
             firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         }
         
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.name.Contains("Enemy Projectile"))
+        {
+            GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
+            elementalBars.HitByElement(projectileElement);
+            //Destroy(gameObject);
+        }
     }
 
     void SetCameraTarget()

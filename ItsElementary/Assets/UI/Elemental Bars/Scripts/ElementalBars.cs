@@ -44,4 +44,13 @@ public class ElementalBars : MonoBehaviour
     {
         Debug.Log("Changing mode to: " + element.ToString());
     }
+
+    int mod(int x, int p)
+    {
+        return (x%p + p)%p; 
+    }
+    public void HitByElement(GameManager.Element projectileElement)
+    {
+        Debug.Log(player.elementalMode);
+    }
 }

@@ -7,16 +7,25 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed = 5f;
     private Vector2 movement;
     private Vector2 direction;
+    private float angle;
+    private float distanceFromPlayer;
     public int health = 100;
-    GameManager.Element element;
+    public GameManager.Element element;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rb;
     public Color[] colorArray = {new Color(255,0,0),new Color(0,0,255),new Color(0,255,0)};
+    private float timeSinceLastShot;
+    public GameObject projectile;
+    public float projectileSpeed = 10;
+
+
 
     void Start()
     {
         element = (GameManager.Element)Random.Range(0,3);
         spriteRenderer.color = colorArray[(int)element];
+        timeSinceLastShot = Time.realtimeSinceStartup;
+
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -32,6 +41,8 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         CalculateMovment();
+        distanceFromPlayer = Vector3.Distance (player.transform.position, transform.position);
+        shoot();
     }
 
     void FixedUpdate()
@@ -70,13 +81,26 @@ public class EnemyController : MonoBehaviour
     void CalculateMovment()
     {
         direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
     }
 
     void moveCharacter(){
-        rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
+        if (distanceFromPlayer <= 10 && distanceFromPlayer > 4){
+            rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
+        }
+        
+    }
+
+    void shoot(){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 1 && distanceFromPlayer <= 6){
+            GameObject projectileClone = Instantiate(projectile);
+            projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle));
+            projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+            timeSinceLastShot = Time.realtimeSinceStartup;
+        }
+        
     }
 }

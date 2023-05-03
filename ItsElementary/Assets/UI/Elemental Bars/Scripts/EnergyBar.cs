@@ -30,7 +30,7 @@ public class EnergyBar : MonoBehaviour
     public void DecreaseHealthByAttack()
     {
         // TODO: Logic for death/empty health?
-        slider.value -= 10;
+        slider.value -= 2;
     }
 
     public bool IsHealthFinished()

@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour
 {
     public PlayerController playerController;
-    public PlayerController.Element element;
+    public GameManager.Element element;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
 

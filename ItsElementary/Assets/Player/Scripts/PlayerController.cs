@@ -1,29 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum Element
-    {
-        Fire,
-        Water,
-        Earth
-    }
-
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     private bool elementalAttack;
     private bool basicAttack;
-    public Element elementalMode = Element.Fire;
+    public GameManager.Element elementalMode = GameManager.Element.Fire;
     public Camera cam;
     private Vector3 target;
     private Vector3 playerLastPosition;
     public float smoothTime = 0.25f;
     
-
-
     // Update is called once per frame
     void Update()
     {
@@ -52,15 +42,16 @@ public class PlayerController : MonoBehaviour
         // Elements
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            elementalMode = Element.Fire;
+            elementalMode = GameManager.Element.Fire;
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            elementalMode = Element.Water;
+            elementalMode = GameManager.Element.Water;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            elementalMode = Element.Earth;
+            elementalMode = GameManager.Element.Earth;
         }
         
     }

@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
     public PlayerController player;
+    public GameManager.Element playerMode;
 
     public GameObject projectile;
     public Transform firePoint;
@@ -30,39 +30,42 @@ public class PlayerShooting : MonoBehaviour
         bool basicAttack = Input.GetMouseButton(1);
         if ( (elementalAttack || basicAttack) && Time.realtimeSinceStartup-timeSinceLastShot > 0.5)
         {
-            GameObject projectileClone = Instantiate(projectile);
+            playerMode = player.elementalMode;
+
             if (basicAttack)
             {
+                GameObject projectileClone = Instantiate(projectile);
                 projectileClone.GetComponent<Renderer>().material.color = new Color(0,0,0);
+
+                //projectileClone.transform.position = firePoint.position + direction;
+                projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
+                projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
+                timeSinceLastShot = Time.realtimeSinceStartup;
             }
-            else // Special attack
+            // Special attack
+            else if (!elementalBars.IsHealthFinishedInElement(playerMode))
             {
-                //DecreaseHealthByAttack();
+                GameObject projectileClone = Instantiate(projectile);
+                //projectileClone.transform.position = firePoint.position + direction;
+                projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
+                projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
+                timeSinceLastShot = Time.realtimeSinceStartup;
+                DecreaseHealthByAttack();
             }
-            //projectileClone.transform.position = firePoint.position + direction;
-            projectileClone.transform.position = firePoint.position;
-
-            projectileClone.transform.rotation = Quaternion.Euler(0,0, lookAngle);
-
-            projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
-            timeSinceLastShot = Time.realtimeSinceStartup;
-
         }
     }
 
     void DecreaseHealthByAttack()
     {
-        Debug.Log("DecreaseHealthByAttack");
-        Debug.Log("PlayerController.Element:" + player.elementalMode.ToString());
         switch (player.elementalMode)
         {
-            case PlayerController.Element.Fire:
+            case GameManager.Element.Fire:
                 elementalBars.fireBar.DecreaseHealthByAttack();
                 break;
-            case PlayerController.Element.Water:
+            case GameManager.Element.Water:
                 elementalBars.waterBar.DecreaseHealthByAttack();
                 break;
-            case PlayerController.Element.Earth:
+            case GameManager.Element.Earth:
                 elementalBars.earthBar.DecreaseHealthByAttack();
                 break;
         }

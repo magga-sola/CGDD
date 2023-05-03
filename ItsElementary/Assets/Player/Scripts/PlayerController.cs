@@ -70,6 +70,15 @@ public class PlayerController : MonoBehaviour
             elementalBars.HitByElement(projectileElement);
             //Destroy(gameObject);
         }
+
+        if (col.gameObject.name.Contains("Healing Orb"))
+        {
+            GameManager.Element healingOrbElement = col.gameObject.GetComponent<HealingOrb>().element;
+
+            //elementalBars.HitByElement(projectileElement);
+            //elementalBars.HealedByElement(healingOrbElement);
+            
+        }
     }
 
     void SetCameraTarget()

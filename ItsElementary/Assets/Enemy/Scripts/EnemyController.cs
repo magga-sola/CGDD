@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
     public GameObject projectile;
     public EnemyProjectile projectilecontroller;
     public float projectileSpeed = 10;
+    public GameObject healingOrb;
+    public HealingOrb healingorbcontroller;
 
 
 
@@ -74,6 +76,11 @@ public class EnemyController : MonoBehaviour
 
         if (health <= 0)
         {
+            // health orbs
+            healingorbcontroller.enemyController = this;
+            GameObject healingOrbClone = Instantiate(healingOrb);
+            healingOrbClone.transform.position = transform.position;
+
             Destroy(gameObject);
         }
     }

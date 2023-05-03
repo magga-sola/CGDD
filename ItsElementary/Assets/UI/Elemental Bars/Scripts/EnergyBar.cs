@@ -33,6 +33,11 @@ public class EnergyBar : MonoBehaviour
         slider.value -= 2;
     }
 
+    public void IncreaseHealthByOrb()
+    {
+        slider.value += 10;
+    }
+
     public bool IsHealthFinished()
     {
         if(slider.value <= 0) {

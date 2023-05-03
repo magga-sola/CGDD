@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     public Color[] colorArray = {new Color(255,0,0),new Color(0,0,255),new Color(0,255,0)};
     private float timeSinceLastShot;
     public GameObject projectile;
+    public EnemyProjectile projectilecontroller;
     public float projectileSpeed = 10;
 
 
@@ -96,6 +97,7 @@ public class EnemyController : MonoBehaviour
 
     void shoot(){
         if (Time.realtimeSinceStartup-timeSinceLastShot > 1 && distanceFromPlayer <= 6){
+            projectilecontroller.enemyController = this;
             GameObject projectileClone = Instantiate(projectile);
             projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle));
             projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;

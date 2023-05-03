@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!50 &708027474 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 4239911944421519891, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
-  m_PrefabInstance: {fileID: 4239911944744701445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &708027475 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
@@ -409,17 +404,9 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 708027474}
-    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1712650342}
-    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
@@ -477,10 +464,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5064989006495143496, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1636198192}
     - target: {fileID: 5064989006495143496, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: projectile
       value: 

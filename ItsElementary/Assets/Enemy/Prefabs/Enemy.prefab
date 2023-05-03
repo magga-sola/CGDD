@@ -146,9 +146,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moveSpeed: 1
   health: 100
+  element: 0
   spriteRenderer: {fileID: 4239911944421519890}
+  rb: {fileID: 4239911944421519891}
   colorArray:
   - {r: 255, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 255, a: 1}
   - {r: 0, g: 255, b: 0, a: 1}
+  projectile: {fileID: 0}
+  projectileSpeed: 10

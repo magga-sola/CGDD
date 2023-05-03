@@ -155,8 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1712650342}
+  moveSpeed: 0
   health: 100
   spriteRenderer: {fileID: 214535353}
+  rb: {fileID: 214535352}
   colorArray:
   - {r: 255, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 255, a: 1}
@@ -307,8 +310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1712650342}
+  moveSpeed: 0
   health: 100
   spriteRenderer: {fileID: 324587032}
+  rb: {fileID: 324587031}
   colorArray:
   - {r: 255, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 255, a: 1}
@@ -427,6 +433,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &708027474 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4239911944421519891, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+  m_PrefabInstance: {fileID: 4239911944744701445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &716401825
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,8 +470,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1712650342}
+  moveSpeed: 0
   health: 100
   spriteRenderer: {fileID: 716401829}
+  rb: {fileID: 716401828}
   colorArray:
   - {r: 255, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 255, a: 1}
@@ -616,8 +630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1712650342}
+  moveSpeed: 0
   health: 100
   spriteRenderer: {fileID: 1111393859}
+  rb: {fileID: 1111393858}
   colorArray:
   - {r: 255, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 255, a: 1}
@@ -831,6 +848,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e84e30484bdea489e8dc717ee3a032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1712650342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5064989006495143508, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+  m_PrefabInstance: {fileID: 5064989004875739514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1875606031
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,8 +885,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1712650342}
+  moveSpeed: 0
   health: 100
   spriteRenderer: {fileID: 1875606035}
+  rb: {fileID: 1875606034}
   colorArray:
   - {r: 255, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 255, a: 1}
@@ -993,6 +1018,18 @@ PrefabInstance:
     - target: {fileID: 4239911944421519889, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 708027474}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1712650342}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_RootOrder

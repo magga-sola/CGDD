@@ -37,7 +37,7 @@ public class PlayerShooting : MonoBehaviour
             }
             else // Special attack
             {
-                DecreaseHealthByAttack();
+                //DecreaseHealthByAttack();
             }
             //projectileClone.transform.position = firePoint.position + direction;
             projectileClone.transform.position = firePoint.position;

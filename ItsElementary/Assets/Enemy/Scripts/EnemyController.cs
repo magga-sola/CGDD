@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    
+    public Transform player;
+    public float moveSpeed = 5f;
+    private Vector2 movement;
+    private Vector2 direction;
     public int health = 100;
     PlayerController.Element element;
     public SpriteRenderer spriteRenderer;
+    public Rigidbody2D rb;
     public Color[] colorArray = {new Color(255,0,0),new Color(0,0,255),new Color(0,255,0)};
 
     void Start()
@@ -28,7 +32,12 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CalculateMovment();
+    }
+
+    void FixedUpdate()
+    {
+        moveCharacter();
     }
 
     int mod(int x, int p)
@@ -59,8 +68,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void CalculateMovment()
     {
+        direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        rb.rotation = angle;
+        direction.Normalize();
+        movement = direction;
+    }
 
+    void moveCharacter(){
+        rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
     }
 }

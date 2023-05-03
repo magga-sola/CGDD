@@ -19,6 +19,7 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (col.gameObject.name != "Player")
         {
+            Debug.Log(col.gameObject.name);
             Destroy(gameObject);
         }
     }

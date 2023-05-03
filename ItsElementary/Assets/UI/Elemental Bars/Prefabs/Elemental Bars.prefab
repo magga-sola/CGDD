@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f596ee4f9178640bb9b3ff0e31d32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   fireBar: {fileID: 2088388525841397899}
   waterBar: {fileID: 6360139320593173508}
   earthBar: {fileID: 3372135443795668323}
+  currentElement: 0
 --- !u!1001 &469292971090132908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57,6 +59,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5634208209344430153}
     m_Modifications:
+    - target: {fileID: 1009848993139870832, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827600499990819797, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827600500274638760, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6827600500835840938, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -145,12 +159,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 6827600500835840939, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6827600501808540725, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6827600501808540725, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827600501808540726, guid: aaefa23aeb8d94d42ad7768d9bbe1f16, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -178,6 +200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5634208209344430153}
     m_Modifications:
+    - target: {fileID: 1100101869336112371, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6925841896362484390, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -266,12 +292,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 6925841896362484391, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925841896805114585, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925841897056075428, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6925841897537600825, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6925841897537600825, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925841897537600826, guid: d6a41b8ecbd0c574ba4805575d24909f, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -299,12 +341,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5634208209344430153}
     m_Modifications:
+    - target: {fileID: 8224203407591803418, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8774484900656691629, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8774484900656691629, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774484900656691630, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774484901133957680, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774484901383857741, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8774484901830420017, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
@@ -398,6 +456,10 @@ PrefabInstance:
     - target: {fileID: 8774484901830420019, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
       propertyPath: m_Name
       value: Fire Energy Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774484901830420019, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d58ab284d4d714ab2750cc709f1be4, type: 3}

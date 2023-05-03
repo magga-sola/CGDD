@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 target;
     private Vector3 playerLastPosition;
     public float smoothTime = 0.25f;
+    public Sprite[] wandSpriteArray;
+    public GameObject firePoint;
+ 
     
     // Update is called once per frame
     void Update()
@@ -43,15 +46,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             elementalMode = GameManager.Element.Fire;
-
+            firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             elementalMode = GameManager.Element.Water;
+            firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             elementalMode = GameManager.Element.Earth;
+            firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         }
         
     }

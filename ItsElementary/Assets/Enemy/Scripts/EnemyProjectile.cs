@@ -16,7 +16,7 @@ public class EnemyProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.gameObject.name.Contains("Enemy"))
+        if (!col.gameObject.name.Contains("Enemy") && !col.gameObject.name.Contains("Projectile"))
         {
             Debug.Log(col.gameObject.name);
             Destroy(gameObject);

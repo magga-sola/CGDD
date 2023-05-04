@@ -7,16 +7,12 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed = 5f;
     private Vector2 movement;
     private Vector2 direction;
-    private float angle;
-    private float distanceFromPlayer;
+    public float angle;
+    public float distanceFromPlayer;
     public int health = 100;
     public GameManager.Element element;
     public Rigidbody2D rb;
     public Sprite[] spriteArray;
-    private float timeSinceLastShot;
-    public GameObject projectile;
-    public EnemyProjectile projectilecontroller;
-    public float projectileSpeed = 10;
     public GameObject healingOrb;
     public HealingOrb healingorbcontroller;
 
@@ -26,8 +22,6 @@ public class EnemyController : MonoBehaviour
     {
         element = (GameManager.Element)Random.Range(0,3);
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
-        timeSinceLastShot = Time.realtimeSinceStartup;
-
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -44,12 +38,23 @@ public class EnemyController : MonoBehaviour
     {
         CalculateMovment();
         distanceFromPlayer = Vector3.Distance (player.transform.position, transform.position);
-        shoot();
     }
 
     void FixedUpdate()
     {
         moveCharacter();
+    }
+
+    void FlipSprite()
+    {
+        if (angle <= 90 && angle > -90)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     int mod(int x, int p)
@@ -89,26 +94,18 @@ public class EnemyController : MonoBehaviour
     {
         direction = player.position - transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
         direction.Normalize();
         movement = direction;
     }
 
     void moveCharacter(){
-        if (distanceFromPlayer <= 10 && distanceFromPlayer > 4){
-            rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
+        if (distanceFromPlayer <= 10){
+            FlipSprite();
+            if (distanceFromPlayer > 4){
+                rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
+            }
         }
-        
     }
 
-    void shoot(){
-        if (Time.realtimeSinceStartup-timeSinceLastShot > 1 && distanceFromPlayer <= 6){
-            projectilecontroller.enemyController = this;
-            GameObject projectileClone = Instantiate(projectile);
-            projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle));
-            projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
-            timeSinceLastShot = Time.realtimeSinceStartup;
-        }
-        
-    }
+    
 }

@@ -66,7 +66,6 @@ public class PlayerController : MonoBehaviour
     {
         elementalMode = mode;
         ChangeSprites();
-        Debug.Log("set elemental mode: " + mode.ToString());
         elementalBars.SetElementalMode(mode);
     }
 

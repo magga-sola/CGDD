@@ -35,16 +35,16 @@ public class PlayerHurting : MonoBehaviour
         {
             if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == playerElement)
             {
-                healthbar.DecreaseByStrongElement();
+                healthbar.DecreaseByStrongOpponent();
                 //50
             }
             else if ((GameManager.Element)(mod(((int)projectileElement - 1),3)) == playerElement)
             {
-                healthbar.DecreaseByWeakElement();
+                healthbar.DecreaseByWeakOpponent();
             }
             else if (projectileElement == playerElement)
             {
-                healthbar.DecreaseBySameElement();
+                healthbar.DecreaseBySameOpponent();
                 //34
             }
         }

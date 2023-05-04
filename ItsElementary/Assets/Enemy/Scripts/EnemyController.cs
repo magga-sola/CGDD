@@ -16,12 +16,13 @@ public class EnemyController : MonoBehaviour
     public GameObject healingOrb;
     public HealingOrb healingorbcontroller;
 
-
+    public EnemyEnergyBar elementalBar;
 
     void Start()
     {
         element = (GameManager.Element)Random.Range(0,3);
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
+        elementalBar.Initialize(health, health);
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -36,13 +37,13 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CalculateMovment();
+        CalculateMovement();
         distanceFromPlayer = Vector3.Distance (player.transform.position, transform.position);
     }
 
     void FixedUpdate()
     {
-        moveCharacter();
+        MoveCharacter();
     }
 
     void FlipSprite()
@@ -68,19 +69,20 @@ public class EnemyController : MonoBehaviour
         int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
         if (basicAttack || (GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
             Debug.Log("STRONG");
-            health -= 20;
+            elementalBar.DecreaseByWeakOpponent();
         }
         else if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
-            Debug.Log(projectileElement + " WEAK " + element);  
-            health -= 50;
+            Debug.Log(projectileElement + " WEAK " + element);
+            elementalBar.DecreaseByStrongOpponent();
         }
         
         else if (projectileElement == element){
+
+            elementalBar.DecreaseBySameOpponent();
             Debug.Log("SAME");
-            health -= 34;
         }
 
-        if (health <= 0)
+        if (elementalBar.IsHealthFinished())
         {
             // health orbs
             healingorbcontroller.enemyController = this;
@@ -91,7 +93,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void CalculateMovment()
+    void CalculateMovement()
     {
         direction = player.position - transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -99,14 +101,12 @@ public class EnemyController : MonoBehaviour
         movement = direction;
     }
 
-    void moveCharacter(){
+    void MoveCharacter(){
         if (distanceFromPlayer <= 10){
             FlipSprite();
             if (distanceFromPlayer > 4){
                 rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
             }
         }
-    }
-
-    
+    }    
 }

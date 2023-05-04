@@ -43,19 +43,20 @@ public class EnergyBar : MonoBehaviour
         slider.value = startingHealth;
     }
 
-    public void DecreaseByWeakElement()
+    public void DecreaseByWeakOpponent()
     {
         // TODO: Logic for death/empty health?
         slider.value -= 7;
     }
 
-    public void DecreaseBySameElement()
+    public void DecreaseBySameOpponent()
     {
         // TODO: Logic for death/empty health?
         slider.value -= 15;
     }
 
-    public void DecreaseByStrongElement()
+    // Enemy is stronger than me
+    public void DecreaseByStrongOpponent()
     {
         // TODO: Logic for death/empty health?
         slider.value -= 30;

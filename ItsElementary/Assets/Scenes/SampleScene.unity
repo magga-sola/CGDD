@@ -228,6 +228,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: elementalBars
+      value: 
+      objectReference: {fileID: 1968187703}
+    - target: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: enemyProjectile
+      value: 
+      objectReference: {fileID: 721925484}
     - target: {fileID: 5064989006495143496, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: projectile
       value: 
@@ -2114,6 +2122,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1099304775}
     - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
       propertyPath: enemyController
       value: 
@@ -9714,6 +9726,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 204dbf948c3f942d38c49c056e5ebf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1099304775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+  m_PrefabInstance: {fileID: 221293152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b4ab65299334a53aa7e29dfbfd9a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1165239305

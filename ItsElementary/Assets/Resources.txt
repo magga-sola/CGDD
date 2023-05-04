@@ -6,3 +6,16 @@ UI Assets:
 https://foozlecc.itch.io/pixel-magic-sprite-effects
 https://github.com/Brackeys/Health-Bar
 https://hoonius.itch.io/generic-dark-pixel-ui
+
+Player Assets:
+
+
+Enemy Assets:
+
+
+Level Design Assets:
+tilemap -> https://szadiart.itch.io/rogue-fantasy-catacombs
+
+
+Healing Orb Assets:
+reference image -> https://lvgames.itch.io/free-glowing-ball-sprite-pixel-fx-rpg-maker-ready?download

@@ -85,7 +85,6 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Element healingOrbElement = col.gameObject.GetComponent<HealingOrb>().element;
 
-            //elementalBars.HitByElement(projectileElement);
             //elementalBars.HealedByElement(healingOrbElement);
             
         }

@@ -9,6 +9,7 @@ public class HealingOrb : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     public PlayerHealing player;
+    public Animator animator;
     // Start is called before the first frame update
 
     //animation ----> static
@@ -23,8 +24,9 @@ public class HealingOrb : MonoBehaviour
     void Start()
     {
         element = enemyController.element;
+        animator.SetInteger("Mode 0", (int)element);
         spriteRenderer.sprite = spriteArray[(int)element];
-        
+        //animator.SetInt("Mode", (int)element); 
     }
 
         void OnTriggerEnter2D(Collider2D col)

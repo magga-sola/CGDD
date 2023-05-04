@@ -148,8 +148,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   element: 1
+  basicAttack: 0
   spriteRenderer: {fileID: 6157575426671919730}
   spriteArray:
   - {fileID: 21300000, guid: efd5c9727b73dba4a8f44c13507b53c7, type: 3}
-  - {fileID: 21300000, guid: 7a6328461e9c0a64ea9136392c626f11, type: 3}
+  - {fileID: 21300000, guid: 41ad6d83a5791a04184077f3705fe339, type: 3}
   - {fileID: 21300000, guid: ae92ecb32aaf0604a96100f3d46b9043, type: 3}
+  basicAttackSprite: {fileID: 21300000, guid: 4fd2b2d05a80e054488bed4846efbc7a, type: 3}

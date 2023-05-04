@@ -25,8 +25,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        //element = (GameManager.Element)Random.Range(0,3);
-        element = (GameManager.Element)2;
+        element = (GameManager.Element)Random.Range(0,3);
         spriteRenderer.color = colorArray[(int)element];
         timeSinceLastShot = Time.realtimeSinceStartup;
 

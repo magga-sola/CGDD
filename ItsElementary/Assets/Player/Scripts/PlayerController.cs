@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerLastPosition;
     public float smoothTime = 0.25f;
     public Sprite[] wandSpriteArray;
+    public Sprite[] playerSpriteArray;
     public GameObject firePoint;
     public ElementalBars elementalBars;
  
@@ -47,19 +48,25 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             elementalMode = GameManager.Element.Fire;
-            firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
+            changeSprites();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             elementalMode = GameManager.Element.Earth;
-            firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
+            changeSprites();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             elementalMode = GameManager.Element.Water;
-            firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
+            changeSprites();
         }
         
+    }
+
+    void changeSprites()
+    {
+        firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
+        GetComponent<SpriteRenderer>().sprite = playerSpriteArray[(int)elementalMode];
     }
 
     void OnTriggerEnter2D(Collider2D col)

@@ -195,7 +195,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1543767310, guid: 3359eeb7f780bb44b9badbdf138a05a5, type: 3}
+  m_Sprite: {fileID: 7791667, guid: e952e0f4d61cf5d4a9cd69cac787a01c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -274,6 +274,10 @@ MonoBehaviour:
   - {fileID: -179543017, guid: 234d5ff3f32cbaa4796e700d4ff87ccd, type: 3}
   - {fileID: 2082279181, guid: 234d5ff3f32cbaa4796e700d4ff87ccd, type: 3}
   - {fileID: 1980000601, guid: 234d5ff3f32cbaa4796e700d4ff87ccd, type: 3}
+  playerSpriteArray:
+  - {fileID: 7791667, guid: e952e0f4d61cf5d4a9cd69cac787a01c, type: 3}
+  - {fileID: -534204004, guid: af7f1c490402cee44bbaae005a3442ad, type: 3}
+  - {fileID: -839324651, guid: 93a8d2b37fd9dc04d80830c18b66b210, type: 3}
   firePoint: {fileID: 5064989004904756073}
   elementalBars: {fileID: 0}
 --- !u!114 &5064989006495143496

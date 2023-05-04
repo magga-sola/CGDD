@@ -1,8 +1,9 @@
 
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ElementalBars : MonoBehaviour
 {
+    
     public PlayerController player;
 
     public EnergyBar fireBar;
@@ -51,6 +52,6 @@ public class ElementalBars : MonoBehaviour
     }
     public void HitByElement(GameManager.Element projectileElement)
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

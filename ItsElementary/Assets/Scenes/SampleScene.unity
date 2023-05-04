@@ -191,6 +191,14 @@ PrefabInstance:
       propertyPath: enemyController
       value: 
       objectReference: {fileID: 1239743611}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: spriteArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 26429564, guid: e732842cad3204b769a160a0164dec61, type: 3}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: spriteArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 2087453550, guid: c4570eb48887c4878820bf99a675e7f9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
 --- !u!50 &73017896 stripped
@@ -232,6 +240,22 @@ PrefabInstance:
       propertyPath: elementalBars
       value: 
       objectReference: {fileID: 1968187703}
+    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: playerSpriteArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: playerSpriteArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 7791667, guid: e952e0f4d61cf5d4a9cd69cac787a01c, type: 3}
+    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: playerSpriteArray.Array.data[1]
+      value: 
+      objectReference: {fileID: -534204004, guid: af7f1c490402cee44bbaae005a3442ad, type: 3}
+    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: playerSpriteArray.Array.data[2]
+      value: 
+      objectReference: {fileID: -839324651, guid: 93a8d2b37fd9dc04d80830c18b66b210, type: 3}
     - target: {fileID: 5064989006495143508, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -280,6 +304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7791667, guid: e952e0f4d61cf5d4a9cd69cac787a01c, type: 3}
     - target: {fileID: 6469663146078208998, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: healingOrb
       value: 

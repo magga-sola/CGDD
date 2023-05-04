@@ -17,13 +17,16 @@ public class PlayerController : MonoBehaviour
     public Sprite[] playerSpriteArray;
     public GameObject firePoint;
     public ElementalBars elementalBars;
- 
-    
+
+    private void Start()
+    {
+        elementalBars.SetElementalMode(elementalMode);
+    }
+
     // Update is called once per frame
     void Update()
     {
         ProcessInput();
-        //SetCameraTarget();
     }
 
     void FixedUpdate()
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         elementalMode = mode;
         ChangeSprites();
+        Debug.Log("set elemental mode: " + mode.ToString());
         elementalBars.SetElementalMode(mode);
     }
 

@@ -181,9 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe84eb8ff6f8824ca33ebbfd9e9bde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disabledColor: {r: 0.050980397, g: 0.24705884, b: 0, a: 0}
+  enabledColor: {r: 0.35458878, g: 0.6981132, b: 0.16135636, a: 1}
+  elementalMode: 1
   startingHealth: 2
   maxHealth: 10
   slider: {fileID: 6925841896362484389}
+  fillImage: {fileID: 6925841897537600824}
 --- !u!1 &6925841896805114585
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20000002, g: 0.45098042, b: 0.058823533, a: 1}
+  m_Color: {r: 0.050980397, g: 0.24705884, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

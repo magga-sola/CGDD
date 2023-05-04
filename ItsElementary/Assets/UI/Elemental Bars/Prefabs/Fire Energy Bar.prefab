@@ -409,6 +409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe84eb8ff6f8824ca33ebbfd9e9bde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disabledColor: {r: 0.5803922, g: 0.2627451, b: 0.25490198, a: 0}
+  enabledColor: {r: 0.3803922, g: 0.058823533, b: 0.10980393, a: 0}
+  elementalMode: 0
   startingHealth: 2
   maxHealth: 10
   slider: {fileID: 8774484901830420017}
+  fillImage: {fileID: 8774484900656691628}

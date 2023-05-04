@@ -1,6 +1,6 @@
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class ElementalBars : MonoBehaviour
 {
     
@@ -12,12 +12,13 @@ public class ElementalBars : MonoBehaviour
 
     public GameManager.Element currentElement;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        fireBar.InitializeHealth(100, 50);
-        waterBar.InitializeHealth(100, 50);
-        earthBar.InitializeHealth(100, 50);
+        fireBar.Initialize(100, 50);
+        waterBar.Initialize(100, 50);
+        earthBar.Initialize(100, 50);
     }
 
     // Update is called once per frame
@@ -43,7 +44,24 @@ public class ElementalBars : MonoBehaviour
 
     public void SetElementalMode(GameManager.Element element)
     {
-        Debug.Log("Changing mode to: " + element.ToString());
+        switch (element)
+        {
+            case GameManager.Element.Fire:
+                fireBar.EnableMode(); // Enable fire
+                waterBar.DisableMode();
+                earthBar.DisableMode();
+                break;
+            case GameManager.Element.Water:
+                fireBar.DisableMode();
+                waterBar.EnableMode(); // Enable water
+                earthBar.DisableMode();
+                break;
+            case GameManager.Element.Earth:
+                fireBar.DisableMode();
+                waterBar.DisableMode();
+                earthBar.EnableMode(); // Enable earth
+                break;
+        }
     }
 
     int mod(int x, int p)

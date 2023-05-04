@@ -1,18 +1,24 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using static GameManager;
 
 public class EnergyBar : MonoBehaviour
 {
+    public Color disabledColor;
+    public Color enabledColor;
+
+    public Element elementalMode;
+
     public int startingHealth;
     public int maxHealth;
     public Slider slider;
+    public Image fillImage;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -21,7 +27,17 @@ public class EnergyBar : MonoBehaviour
         
     }
 
-    public void InitializeHealth(int maxHealth, int startingHealth)
+    public void EnableMode()
+    {
+        fillImage.color = enabledColor;
+    }
+
+    public void DisableMode()
+    {
+        fillImage.color = disabledColor;
+    }
+
+    public void Initialize(int maxHealth, int startingHealth)
     {
         slider.maxValue = maxHealth;
         slider.value = startingHealth;
@@ -29,7 +45,6 @@ public class EnergyBar : MonoBehaviour
 
     public void DecreaseHealthByAttack()
     {
-        // TODO: Logic for death/empty health?
         slider.value -= 2;
     }
 

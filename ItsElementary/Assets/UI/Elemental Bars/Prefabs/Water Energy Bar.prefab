@@ -333,9 +333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe84eb8ff6f8824ca33ebbfd9e9bde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disabledColor: {r: 0.21176472, g: 0.37647063, b: 0.5803922, a: 0}
+  enabledColor: {r: 0, g: 0.20392159, b: 0.35686275, a: 0}
+  elementalMode: 2
   startingHealth: 2
   maxHealth: 10
   slider: {fileID: 6827600500835840937}
+  fillImage: {fileID: 6827600501808540724}
 --- !u!1 &6827600501808540726
 GameObject:
   m_ObjectHideFlags: 0

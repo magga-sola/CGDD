@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5064989006495143498}
+  playerProjectile: {fileID: 0}
   playerMode: 0
   projectile: {fileID: 0}
   firePoint: {fileID: 5064989005212533436}

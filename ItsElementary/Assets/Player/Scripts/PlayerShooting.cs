@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     public PlayerController player;
+    public PlayerProjectile playerProjectile;
     public GameManager.Element playerMode;
 
     public GameObject projectile;
@@ -34,13 +35,13 @@ public class PlayerShooting : MonoBehaviour
 
             if (basicAttack)
             {
+                playerProjectile.SetBasicAttack(true);
                 GameObject projectileClone = Instantiate(projectile);
-                projectileClone.GetComponent<Renderer>().material.color = new Color(0,0,0);
-
                 //projectileClone.transform.position = firePoint.position + direction;
                 projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
                 projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
                 timeSinceLastShot = Time.realtimeSinceStartup;
+                playerProjectile.SetBasicAttack(false);
             }
             // Special attack
             else if (!elementalBars.IsHealthFinishedInElement(playerMode))

@@ -240,22 +240,6 @@ PrefabInstance:
       propertyPath: elementalBars
       value: 
       objectReference: {fileID: 1968187703}
-    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: playerSpriteArray.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: playerSpriteArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 7791667, guid: e952e0f4d61cf5d4a9cd69cac787a01c, type: 3}
-    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: playerSpriteArray.Array.data[1]
-      value: 
-      objectReference: {fileID: -534204004, guid: af7f1c490402cee44bbaae005a3442ad, type: 3}
-    - target: {fileID: 5064989006495143498, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: playerSpriteArray.Array.data[2]
-      value: 
-      objectReference: {fileID: -839324651, guid: 93a8d2b37fd9dc04d80830c18b66b210, type: 3}
     - target: {fileID: 5064989006495143508, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -304,10 +288,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7791667, guid: e952e0f4d61cf5d4a9cd69cac787a01c, type: 3}
     - target: {fileID: 6469663146078208998, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: healingOrb
       value: 

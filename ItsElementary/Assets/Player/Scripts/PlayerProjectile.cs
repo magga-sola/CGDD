@@ -25,7 +25,7 @@ public class PlayerProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile"))
+        if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
         {
             Debug.Log(col.gameObject.name);
             Destroy(gameObject);

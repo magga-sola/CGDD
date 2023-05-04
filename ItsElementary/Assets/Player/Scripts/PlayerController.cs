@@ -1,9 +1,10 @@
-
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
+    //public bool gameOver;
     public float moveSpeed;
+
+    //public GameManager GM;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     private bool elementalAttack;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public GameObject firePoint;
     public ElementalBars elementalBars;
 
+
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
@@ -27,6 +29,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         ProcessInput();
+        CheckMode();
+        
     }
 
     void FixedUpdate()
@@ -66,7 +70,34 @@ public class PlayerController : MonoBehaviour
     {
         elementalMode = mode;
         ChangeSprites();
+        //Debug.Log("set elemental mode: " + mode.ToString());
         elementalBars.SetElementalMode(mode);
+    }
+    int mod(int x, int p)
+    {
+        return (x%p + p)%p; 
+    }
+    private void CheckMode()
+    {
+        if(elementalBars.IsHealthFinishedInElement(elementalMode))
+        {
+            // The element that 
+            GameManager.Element firstElement = (GameManager.Element) (mod((int) elementalMode + 1, 3));
+            GameManager.Element secondElement = (GameManager.Element) (mod((int) elementalMode - 1, 3));
+
+            if(!elementalBars.IsHealthFinishedInElement(firstElement))
+            {
+                ChangeMode(firstElement);
+            }
+            else if(!elementalBars.IsHealthFinishedInElement(secondElement))
+            {
+                ChangeMode(secondElement);
+            }
+            else {
+                // PLAYER IS DEAD
+                GameManager.instance.GameOver();
+            }
+        }
     }
 
     void ChangeSprites()
@@ -90,6 +121,7 @@ public class PlayerController : MonoBehaviour
 
             //elementalBars.HealedByElement(healingOrbElement);
             
+            //random comment
         }
     }
 

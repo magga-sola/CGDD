@@ -43,6 +43,24 @@ public class EnergyBar : MonoBehaviour
         slider.value = startingHealth;
     }
 
+    public void DecreaseByWeakElement()
+    {
+        // TODO: Logic for death/empty health?
+        slider.value -= 7;
+    }
+
+    public void DecreaseBySameElement()
+    {
+        // TODO: Logic for death/empty health?
+        slider.value -= 15;
+    }
+
+    public void DecreaseByStrongElement()
+    {
+        // TODO: Logic for death/empty health?
+        slider.value -= 30;
+    }
+
     public void DecreaseHealthByAttack()
     {
         slider.value -= 2;
@@ -50,7 +68,7 @@ public class EnergyBar : MonoBehaviour
 
     public void IncreaseHealthByOrb()
     {
-        slider.value += 10;
+        slider.value += 30;
     }
 
     public bool IsHealthFinished()

@@ -68,8 +68,18 @@ public class ElementalBars : MonoBehaviour
     {
         return (x%p + p)%p; 
     }
-    public void HitByElement(GameManager.Element projectileElement)
+    public EnergyBar? GetBarByElement(GameManager.Element element)
     {
+        switch (element)
+        {
+            case GameManager.Element.Fire:
+                return fireBar;
+            case GameManager.Element.Water:
+                return waterBar;
+            case GameManager.Element.Earth:
+                return earthBar;
+        }
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        return null;
     }
 }

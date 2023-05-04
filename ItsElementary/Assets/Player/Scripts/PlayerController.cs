@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name.Contains("Enemy Projectile"))
         {
             GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
-            elementalBars.HitByElement(projectileElement);
+            //elementalBars.HitByElement(projectileElement);
             //Destroy(gameObject);
         }
 

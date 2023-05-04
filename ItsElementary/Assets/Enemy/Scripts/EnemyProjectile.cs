@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     public EnemyController enemyController;
+    public PlayerHurting player;
     public GameManager.Element element;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
@@ -18,6 +19,11 @@ public class EnemyProjectile : MonoBehaviour
     {
         if (!col.gameObject.name.Contains("Enemy") && !col.gameObject.name.Contains("Projectile"))
         {
+            if (col.gameObject.name.Contains("Player"))
+            {
+                player.HitByEnemyProjectile(element);
+            }
+            
             Destroy(gameObject);
         }
     }

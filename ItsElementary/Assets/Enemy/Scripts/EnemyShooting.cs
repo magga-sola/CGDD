@@ -27,7 +27,7 @@ public class EnemyShooting : MonoBehaviour
     }
 
     void shoot(){
-        if (Time.realtimeSinceStartup-timeSinceLastShot > 1 && enemyController.distanceFromPlayer <= 6){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 2 && enemyController.distanceFromPlayer <= 6){
             transform.rotation = Quaternion.Euler(0, 0, enemyController.angle);
             projectilecontroller.enemyController = enemyController;
             GameObject projectileClone = Instantiate(projectile);

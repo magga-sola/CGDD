@@ -45,15 +45,15 @@ public class PlayerController : MonoBehaviour
         basicAttack = Input.GetMouseButton(1);
 
         // Elements
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Fire))
         {
             ChangeMode(GameManager.Element.Fire);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Earth))
         {
             ChangeMode(GameManager.Element.Earth);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Water))
         {
             ChangeMode(GameManager.Element.Water);
         }        

@@ -47,7 +47,7 @@ MonoBehaviour:
   enemyController: {fileID: 4239911944421519900}
   projectilecontroller: {fileID: 0}
   projectile: {fileID: 0}
-  projectileSpeed: 10
+  projectileSpeed: 5
 --- !u!1 &4239911944421519889
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4239911944421519888
 BoxCollider2D:
   m_ObjectHideFlags: 0

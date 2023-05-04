@@ -66,7 +66,6 @@ public class EnemyController : MonoBehaviour
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
         int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
-        Debug.Log(projectileElement + " " + element);  
         if (basicAttack || (GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
             Debug.Log("STRONG");
             health -= 20;

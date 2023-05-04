@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         element = (GameManager.Element)Random.Range(0,3);
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
-        elementalBar.Initialize(health, health);
+        elementalBar.Initialize(element, health, health);
     }
     void OnTriggerEnter2D(Collider2D col)
     {

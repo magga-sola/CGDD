@@ -5,9 +5,9 @@ public class GameManager : MonoBehaviour
 {
     public enum Element
     {
-        Fire,
-        Water,
-        Earth
+        Fire = 0,
+        Earth = 1,
+        Water = 2
     }
 
     PlayerController player;

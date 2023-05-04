@@ -151,5 +151,5 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8581849176734979319}
   spriteArray:
   - {fileID: 21300000, guid: efd5c9727b73dba4a8f44c13507b53c7, type: 3}
-  - {fileID: 21300000, guid: ae92ecb32aaf0604a96100f3d46b9043, type: 3}
   - {fileID: 21300000, guid: 7a6328461e9c0a64ea9136392c626f11, type: 3}
+  - {fileID: 21300000, guid: ae92ecb32aaf0604a96100f3d46b9043, type: 3}

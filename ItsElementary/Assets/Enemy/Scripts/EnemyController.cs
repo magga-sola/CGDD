@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
     public GameManager.Element element;
     public SpriteRenderer spriteRenderer;
     public Rigidbody2D rb;
-    public Color[] colorArray = {new Color(255,0,0),new Color(0,0,255),new Color(0,255,0)};
+    public Color[] colorArray = {new Color(255,0,0),new Color(0,255,0),new Color(0,0,255)};
     private float timeSinceLastShot;
     public GameObject projectile;
     public EnemyProjectile projectilecontroller;
@@ -25,7 +25,8 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        element = (GameManager.Element)Random.Range(0,3);
+        //element = (GameManager.Element)Random.Range(0,3);
+        element = (GameManager.Element)2;
         spriteRenderer.color = colorArray[(int)element];
         timeSinceLastShot = Time.realtimeSinceStartup;
 
@@ -61,11 +62,12 @@ public class EnemyController : MonoBehaviour
     {
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
-        if ((GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
-            Debug.Log("WEAK");
+        Debug.Log(projectileElement + " " + element);  
+        if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
+            Debug.Log(projectileElement + " WEAK " + element);  
             health -= 50;
         }
-        else if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
+        else if ((GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
             Debug.Log("STRONG");
             health -= 20;
         }

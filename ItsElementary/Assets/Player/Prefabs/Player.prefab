@@ -240,7 +240,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -251,7 +251,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &5064989006495143498
 MonoBehaviour:
@@ -270,8 +270,11 @@ MonoBehaviour:
   elementalMode: 0
   cam: {fileID: 0}
   smoothTime: 0.25
-  wandSpriteArray: []
-  firePoint: {fileID: 0}
+  wandSpriteArray:
+  - {fileID: -179543017, guid: 234d5ff3f32cbaa4796e700d4ff87ccd, type: 3}
+  - {fileID: 2082279181, guid: 234d5ff3f32cbaa4796e700d4ff87ccd, type: 3}
+  - {fileID: 1980000601, guid: 234d5ff3f32cbaa4796e700d4ff87ccd, type: 3}
+  firePoint: {fileID: 5064989004904756073}
   elementalBars: {fileID: 0}
 --- !u!114 &5064989006495143496
 MonoBehaviour:
@@ -304,6 +307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5064989006495143498}
-  playerMode: 0
+  enemy: {fileID: 0}
   healingOrb: {fileID: 0}
   elementalBars: {fileID: 0}

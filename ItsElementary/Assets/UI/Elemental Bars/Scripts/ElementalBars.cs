@@ -51,6 +51,6 @@ public class ElementalBars : MonoBehaviour
     }
     public void HitByElement(GameManager.Element projectileElement)
     {
-        Debug.Log(player.elementalMode);
+        
     }
 }

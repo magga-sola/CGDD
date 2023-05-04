@@ -51,12 +51,12 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            elementalMode = GameManager.Element.Water;
+            elementalMode = GameManager.Element.Earth;
             firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            elementalMode = GameManager.Element.Earth;
+            elementalMode = GameManager.Element.Water;
             firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         }
         

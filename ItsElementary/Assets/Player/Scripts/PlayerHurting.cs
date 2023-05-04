@@ -35,23 +35,17 @@ public class PlayerHurting : MonoBehaviour
         {
             if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == playerElement)
             {
-                Debug.Log("hit by: STRONG");
                 healthbar.DecreaseByStrongElement();
-                
                 //50
             }
             else if ((GameManager.Element)(mod(((int)projectileElement - 1),3)) == playerElement)
             {
-                Debug.Log("hit by: WEAK");
                 healthbar.DecreaseByWeakElement();
-                //20
             }
             else if (projectileElement == playerElement)
             {
-                Debug.Log("hit by: SAME");
                 healthbar.DecreaseBySameElement();
                 //34
-
             }
         }
         

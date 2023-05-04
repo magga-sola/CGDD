@@ -11,9 +11,8 @@ public class EnemyController : MonoBehaviour
     private float distanceFromPlayer;
     public int health = 100;
     public GameManager.Element element;
-    public SpriteRenderer spriteRenderer;
     public Rigidbody2D rb;
-    public Color[] colorArray = {new Color(255,0,0),new Color(0,255,0),new Color(0,0,255)};
+    public Sprite[] spriteArray;
     private float timeSinceLastShot;
     public GameObject projectile;
     public EnemyProjectile projectilecontroller;
@@ -26,7 +25,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         element = (GameManager.Element)Random.Range(0,3);
-        spriteRenderer.color = colorArray[(int)element];
+        GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         timeSinceLastShot = Time.realtimeSinceStartup;
 
     }

@@ -52,6 +52,6 @@ public class ElementalBars : MonoBehaviour
     }
     public void HitByElement(GameManager.Element projectileElement)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

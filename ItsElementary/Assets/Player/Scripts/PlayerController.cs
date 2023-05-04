@@ -47,23 +47,26 @@ public class PlayerController : MonoBehaviour
         // Elements
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            elementalMode = GameManager.Element.Fire;
-            changeSprites();
+            ChangeMode(GameManager.Element.Fire);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            elementalMode = GameManager.Element.Earth;
-            changeSprites();
+            ChangeMode(GameManager.Element.Earth);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            elementalMode = GameManager.Element.Water;
-            changeSprites();
-        }
-        
+            ChangeMode(GameManager.Element.Water);
+        }        
     }
 
-    void changeSprites()
+    private void ChangeMode(GameManager.Element mode)
+    {
+        elementalMode = mode;
+        ChangeSprites();
+        elementalBars.SetElementalMode(mode);
+    }
+
+    void ChangeSprites()
     {
         firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
         GetComponent<SpriteRenderer>().sprite = playerSpriteArray[(int)elementalMode];

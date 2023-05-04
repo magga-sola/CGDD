@@ -41,7 +41,7 @@ public class ElementalBars : MonoBehaviour
         return false;
     }
 
-    void SetElementalMode(GameManager.Element element)
+    public void SetElementalMode(GameManager.Element element)
     {
         Debug.Log("Changing mode to: " + element.ToString());
     }

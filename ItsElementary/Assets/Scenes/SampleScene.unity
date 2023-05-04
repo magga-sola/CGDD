@@ -228,6 +228,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: elementalBars
+      value: 
+      objectReference: {fileID: 1968187703}
+    - target: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: enemyProjectile
+      value: 
+      objectReference: {fileID: 721925484}
     - target: {fileID: 5064989006495143496, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: projectile
       value: 
@@ -382,6 +390,10 @@ PrefabInstance:
       propertyPath: basicAttackSprite
       value: 
       objectReference: {fileID: 21300000, guid: 4fd2b2d05a80e054488bed4846efbc7a, type: 3}
+    - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
+      propertyPath: spriteArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 41ad6d83a5791a04184077f3705fe339, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
 --- !u!50 &429314666 stripped
@@ -2115,9 +2127,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1311808168}
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
       propertyPath: enemyController
       value: 
       objectReference: {fileID: 1239743611}
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: spriteArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 41ad6d83a5791a04184077f3705fe339, type: 3}
     - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -51340,6 +51360,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4239911944421519891, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
   m_PrefabInstance: {fileID: 1750150658}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1311808168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+  m_PrefabInstance: {fileID: 221293152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b4ab65299334a53aa7e29dfbfd9a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1391789200
 GameObject:
   m_ObjectHideFlags: 0

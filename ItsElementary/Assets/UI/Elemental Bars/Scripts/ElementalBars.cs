@@ -68,7 +68,8 @@ public class ElementalBars : MonoBehaviour
     {
         return (x%p + p)%p; 
     }
-    public EnergyBar? GetBarByElement(GameManager.Element element)
+
+    public EnergyBar GetBarByElement(GameManager.Element element)
     {
         switch (element)
         {
@@ -79,7 +80,7 @@ public class ElementalBars : MonoBehaviour
             case GameManager.Element.Earth:
                 return earthBar;
         }
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        return null;
+
+        return fireBar;
     }
 }

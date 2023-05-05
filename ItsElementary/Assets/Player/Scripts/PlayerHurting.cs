@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHurting : MonoBehaviour
 {
     public PlayerController player;
-    //public EnemyController enemy;
     public GameManager.Element element;
 
     public GameObject enemyProjectile;
@@ -52,7 +51,3 @@ public class PlayerHurting : MonoBehaviour
     }
 
 }
-
-//IncreaseHealthByOrb
-
-/////

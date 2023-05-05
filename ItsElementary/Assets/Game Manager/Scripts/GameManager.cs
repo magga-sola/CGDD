@@ -37,9 +37,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Restart();
     }
 
+    void Restart()
+    {
+        if (SceneManager.GetActiveScene().name == "EndScreen")
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
+        }
+    }
     public void GameOver(){
         gameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

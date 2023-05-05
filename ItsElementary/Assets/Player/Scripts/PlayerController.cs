@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
         // Attack
         elementalAttack = Input.GetMouseButton(0);
         basicAttack = Input.GetMouseButton(1);
-
         // Elements
         if (Input.GetKeyDown(KeyCode.Alpha1) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Fire))
         {
@@ -63,7 +62,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Water))
         {
             ChangeMode(GameManager.Element.Water);
-        }        
+        }
+        //ChangeModeScroll((int)Input.mouseScrollDelta.y);
     }
 
     private void ChangeMode(GameManager.Element mode)
@@ -72,6 +72,11 @@ public class PlayerController : MonoBehaviour
         ChangeSprites();
         //Debug.Log("set elemental mode: " + mode.ToString());
         elementalBars.SetElementalMode(mode);
+    }
+
+    private void ChangeModeScroll(int scrollNum)
+    {
+        elementalMode = (GameManager.Element) (mod((int) elementalMode + scrollNum, 3));
     }
     int mod(int x, int p)
     {

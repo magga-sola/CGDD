@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public GameObject firePoint;
     public ElementalBars elementalBars;
     public PlayerShooting playerShootingController;
+    public Animator animator;
 
     private void Start()
     {
@@ -53,6 +54,15 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;
+        if (moveX !=0 || moveY !=0)
+        {
+            Debug.Log("MOVING");
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
 
         // Attack
         elementalAttack = Input.GetMouseButton(0);
@@ -119,30 +129,35 @@ public class PlayerController : MonoBehaviour
     void PlayerDirection()
     {
         //Debug.Log(playerShootingController.lookAngle);
-        // Down
         if (GetComponent<SpriteRenderer>().flipX)
         {
             GetComponent<SpriteRenderer>().flipX = false;
         }
+                
+        // Down
         if (playerShootingController.lookAngle >= -135 && playerShootingController.lookAngle < -45)
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[0];
+            animator.SetInteger("Direction",0);
         }
         // Right
         else if (playerShootingController.lookAngle >= -45 && playerShootingController.lookAngle < 45)
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
             GetComponent<SpriteRenderer>().flipX = true;
+            animator.SetInteger("Direction",2);
         }
         // Up
         else if (playerShootingController.lookAngle >= 45 && playerShootingController.lookAngle < 135)
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[1];
+            animator.SetInteger("Direction",1);
         }
         // Left
         else
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
+            animator.SetInteger("Direction",2);
         }
     }
 

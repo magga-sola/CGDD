@@ -11,7 +11,7 @@ public class PlayerShooting : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed;
     private Vector2 lookDirection;
-    private float lookAngle;
+    public float lookAngle;
     private float timeSinceLastShot;
     public ElementalBars elementalBars;
 

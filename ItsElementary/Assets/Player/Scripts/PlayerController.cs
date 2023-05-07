@@ -16,13 +16,19 @@ public class PlayerController : MonoBehaviour
     public float smoothTime = 0.25f;
     public Sprite[] wandSpriteArray;
     public Sprite[] playerSpriteArray;
+    public Sprite[] playerRedSpriteArray;
+    public Sprite[] playerGreenSpriteArray;
+    public Sprite[] playerBlueSpriteArray;
+    private Sprite[] activeColorSpriteArray;
+
     public GameObject firePoint;
     public ElementalBars elementalBars;
-
+    public PlayerShooting playerShootingController;
 
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
+        activeColorSpriteArray = playerRedSpriteArray;
     }
 
     // Update is called once per frame
@@ -37,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         SetCameraTarget();
         Move();
+        PlayerDirection();
     }
 
     // TODO: Nota acceleration
@@ -54,14 +61,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Fire))
         {
             ChangeMode(GameManager.Element.Fire);
+            activeColorSpriteArray = playerRedSpriteArray;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Earth))
         {
             ChangeMode(GameManager.Element.Earth);
+            activeColorSpriteArray = playerGreenSpriteArray;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Water))
         {
             ChangeMode(GameManager.Element.Water);
+            activeColorSpriteArray = playerBlueSpriteArray;
+
         }
         //ChangeModeScroll((int)Input.mouseScrollDelta.y);
     }
@@ -105,10 +116,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void PlayerDirection()
+    {
+        //Debug.Log(playerShootingController.lookAngle);
+        // Down
+        if (GetComponent<SpriteRenderer>().flipX)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (playerShootingController.lookAngle >= -135 && playerShootingController.lookAngle < -45)
+        {
+            GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[0];
+        }
+        // Right
+        else if (playerShootingController.lookAngle >= -45 && playerShootingController.lookAngle < 45)
+        {
+            GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        // Up
+        else if (playerShootingController.lookAngle >= 45 && playerShootingController.lookAngle < 135)
+        {
+            GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[1];
+        }
+        // Left
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
+        }
+    }
+
     void ChangeSprites()
     {
         firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
-        GetComponent<SpriteRenderer>().sprite = playerSpriteArray[(int)elementalMode];
+        //GetComponent<SpriteRenderer>().sprite = playerSpriteArray[(int)elementalMode];
     }
 
     void OnTriggerEnter2D(Collider2D col)

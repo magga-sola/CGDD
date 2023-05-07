@@ -410,6 +410,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7123109738037793007, guid: 10f86cb607acc8141863b0fedbe9d0e6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1636198192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10f86cb607acc8141863b0fedbe9d0e6, type: 3}
 --- !u!114 &2014865364 stripped
@@ -510,6 +514,14 @@ PrefabInstance:
       propertyPath: projectilecontroller
       value: 
       objectReference: {fileID: 6157575425002346562}
+    - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519889, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -587,6 +599,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: elementalBars
+      value: 
+      objectReference: {fileID: 2014865364}
+    - target: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: enemyProjectile
+      value: 
+      objectReference: {fileID: 6157575425002346561}
+    - target: {fileID: 2028077173, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5064989006495143496, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: projectile
       value: 
@@ -655,6 +679,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469663146078208998, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 708027475}
+    - target: {fileID: 6469663146078208998, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 40824061}
+    - target: {fileID: 6469663146078208998, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: elementalBars
+      value: 
+      objectReference: {fileID: 2014865364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
 --- !u!1 &6157575425002346561 stripped

@@ -129,10 +129,6 @@ public class PlayerController : MonoBehaviour
     void PlayerDirection()
     {
         //Debug.Log(playerShootingController.lookAngle);
-        if (GetComponent<SpriteRenderer>().flipX)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
                 
         // Down
         if (playerShootingController.lookAngle >= -135 && playerShootingController.lookAngle < -45)

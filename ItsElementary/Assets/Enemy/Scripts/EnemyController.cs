@@ -71,11 +71,11 @@ public class EnemyController : MonoBehaviour
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
         int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
         if (basicAttack || (GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
-            Debug.Log("STRONG");
+            //Debug.Log("STRONG");
             elementalBar.DecreaseByWeakOpponent();
         }
         else if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
-            Debug.Log(projectileElement + " WEAK " + element);
+            //Debug.Log(projectileElement + " WEAK " + element);
             elementalBar.DecreaseByStrongOpponent();
             GameObject explosionClone = Instantiate(explosion);
             explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
@@ -84,7 +84,7 @@ public class EnemyController : MonoBehaviour
         else if (projectileElement == element){
 
             elementalBar.DecreaseBySameOpponent();
-            Debug.Log("SAME");
+            //Debug.Log("SAME");
         }
 
         if (elementalBar.IsHealthFinished())

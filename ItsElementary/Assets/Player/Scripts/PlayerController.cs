@@ -81,7 +81,10 @@ public class PlayerController : MonoBehaviour
             activeColorSpriteArray = playerBlueSpriteArray;
 
         }
-        //ChangeModeScroll((int)Input.mouseScrollDelta.y);
+        if ((int)Input.mouseScrollDelta.y != 0){
+            ChangeModeScroll((int)Input.mouseScrollDelta.y);
+        }
+        
     }
 
     private void ChangeMode(GameManager.Element mode)
@@ -95,7 +98,17 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeModeScroll(int scrollNum)
     {
-        elementalMode = (GameManager.Element) (mod((int) elementalMode + scrollNum, 3));
+        ChangeMode((GameManager.Element) (mod((int) elementalMode + scrollNum, 3)));
+        GameManager.Element element = (GameManager.Element) mod((int)elementalMode + scrollNum, 3);
+        for (int i = 0; i < 3; i++){
+            Debug.Log(element);
+            if (!elementalBars.IsHealthFinishedInElement(element)){
+                ChangeMode(element);
+                break;
+            }
+            Debug.Log("ASDASD");
+            element = (GameManager.Element) mod((int)element + scrollNum, 3);
+        }
     }
     int mod(int x, int p)
     {

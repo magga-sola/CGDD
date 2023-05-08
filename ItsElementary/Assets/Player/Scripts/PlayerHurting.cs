@@ -5,11 +5,8 @@ using UnityEngine;
 public class PlayerHurting : MonoBehaviour
 {
     public PlayerController player;
-    public GameManager.Element element;
-
     public GameObject enemyProjectile;
     public ElementalBars elementalBars;
-
     private GameManager.Element playerElement;
     private EnergyBar healthbar;
     void Start()
@@ -21,7 +18,8 @@ public class PlayerHurting : MonoBehaviour
     {
         
     }
-    int mod(int x, int p)
+
+    int Mod(int x, int p)
     {
         return (x%p + p)%p; 
     }
@@ -31,14 +29,13 @@ public class PlayerHurting : MonoBehaviour
         playerElement = player.elementalMode; 
         healthbar = elementalBars.GetBarByElement(playerElement);
 
-        
         if (healthbar) 
         {
-            if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == playerElement)
+            if ((GameManager.Element)(Mod(((int)projectileElement + 1),3)) == playerElement)
             {
                 healthbar.DecreaseByStrongOpponent();
             }
-            else if ((GameManager.Element)(mod(((int)projectileElement - 1),3)) == playerElement)
+            else if ((GameManager.Element)(Mod(((int)projectileElement - 1),3)) == playerElement)
             {
                 healthbar.DecreaseByWeakOpponent();
             }

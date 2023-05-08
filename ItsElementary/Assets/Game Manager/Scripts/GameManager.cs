@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public PlayerController player;
 
     public bool gameOver;
-    public int level = 0;
+    public int level = 1;
 
     void Awake()
     {
@@ -56,19 +56,39 @@ public class GameManager : MonoBehaviour
     public void GoToNextLevel()
     {
         level++;
-        if(level == 1)
-        {
-            SceneManager.LoadScene("RoomsScene");
-            player.transform.position = new Vector3((float)-30.7800007, (float)43.3499985, 0);
-        }
         if(level == 2)
+        {
+            StartLevel2();
+        }
+        if(level == 3)
         {
             SceneManager.LoadScene("EndScreen");
         }
     }
 
-    public void GameOver(){
+    public void PlayerDied(){
         gameOver = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if (level == 1)
+        {
+            StartLevel1();
+        }
+        if (level == 2)
+        {
+            StartLevel2();
+        }
+    }
+
+    public void StartLevel1()
+    {
+        SceneManager.LoadScene("SampleScene");
+        Debug.Log("Transform position");
+        player.transform.position = new Vector3((float)13.1999998, (float)10.7299995, 0);
+        Debug.Log("Transform position:" + player.transform.position);
+    }
+    public void StartLevel2()
+    {
+        SceneManager.LoadScene("RoomsScene");
+        player.transform.position = new Vector3((float)-30.7800007, (float)43.3499985, 0);
     }
 }

@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     private Vector2 moveDirection;
-    private bool elementalAttack;
-    private bool basicAttack;
     public GameManager.Element elementalMode = GameManager.Element.Fire;
     public Camera cam;
     private Vector3 target;
@@ -25,13 +23,13 @@ public class PlayerController : MonoBehaviour
     public PlayerShooting playerShootingController;
     public Animator animator;
     public PlayerHurting hurting;
+    public PlayerHealing healing;
 
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
         activeColorSpriteArray = playerRedSpriteArray;
     }
-
 
     void Awake()
     {
@@ -66,7 +64,7 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;
-        if (moveX !=0 || moveY !=0)
+        if (moveX != 0 || moveY != 0)
         {
             animator.SetBool("Moving", true);
         }
@@ -75,9 +73,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Moving", false);
         }
 
-        // Attack
-        elementalAttack = Input.GetMouseButton(0);
-        basicAttack = Input.GetMouseButton(1);
         // Elements
         if (Input.GetKeyDown(KeyCode.Alpha1) && !elementalBars.IsHealthFinishedInElement(GameManager.Element.Fire))
         {
@@ -111,8 +106,8 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeModeScroll(int scrollNum)
     {
-        ChangeMode((GameManager.Element) (mod((int) elementalMode + scrollNum, 3)));
-        GameManager.Element element = (GameManager.Element) mod((int)elementalMode + scrollNum, 3);
+        ChangeMode((GameManager.Element) (Mod((int) elementalMode + scrollNum, 3)));
+        GameManager.Element element = (GameManager.Element) Mod((int)elementalMode + scrollNum, 3);
         for (int i = 0; i < 3; i++){
             Debug.Log(element);
             if (!elementalBars.IsHealthFinishedInElement(element)){
@@ -120,19 +115,21 @@ public class PlayerController : MonoBehaviour
                 break;
             }
             Debug.Log("ASDASD");
-            element = (GameManager.Element) mod((int)element + scrollNum, 3);
+            element = (GameManager.Element) Mod((int)element + scrollNum, 3);
         }
     }
-    int mod(int x, int p)
+
+    int Mod(int x, int p)
     {
         return (x%p + p)%p; 
     }
+
     private void CheckMode()
     {
         if(elementalBars.IsHealthFinishedInElement(elementalMode))
         {
-            GameManager.Element firstElement = (GameManager.Element) (mod((int) elementalMode + 1, 3));
-            GameManager.Element secondElement = (GameManager.Element) (mod((int) elementalMode - 1, 3));
+            GameManager.Element firstElement = (GameManager.Element) (Mod((int) elementalMode + 1, 3));
+            GameManager.Element secondElement = (GameManager.Element) (Mod((int) elementalMode - 1, 3));
 
             if(!elementalBars.IsHealthFinishedInElement(firstElement))
             {
@@ -145,12 +142,11 @@ public class PlayerController : MonoBehaviour
             else {
                 // PLAYER IS DEAD
                 PlayerDies();
-                GameManager.instance.GameOver();
+                GameManager.instance.PlayerDied();
             }
         }
     }
 
-    // TODO finish
     void PlayerDies()
     {
         elementalBars.RestartHealth();

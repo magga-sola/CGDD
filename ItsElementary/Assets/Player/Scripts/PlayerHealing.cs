@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealing : MonoBehaviour
 {
     public PlayerController player;
     public EnemyController enemy;
-    //public GameManager.Element element;
 
     public GameObject healingOrb;
     public ElementalBars elementalBars;
     
-
     void Update()
     {
         
@@ -32,11 +28,4 @@ public class PlayerHealing : MonoBehaviour
                 break;
         }
     }
-
-
 }
-
-//IncreaseHealthByOrb
-
-
-/////

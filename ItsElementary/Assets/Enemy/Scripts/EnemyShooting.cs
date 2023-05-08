@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
@@ -11,9 +9,6 @@ public class EnemyShooting : MonoBehaviour
     public GameObject projectile;
     public float projectileSpeed = 10;
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +18,10 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shoot();
+        Shoot();
     }
 
-    void shoot(){
+    void Shoot(){
         if (Time.realtimeSinceStartup-timeSinceLastShot > 2 && enemyController.distanceFromPlayer <= 6){
             transform.rotation = Quaternion.Euler(0, 0, enemyController.angle);
             projectilecontroller.enemyController = enemyController;
@@ -35,6 +30,5 @@ public class EnemyShooting : MonoBehaviour
             projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
             timeSinceLastShot = Time.realtimeSinceStartup;
         }
-        
     }
 }

@@ -25,15 +25,14 @@ public class EnemyController : MonoBehaviour
         element = (GameManager.Element)Random.Range(0,3);
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
-        animator.SetInteger("Element",(int)element);
-
+        animator.SetInteger("Element", (int)element);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Projectile(Clone)")
         {
-            GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
+            //GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
             TakeDamage(col.gameObject);
         }
     }
@@ -62,7 +61,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    int mod(int x, int p)
+    int Mod(int x, int p)
     {
         return (x%p + p)%p; 
     }
@@ -70,11 +69,11 @@ public class EnemyController : MonoBehaviour
     {
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
-        int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
-        if (basicAttack || (GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
+        //int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
+        if (basicAttack || (GameManager.Element)Mod((int)projectileElement - 1,3) == element){
             elementalBar.DecreaseByWeakOpponent();
         }
-        else if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
+        else if ((GameManager.Element)Mod((int)projectileElement + 1,3) == element){
             elementalBar.DecreaseByStrongOpponent();
             GameObject explosionClone = Instantiate(explosion);
             explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));

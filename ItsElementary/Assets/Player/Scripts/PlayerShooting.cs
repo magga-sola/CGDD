@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
@@ -25,7 +24,6 @@ public class PlayerShooting : MonoBehaviour
     {
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         lookAngle = Mathf.Atan2(lookDirection.y - transform.position.y, lookDirection.x - transform.position.x) * Mathf.Rad2Deg;
-        Vector3 direction = new Vector3 (lookDirection.normalized.x, lookDirection.normalized.y, 0);
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
         bool elementalAttack = Input.GetMouseButton(0);
         bool basicAttack = Input.GetMouseButton(1);
@@ -37,7 +35,6 @@ public class PlayerShooting : MonoBehaviour
             {
                 playerProjectile.SetBasicAttack(true);
                 GameObject projectileClone = Instantiate(projectile);
-                //projectileClone.transform.position = firePoint.position + direction;
                 projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
                 projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
                 timeSinceLastShot = Time.realtimeSinceStartup;
@@ -47,7 +44,6 @@ public class PlayerShooting : MonoBehaviour
             else if (!elementalBars.IsHealthFinishedInElement(playerMode))
             {
                 GameObject projectileClone = Instantiate(projectile);
-                //projectileClone.transform.position = firePoint.position + direction;
                 projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
                 projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
                 timeSinceLastShot = Time.realtimeSinceStartup;

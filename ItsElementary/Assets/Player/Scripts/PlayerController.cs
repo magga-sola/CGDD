@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     public ElementalBars elementalBars;
     public PlayerShooting playerShootingController;
     public Animator animator;
-
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
@@ -37,7 +36,6 @@ public class PlayerController : MonoBehaviour
     {
         ProcessInput();
         CheckMode();
-        
     }
 
     void FixedUpdate()

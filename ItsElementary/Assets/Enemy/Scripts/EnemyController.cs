@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     public HealingOrb healingorbcontroller;
     public EnemyEnergyBar elementalBar;
     public Animator animator;
+    public GameObject explosion;
 
     void Start()
     {
@@ -76,6 +77,8 @@ public class EnemyController : MonoBehaviour
         else if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
             Debug.Log(projectileElement + " WEAK " + element);
             elementalBar.DecreaseByStrongOpponent();
+            GameObject explosionClone = Instantiate(explosion);
+            explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
         }
         
         else if (projectileElement == element){

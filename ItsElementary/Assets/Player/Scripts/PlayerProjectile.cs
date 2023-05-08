@@ -9,10 +9,11 @@ public class PlayerProjectile : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     public Sprite basicAttackSprite;
-
     void Start()
     {
         element = playerController.elementalMode;
+        Debug.Log(element);
+
         if (basicAttack)
         {
             spriteRenderer.sprite = basicAttackSprite;
@@ -28,7 +29,7 @@ public class PlayerProjectile : MonoBehaviour
         if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
         {
             Debug.Log(col.gameObject.name);
-            Destroy(gameObject);
+            Destroy(gameObject);      
         }
     }
 

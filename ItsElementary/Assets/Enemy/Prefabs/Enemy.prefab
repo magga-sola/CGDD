@@ -313,6 +313,7 @@ MonoBehaviour:
   healingorbcontroller: {fileID: 0}
   elementalBar: {fileID: 7606611334589113607}
   animator: {fileID: 1335788204}
+  explosion: {fileID: 6661927329507049182, guid: 86a62eea8b6f7704abea5aa897313238, type: 3}
 --- !u!95 &1335788204
 Animator:
   serializedVersion: 5

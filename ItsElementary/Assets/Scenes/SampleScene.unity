@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143499, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5064989006495143508, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -320,6 +324,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 328542179, guid: 3902492409c9b3c4a89c4c2a1a616822, type: 3}
+    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064989006495143511, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2031502527
+      objectReference: {fileID: 0}
     - target: {fileID: 6469663146078208998, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: healingOrb
       value: 

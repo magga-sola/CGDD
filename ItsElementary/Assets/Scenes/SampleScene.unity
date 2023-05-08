@@ -240,14 +240,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5064989004904756079, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5064989005212533436, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 5064989006495143496, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
       propertyPath: projectile
       value: 
@@ -396,10 +388,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6157575426671919729, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6157575426671919730, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
-      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}

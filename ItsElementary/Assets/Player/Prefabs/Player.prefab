@@ -295,7 +295,7 @@ MonoBehaviour:
   firePoint: {fileID: 5064989004904756073}
   elementalBars: {fileID: 0}
   playerShootingController: {fileID: 5064989006495143496}
-  animator: {fileID: 0}
+  animator: {fileID: 2028077173}
 --- !u!114 &5064989006495143496
 MonoBehaviour:
   m_ObjectHideFlags: 0

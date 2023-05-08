@@ -19268,6 +19268,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wall&FloorTiles_868
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 532
+        width: 91
+        height: 99
+      alignment: 9
+      pivot: {x: 0.5, y: 0.048082758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34309dde922ea4be6b47f8b9be9e2b84
+      internalID: 103367979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -20133,6 +20154,7 @@ TextureImporter:
       Wall&FloorTiles_865: -2096016719
       Wall&FloorTiles_866: 1846057060
       Wall&FloorTiles_867: -165450883
+      Wall&FloorTiles_868: 103367979
       Wall&FloorTiles_87: 1842035154
       Wall&FloorTiles_88: 593552459
       Wall&FloorTiles_89: 1315884300

@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 4239911944421519891}
   - component: {fileID: 4239911944421519888}
   - component: {fileID: 4239911944421519900}
+  - component: {fileID: 1335788204}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -297,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5064989006495143508, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+  player: {fileID: 0}
   moveSpeed: 1
   angle: 0
   distanceFromPlayer: 0
@@ -311,6 +312,28 @@ MonoBehaviour:
   healingOrb: {fileID: 0}
   healingorbcontroller: {fileID: 0}
   elementalBar: {fileID: 7606611334589113607}
+  animator: {fileID: 1335788204}
+--- !u!95 &1335788204
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239911944421519889}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560133afd582c804e834af2ac4e7c7a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7595507678002032909
 PrefabInstance:
   m_ObjectHideFlags: 0

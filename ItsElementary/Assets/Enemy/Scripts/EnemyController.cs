@@ -15,14 +15,16 @@ public class EnemyController : MonoBehaviour
     public Sprite[] spriteArray;
     public GameObject healingOrb;
     public HealingOrb healingorbcontroller;
-
     public EnemyEnergyBar elementalBar;
+    public Animator animator;
 
     void Start()
     {
         element = (GameManager.Element)Random.Range(0,3);
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
+        animator.SetInteger("Element",(int)element);
+
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -104,9 +106,18 @@ public class EnemyController : MonoBehaviour
     void MoveCharacter(){
         if (distanceFromPlayer <= 10){
             FlipSprite();
-            if (distanceFromPlayer > 4){
+            if (distanceFromPlayer > 4){   
+                animator.SetBool("Walking",true);
                 rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
             }
+            else
+            {
+                animator.SetBool("Walking",false);
+            }
+        }
+        else
+        {
+                animator.SetBool("Walking",false);
         }
     }    
 }

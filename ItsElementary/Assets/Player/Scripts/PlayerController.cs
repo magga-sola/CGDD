@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
         if (moveX !=0 || moveY !=0)
         {
-            Debug.Log("MOVING");
             animator.SetBool("Moving", true);
         }
         else

@@ -157,6 +157,10 @@ public class PlayerController : MonoBehaviour
         // Left
         else
         {
+            if (GetComponent<SpriteRenderer>().flipX)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
             animator.SetInteger("Direction",2);
         }

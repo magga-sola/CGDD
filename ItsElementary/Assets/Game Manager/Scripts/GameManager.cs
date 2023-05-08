@@ -11,9 +11,10 @@ public class GameManager : MonoBehaviour
         Water = 2
     }
 
-    PlayerController player;
+    public PlayerController player;
+
     public bool gameOver;
-    public int level = 1;
+    public int level = 0;
 
     void Awake()
     {
@@ -47,14 +48,27 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 SceneManager.LoadScene("SampleScene");
+
             }
         }
     }
+
+    public void GoToNextLevel()
+    {
+        level++;
+        if(level == 1)
+        {
+            SceneManager.LoadScene("RoomsScene");
+            player.transform.position = new Vector3((float)-30.7800007, (float)43.3499985, 0);
+        }
+        if(level == 2)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+    }
+
     public void GameOver(){
         gameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
-
 }

@@ -5,6 +5,7 @@ using static GameManager;
 
 public class EnergyBar : MonoBehaviour
 {
+    public static PlayerController instance;
     public Color disabledColor;
     public Color enabledColor;
 

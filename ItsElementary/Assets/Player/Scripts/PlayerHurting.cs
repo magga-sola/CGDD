@@ -12,7 +12,11 @@ public class PlayerHurting : MonoBehaviour
 
     private GameManager.Element playerElement;
     private EnergyBar healthbar;
+    void Start()
+    {
+        player = GameManager.instance.player;
 
+    }
     void Update()
     {
         
@@ -27,15 +31,12 @@ public class PlayerHurting : MonoBehaviour
         playerElement = player.elementalMode; 
         healthbar = elementalBars.GetBarByElement(playerElement);
 
-        Debug.Log("projectile element" + projectileElement);
-        Debug.Log("player element" + playerElement);
         
         if (healthbar) 
         {
             if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == playerElement)
             {
                 healthbar.DecreaseByStrongOpponent();
-                //50
             }
             else if ((GameManager.Element)(mod(((int)projectileElement - 1),3)) == playerElement)
             {
@@ -44,7 +45,6 @@ public class PlayerHurting : MonoBehaviour
             else if (projectileElement == playerElement)
             {
                 healthbar.DecreaseBySameOpponent();
-                //34
             }
         }
         

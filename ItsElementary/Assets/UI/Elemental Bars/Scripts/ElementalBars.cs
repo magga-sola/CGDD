@@ -64,6 +64,13 @@ public class ElementalBars : MonoBehaviour
         }
     }
 
+    public void RestartHealth()
+    {
+        fireBar.Initialize(100, 50);
+        waterBar.Initialize(100, 50);
+        earthBar.Initialize(100, 50);
+    }
+
     int mod(int x, int p)
     {
         return (x%p + p)%p; 

@@ -9,14 +9,7 @@ public class ExitRoomScript : MonoBehaviour
     {
         if (col.gameObject.name == "Player")
         {
-            if (SceneManager.GetActiveScene().name == "SampleScene")
-            {
-                SceneManager.LoadScene("RoomsScene");
-            }
-            else
-            {
-                SceneManager.LoadScene("EndScreen");
-            }
+            GameManager.instance.GoToNextLevel();
         }
     }
 }

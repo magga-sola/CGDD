@@ -21,19 +21,20 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
+        player = GameManager.instance.player.transform;
         element = (GameManager.Element)Random.Range(0,3);
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
         animator.SetInteger("Element",(int)element);
 
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Projectile(Clone)")
         {
             GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
             TakeDamage(col.gameObject);
-            //Destroy(gameObject);
         }
     }
 
@@ -71,11 +72,9 @@ public class EnemyController : MonoBehaviour
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
         int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
         if (basicAttack || (GameManager.Element)(mod(((int)projectileElement - 1),3)) == element){
-            //Debug.Log("STRONG");
             elementalBar.DecreaseByWeakOpponent();
         }
         else if ((GameManager.Element)(mod(((int)projectileElement + 1),3)) == element){
-            //Debug.Log(projectileElement + " WEAK " + element);
             elementalBar.DecreaseByStrongOpponent();
             GameObject explosionClone = Instantiate(explosion);
             explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
@@ -84,12 +83,11 @@ public class EnemyController : MonoBehaviour
         else if (projectileElement == element){
 
             elementalBar.DecreaseBySameOpponent();
-            //Debug.Log("SAME");
         }
 
         if (elementalBar.IsHealthFinished())
         {
-            // health orbs
+            // Health orbs
             healingorbcontroller.enemyController = this;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;

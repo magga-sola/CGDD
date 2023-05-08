@@ -1,10 +1,9 @@
 using UnityEngine;
 public class PlayerController : MonoBehaviour
-{
-    //public bool gameOver;
-    public float moveSpeed;
+{   public float moveSpeed;
 
-    //public GameManager GM;
+    public static PlayerController instance;
+
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     private bool elementalAttack;
@@ -25,10 +24,26 @@ public class PlayerController : MonoBehaviour
     public ElementalBars elementalBars;
     public PlayerShooting playerShootingController;
     public Animator animator;
+    public PlayerHurting hurting;
+
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
         activeColorSpriteArray = playerRedSpriteArray;
+    }
+
+
+    void Awake()
+    {
+        if (instance is null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -45,7 +60,6 @@ public class PlayerController : MonoBehaviour
         PlayerDirection();
     }
 
-    // TODO: Nota acceleration
     void ProcessInput()
     {
         // Movement
@@ -92,7 +106,6 @@ public class PlayerController : MonoBehaviour
         elementalMode = mode;
         ChangeSprites();
         animator.SetInteger("Element", (int)mode);
-        //Debug.Log("set elemental mode: " + mode.ToString());
         elementalBars.SetElementalMode(mode);
     }
 
@@ -118,7 +131,6 @@ public class PlayerController : MonoBehaviour
     {
         if(elementalBars.IsHealthFinishedInElement(elementalMode))
         {
-            // The element that 
             GameManager.Element firstElement = (GameManager.Element) (mod((int) elementalMode + 1, 3));
             GameManager.Element secondElement = (GameManager.Element) (mod((int) elementalMode - 1, 3));
 
@@ -132,33 +144,38 @@ public class PlayerController : MonoBehaviour
             }
             else {
                 // PLAYER IS DEAD
+                PlayerDies();
                 GameManager.instance.GameOver();
             }
         }
     }
 
-    void PlayerDirection()
+    // TODO finish
+    void PlayerDies()
     {
-        //Debug.Log(playerShootingController.lookAngle);
-                
+        elementalBars.RestartHealth();
+    }
+
+    void PlayerDirection()
+    {                
         // Down
         if (playerShootingController.lookAngle >= -135 && playerShootingController.lookAngle < -45)
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[0];
-            animator.SetInteger("Direction",0);
+            animator.SetInteger("Direction", 0);
         }
         // Right
         else if (playerShootingController.lookAngle >= -45 && playerShootingController.lookAngle < 45)
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
             GetComponent<SpriteRenderer>().flipX = true;
-            animator.SetInteger("Direction",2);
+            animator.SetInteger("Direction", 2);
         }
         // Up
         else if (playerShootingController.lookAngle >= 45 && playerShootingController.lookAngle < 135)
         {
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[1];
-            animator.SetInteger("Direction",1);
+            animator.SetInteger("Direction", 1);
         }
         // Left
         else
@@ -168,14 +185,13 @@ public class PlayerController : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
             }
             GetComponent<SpriteRenderer>().sprite = activeColorSpriteArray[2];
-            animator.SetInteger("Direction",2);
+            animator.SetInteger("Direction", 2);
         }
     }
 
     void ChangeSprites()
     {
         firePoint.GetComponent<SpriteRenderer>().sprite = wandSpriteArray[(int)elementalMode];
-        //GetComponent<SpriteRenderer>().sprite = playerSpriteArray[(int)elementalMode];
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -183,17 +199,11 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name.Contains("Enemy Projectile"))
         {
             GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
-            //elementalBars.HitByElement(projectileElement);
-            //Destroy(gameObject);
         }
 
         if (col.gameObject.name.Contains("Healing Orb"))
         {
             GameManager.Element healingOrbElement = col.gameObject.GetComponent<HealingOrb>().element;
-
-            //elementalBars.HealedByElement(healingOrbElement);
-            
-            //random comment
         }
     }
 

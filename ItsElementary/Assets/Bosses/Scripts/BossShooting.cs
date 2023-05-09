@@ -39,7 +39,7 @@ public class BossShooting : MonoBehaviour
         }
         else if (attackMode == 1 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
         {
-            OmniDirectionalAttack();
+            FireRing();
         }
         else if(Time.realtimeSinceStartup - timeSinceLastAttack > 5){
             attackMode = Random.Range(0,2);
@@ -47,7 +47,7 @@ public class BossShooting : MonoBehaviour
         }
     }
     void FlameThrower(){
-        if (Time.realtimeSinceStartup-timeSinceLastShot > 0.1 && bossController.distanceFromPlayer <= 8){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 0.1){
             transform.rotation = Quaternion.Euler(0, 0, bossController.angle);
             projectilecontroller.bossController = bossController;
             GameObject projectileClone = Instantiate(projectile);
@@ -57,8 +57,8 @@ public class BossShooting : MonoBehaviour
         }
     }
 
-    void OmniDirectionalAttack(){
-        if (Time.realtimeSinceStartup-timeSinceLastShot > 2 && bossController.distanceFromPlayer <= 8){
+    void FireRing(){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 2){
             projectilecontroller.bossController = bossController;
             float dangle = 22.5f;
             for (int i = 0; i < 16; i++){

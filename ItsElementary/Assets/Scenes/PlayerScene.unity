@@ -721,14 +721,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 816673214322788, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 470706568}
-    - target: {fileID: 816673214322788, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
-      propertyPath: enemyController
-      value: 
-      objectReference: {fileID: 708027475}
+    - target: {fileID: 1365394569710669014, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365394569710669014, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3240343858922032350, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: player
       value: 
@@ -785,14 +785,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 313051221}
-    - target: {fileID: 6158387696666048772, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -12.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 6158387696666048772, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 17.04
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
 --- !u!1 &6157575425002346561 stripped

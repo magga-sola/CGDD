@@ -37,17 +37,17 @@ public class EnemyEnergyBar : MonoBehaviour
 
     public void DecreaseByWeakOpponent()
     {
-        slider.value -= 20;
+        slider.value -= 9;
     }
 
     public void DecreaseBySameOpponent()
     {
-        slider.value -= 34;
+        slider.value -= 17;
     }
 
     public void DecreaseByStrongOpponent()
     {
-        slider.value -= 50;
+        slider.value -= 34;
     }
 
     public bool IsHealthFinished()

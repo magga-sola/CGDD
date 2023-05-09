@@ -29,7 +29,7 @@ public class PlayerProjectile : MonoBehaviour
         if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
         {
             animator.SetBool("Hit",true);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
         }
     }
 
@@ -40,7 +40,6 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(animator.GetBool("Exploded"));
         if (animator.GetBool("Exploded"))
         {
             Destroy(gameObject);      

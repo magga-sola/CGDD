@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8581849176734979313}
   - component: {fileID: 8581849176734979318}
   - component: {fileID: 2480569023179814292}
+  - component: {fileID: 721925490}
   m_Layer: 0
   m_Name: Enemy Projectile
   m_TagString: Untagged
@@ -146,11 +147,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3380504554548a645b342cefa27e375b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyController: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
-  player: {fileID: -9203458737318075669, guid: 72bc30ae925d2ca488f0fd8c967dc6b8, type: 3}
+  enemyController: {fileID: 0}
+  player: {fileID: 0}
   element: 0
   spriteRenderer: {fileID: 8581849176734979319}
   spriteArray:
   - {fileID: 21300000, guid: efd5c9727b73dba4a8f44c13507b53c7, type: 3}
   - {fileID: 21300000, guid: 41ad6d83a5791a04184077f3705fe339, type: 3}
   - {fileID: 21300000, guid: ae92ecb32aaf0604a96100f3d46b9043, type: 3}
+  animator: {fileID: 721925490}
+--- !u!95 &721925490
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581849176734979317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9d5bd31febaadc48bd89ead48d8ec28, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

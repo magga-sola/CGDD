@@ -10,7 +10,7 @@ public class BossController : MonoBehaviour
     private Vector2 direction;
     public float angle;
     public float distanceFromPlayer;
-    public int health = 100;
+    public int health = 2000;
     public GameManager.Element element;
     public Rigidbody2D rb;
     public Sprite[] spriteArray;
@@ -27,7 +27,7 @@ public class BossController : MonoBehaviour
         //element = (GameManager.Element)Random.Range(0,3);
         element = GameManager.Element.Fire;
         //GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
-        //elementalBar.Initialize(element, health, health);
+        elementalBar.Initialize(element, health, health);
         //animator.SetInteger("Element", (int)element);
     }
 
@@ -36,7 +36,7 @@ public class BossController : MonoBehaviour
         if (col.gameObject.name == "Projectile(Clone)")
         {
             //GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
-            //TakeDamage(col.gameObject);
+            TakeDamage(col.gameObject);
         }
     }
 
@@ -68,7 +68,6 @@ public class BossController : MonoBehaviour
     {
         return (x%p + p)%p; 
     }
-    /*
     void TakeDamage(GameObject projectile)
     {
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
@@ -88,9 +87,12 @@ public class BossController : MonoBehaviour
 
             elementalBar.DecreaseBySameOpponent();
         }
+        if (elementalBar.IsHealthFinished())
+        {
+            Destroy(gameObject);
+        }
 
     }
-    */
     void CalculateMovement()
     {
         direction = player.position - transform.position;
@@ -100,20 +102,10 @@ public class BossController : MonoBehaviour
     }
 
     void MoveCharacter(){
-        if (distanceFromPlayer <= 10){
-            FlipSprite();
-            if (distanceFromPlayer > 4){   
+        if (distanceFromPlayer > 4){   
                 //animator.SetBool("Walking",true);
+                FlipSprite();
                 rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
-            }
-            else
-            {
-                //animator.SetBool("Walking",false);
-            }
-        }
-        else
-        {
-                //animator.SetBool("Walking",false);
         }
     }    
 }

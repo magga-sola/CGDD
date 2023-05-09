@@ -33,17 +33,24 @@ public class BossShooting : MonoBehaviour
 
     void ShootingMode()
     {
+        
         if (attackMode == 0 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
         {
+            bossController.moving = false;
             FlameThrower();
         }
         else if (attackMode == 1 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
         {
+            bossController.moving = false;
             FireRing();
         }
         else if(Time.realtimeSinceStartup - timeSinceLastAttack > 5){
             attackMode = Random.Range(0,2);
             timeSinceLastAttack = Time.realtimeSinceStartup;
+        }
+        else
+        {
+            bossController.moving = true;
         }
     }
     void FlameThrower(){

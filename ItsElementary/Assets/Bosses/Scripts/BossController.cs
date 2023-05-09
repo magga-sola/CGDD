@@ -17,9 +17,10 @@ public class BossController : MonoBehaviour
     public GameObject healingOrb;
     public HealingOrb healingorbcontroller;
     public EnemyEnergyBar elementalBar;
-    //public Animator animator;
+    public Animator animator;
     public GameObject explosion;
     public Explosion explosionController;
+    public bool moving;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class BossController : MonoBehaviour
         //GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
         //animator.SetInteger("Element", (int)element);
+        moving = true;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -102,10 +104,14 @@ public class BossController : MonoBehaviour
     }
 
     void MoveCharacter(){
-        if (distanceFromPlayer > 4){   
-                //animator.SetBool("Walking",true);
-                FlipSprite();
+        FlipSprite();
+        if (moving && distanceFromPlayer > 4){   
+                animator.SetBool("Walking",true);
                 rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
+        }
+        else
+        {
+            animator.SetBool("Walking",false);
         }
     }    
 }

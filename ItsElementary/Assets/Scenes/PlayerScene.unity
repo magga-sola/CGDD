@@ -197,6 +197,10 @@ PrefabInstance:
       propertyPath: enemyProjectile
       value: 
       objectReference: {fileID: 6157575425002346561}
+    - target: {fileID: 2880499799088634205, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 68.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5180300435004415834, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

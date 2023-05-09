@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             new Vector3((float)-30.7000008,(float)64.0999985,0), // 4
             new Vector3((float)-5.5, (float)-0.699999988, 0), // 5
             new Vector3((float)-0.439999998,(float)3.70000005,0), // 6
-            new Vector3((float) 0,(float) 0, 0), // 7
+            new Vector3((float)-13.6499996,(float)-4.30000019, 0), // 7
         };
     }
 

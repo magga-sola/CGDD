@@ -133,6 +133,11 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4239911944421519891, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
   m_PrefabInstance: {fileID: 516568168}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &214181352 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4885033327265773717, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+  m_PrefabInstance: {fileID: 2880499797977887050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &429314666 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4239911944421519891, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
@@ -17606,6 +17611,10 @@ PrefabInstance:
       propertyPath: enemyController
       value: 
       objectReference: {fileID: 1239743611}
+    - target: {fileID: 8254409238209153252, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 214181352}
     - target: {fileID: 8735036270898843757, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

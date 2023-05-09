@@ -9,10 +9,11 @@ public class PlayerProjectile : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     public Sprite basicAttackSprite;
+    public Animator animator;
     void Start()
     {
         element = playerController.elementalMode;
-
+        animator.SetInteger("Element",(int)element);
         if (basicAttack)
         {
             spriteRenderer.sprite = basicAttackSprite;
@@ -27,7 +28,8 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
         {
-            Destroy(gameObject);      
+            animator.SetBool("Hit",true);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);;
         }
     }
 
@@ -38,6 +40,10 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(animator.GetBool("Exploded"));
+        if (animator.GetBool("Exploded"))
+        {
+            Destroy(gameObject);      
+        }
     }
 }

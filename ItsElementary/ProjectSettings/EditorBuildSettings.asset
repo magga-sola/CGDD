@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game/3FireEarthRoom.unity
+    path: Assets/Scenes/Game/2FireEarthRoom.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Game/5EarthWaterRoom.unity
+    path: Assets/Scenes/Game/4EarthWaterRoom.unity
     guid: 77bb5a8cd90a04604a1da4b4d03de852
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 9f85932c2bbcd18498a49a11113f0823
   - enabled: 1
-    path: Assets/Scenes/Game/2FireRoomBoss.unity
+    path: Assets/Scenes/Game/1FireRoomBoss.unity
     guid: 2231a8c1524e40544a24bb473aa50351
   - enabled: 1
-    path: Assets/Scenes/Game/4FireEarthRoomBoss.unity
+    path: Assets/Scenes/Game/3FireEarthRoomBoss.unity
     guid: d17f14ad643210e408cec79009d0c2e6
   - enabled: 1
-    path: Assets/Scenes/Game/6EarthWaterRoomBoss.unity
+    path: Assets/Scenes/Game/5EarthWaterRoomBoss.unity
     guid: 5f1a46ac8090ccc4da3e348783ca9ee6
   - enabled: 1
-    path: Assets/Scenes/Game/7FinalRoom.unity
+    path: Assets/Scenes/Game/6FinalRoom.unity
     guid: 97e3b4579712b6d409f1506a3f423fc3
   - enabled: 1
-    path: Assets/Scenes/Game/8FinalRoomBoss.unity
+    path: Assets/Scenes/Game/7FinalRoomBoss.unity
     guid: f349a7e33c4967e438b90c336b50fd33
   m_configObjects: {}

@@ -38,23 +38,28 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         scenes = new List<string> ()
         {
-            "1FireRoom", // 0
-            "2FireRoomBoss", // 1
+            "0FireRoom", // 0
+            "1FireRoomBoss", // 1
 
-            "3FireEarthRoom", // 2
-            "4FireEarthRoomBoss", // 3
+            "2FireEarthRoom", // 2
+            "3FireEarthRoomBoss", // 3
 
-            "5EarthWaterRoom", // 4
-            "6EarthWaterRoomBoss", // 5
+            "4EarthWaterRoom", // 4
+            "5EarthWaterRoomBoss", // 5
 
-            "7FinalRoom", // 6
-            "8FinalRoomBoss" // 7
+            "6FinalRoom", // 6
+            "7FinalRoomBoss" // 7
         };
         positions = new List<Vector3>()
         {
-            new Vector3((float)13.1999998, (float)10.7299995, 0),
-            new Vector3((float)-5.51999998,(float)-0.349999994,0),
-            new Vector3((float)-13.4899998,(float) 63.1599998, 0),
+            new Vector3((float)13.1999998, (float)10.7299995, 0), // 0
+            new Vector3((float)-5.51999998,(float)-0.349999994, 0), // 1
+            new Vector3((float)-13.4899998,(float) 63.1599998, 0), // 2
+            new Vector3((float)-5.63847637,(float)-0.879456997,0), // 3
+            new Vector3((float)-30.7000008,(float)64.0999985,0), // 4
+            new Vector3((float)-5.5, (float)-0.699999988, 0), // 5
+            new Vector3((float)-0.439999998,(float)3.70000005,0), // 6
+            new Vector3((float) 0,(float) 0, 0), // 7
         };
     }
 
@@ -84,15 +89,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("positions:" + positions[level]);
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
-        /*
-        if (level == 2)
-        {
-            StartLevel2();
-        }
-        if(level == 3)
-        {
-            SceneManager.LoadScene("EndScreen");
-        }*/
     }
 
     public void PlayerDied(){
@@ -104,15 +100,6 @@ public class GameManager : MonoBehaviour
         }
 
         StartLevel(level);
-        /*
-        if (level == 1)
-        {
-            StartLevel1();
-        }
-        if (level == 2)
-        {
-            StartLevel2();
-        }*/
     }
 
     public void StartLevel(int level)
@@ -120,10 +107,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
     }
-    /*
-    public void StartLevel2()
-    {
-        SceneManager.LoadScene(scenes[2]);
-        player.transform.position = positions[2];
-    }*/
 }

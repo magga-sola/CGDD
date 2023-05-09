@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOver = false;
-        player.transform.position = new Vector3((float)-7.0999999, (float)-0.5, 0);
+        //player.transform.position = new Vector3((float)-7.0999999, (float)-0.5, 0);
         scenes = new List<string> ()
         {
             "0FireRoom", // 0

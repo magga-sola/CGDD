@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossContoller : MonoBehaviour
+public class BossController : MonoBehaviour
 {
     public Transform player;
     public float moveSpeed = 5f;
@@ -24,9 +24,10 @@ public class BossContoller : MonoBehaviour
     void Start()
     {
         player = GameManager.instance.player.transform;
-        element = (GameManager.Element)Random.Range(0,3);
-        GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
-        elementalBar.Initialize(element, health, health);
+        //element = (GameManager.Element)Random.Range(0,3);
+        element = GameManager.Element.Fire;
+        //GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
+        //elementalBar.Initialize(element, health, health);
         //animator.SetInteger("Element", (int)element);
     }
 
@@ -35,7 +36,7 @@ public class BossContoller : MonoBehaviour
         if (col.gameObject.name == "Projectile(Clone)")
         {
             //GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
-            TakeDamage(col.gameObject);
+            //TakeDamage(col.gameObject);
         }
     }
 
@@ -67,6 +68,7 @@ public class BossContoller : MonoBehaviour
     {
         return (x%p + p)%p; 
     }
+    /*
     void TakeDamage(GameObject projectile)
     {
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
@@ -88,7 +90,7 @@ public class BossContoller : MonoBehaviour
         }
 
     }
-
+    */
     void CalculateMovement()
     {
         direction = player.position - transform.position;

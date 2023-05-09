@@ -49,13 +49,13 @@ public class PlayerController : MonoBehaviour
     {
         ProcessInput();
         CheckMode();
+        PlayerDirection();
     }
 
     void FixedUpdate()
     {
         SetCameraTarget();
         Move();
-        PlayerDirection();
     }
 
     void ProcessInput()

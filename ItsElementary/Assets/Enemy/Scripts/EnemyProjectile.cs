@@ -8,11 +8,13 @@ public class EnemyProjectile : MonoBehaviour
     public GameManager.Element element;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
+    public Animator animator;
 
     void Start()
     {
         player = GameManager.instance.player;
         element = enemyController.element;
+        animator.SetInteger("Element",(int)element);
         spriteRenderer.sprite = spriteArray[(int)element];
     }
 
@@ -25,13 +27,17 @@ public class EnemyProjectile : MonoBehaviour
                 player.hurting.HitByEnemyProjectile(element);
             }
             
-            Destroy(gameObject);
+            animator.SetBool("Hit",true);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (animator.GetBool("Exploded"))
+        {
+            Destroy(gameObject);      
+        }
     }
 
 }

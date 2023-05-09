@@ -11,13 +11,14 @@ public class BossShooting : MonoBehaviour
     public GameObject projectile;
     public float projectileSpeed = 10;
     private int attackMode;
+    private bool attacking;
 
     // Start is called before the first frame update
     void Start()
     {
         timeSinceLastShot = Time.realtimeSinceStartup;
         timeSinceLastAttack = Time.realtimeSinceStartup;
-        attackMode = 1;
+        attackMode = 0;
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class BossShooting : MonoBehaviour
         {
             bossController.moving = false;
             FireRing();
+            
         }
         else if(Time.realtimeSinceStartup - timeSinceLastAttack > 5){
             attackMode = Random.Range(0,2);
@@ -76,6 +78,7 @@ public class BossShooting : MonoBehaviour
             }
             
             timeSinceLastShot = Time.realtimeSinceStartup;
+            
         }
     }
 }

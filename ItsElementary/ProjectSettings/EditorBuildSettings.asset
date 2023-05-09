@@ -5,8 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Game/2FireEarthRoom.unity
+  - enabled: 0
+    path: Assets/Scenes/Game/2FireEarthRoomOld.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Game/4EarthWaterRoom.unity
@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/7FinalRoomBoss.unity
     guid: f349a7e33c4967e438b90c336b50fd33
+  - enabled: 1
+    path: Assets/Scenes/Game/2FireEarthRoom.unity
+    guid: b7541ee3e109dc248b96675b9b926bf8
   m_configObjects: {}

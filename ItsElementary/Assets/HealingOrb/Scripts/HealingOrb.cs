@@ -12,7 +12,8 @@ public class HealingOrb : MonoBehaviour
     void Start()
     {
         element = enemyController.element;
-        animator.SetInteger("Mode 0", (int)element);
+        Debug.Log(element);
+        animator.SetInteger("Element",(int)element);
         spriteRenderer.sprite = spriteArray[(int)element];
         healing = GameManager.instance.player.GetComponent<PlayerHealing>();    
     }

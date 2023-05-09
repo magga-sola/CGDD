@@ -98,7 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d0e7cfcad506444a3df4ace208a8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.8196079, g: 0.1764706, b: 0.15686275, a: 1}
+  - {r: 0.3529412, g: 0.69803923, b: 0.16078432, a: 1}
+  - {r: 0.16078432, g: 0.4431373, b: 0.79215693, a: 1}
   animator: {fileID: 6661927329507049177}
+  element: 2
 --- !u!95 &6661927329507049177
 Animator:
   serializedVersion: 5

@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     public EnemyEnergyBar elementalBar;
     public Animator animator;
     public GameObject explosion;
+    public Explosion explosionController;
 
     void Start()
     {
@@ -75,6 +76,7 @@ public class EnemyController : MonoBehaviour
         }
         else if ((GameManager.Element)Mod((int)projectileElement + 1,3) == element){
             elementalBar.DecreaseByStrongOpponent();
+            explosionController.element = projectileElement;
             GameObject explosionClone = Instantiate(explosion);
             explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
         }

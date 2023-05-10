@@ -12,6 +12,7 @@ public class BossShooting : MonoBehaviour
     public float projectileSpeed = 10;
     private int attackMode;
     private bool attacking;
+    private float offset;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,21 @@ public class BossShooting : MonoBehaviour
 
     void FixedUpdate()
     {
-        ShootingMode();
+        if (bossController.element == GameManager.Element.Fire)
+        {
+            FireShootingMode();
+        }
+        else if (bossController.element == GameManager.Element.Earth)
+        {
+            EarthShootingMode();
+        }
+        if (bossController.element == GameManager.Element.Water)
+        {
+            WaterShootingMode();
+        }
     }
 
-    void ShootingMode()
+    void FireShootingMode()
     {
         
         if (attackMode == 0 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
@@ -55,13 +67,55 @@ public class BossShooting : MonoBehaviour
             bossController.moving = true;
         }
     }
+
+    void EarthShootingMode()
+    {
+        if (attackMode == 0 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
+        {
+            bossController.moving = false;
+            FlameThrower();
+        }
+        else if (attackMode == 1 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
+        {
+            bossController.moving = false;
+            EarthRing();
+            
+        }
+        else if(Time.realtimeSinceStartup - timeSinceLastAttack > 5){
+            attackMode = Random.Range(0,2);
+            timeSinceLastAttack = Time.realtimeSinceStartup;
+        }
+        else
+        {
+            bossController.moving = true;
+        }
+    }
+
+    void WaterShootingMode()
+    {
+        if (attackMode == 0 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
+        {
+            bossController.moving = false;
+            WaveAttack();
+        }
+        else if (attackMode == 1 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
+        {
+            bossController.moving = false;
+            WaterRing();
+            
+        }
+        else if(Time.realtimeSinceStartup - timeSinceLastAttack > 5){
+            attackMode = Random.Range(0,2);
+            timeSinceLastAttack = Time.realtimeSinceStartup;
+        }
+        else
+        {
+            bossController.moving = true;
+        }
+    }
     void FlameThrower(){
         if (Time.realtimeSinceStartup-timeSinceLastShot > 0.1){
-            transform.rotation = Quaternion.Euler(0, 0, bossController.angle);
-            projectilecontroller.bossController = bossController;
-            GameObject projectileClone = Instantiate(projectile);
-            projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, bossController.angle));
-            projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+            ShootProjectile(bossController.angle);
             timeSinceLastShot = Time.realtimeSinceStartup;
         }
     }
@@ -71,14 +125,55 @@ public class BossShooting : MonoBehaviour
             projectilecontroller.bossController = bossController;
             float dangle = 22.5f;
             for (int i = 0; i < 16; i++){
-                transform.rotation = Quaternion.Euler(0, 0, dangle*i);
-                GameObject projectileClone = Instantiate(projectile);
-                projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, dangle*i));
-                projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed;
+                ShootProjectile(dangle*i);
             }
             
             timeSinceLastShot = Time.realtimeSinceStartup;
             
         }
     }
+
+    void EarthRing(){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 1){
+            projectilecontroller.bossController = bossController;
+            float dangle = 45f;
+            for (int i = 0; i < 16; i++){
+                ShootProjectile(dangle*i+offset);
+            }
+            offset += 22.5f;
+            timeSinceLastShot = Time.realtimeSinceStartup;
+            
+        }
+    }
+
+    void WaveAttack(){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 0.8){
+            projectilecontroller.bossController = bossController;
+            float dangle = 5f;
+            for (int i = -2; i < 3; i++){
+                ShootProjectile(bossController.angle+dangle*i,0.8f);
+            }
+            timeSinceLastShot = Time.realtimeSinceStartup;
+        }
+    }
+    void WaterRing(){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 4){
+            projectilecontroller.bossController = bossController;
+            float dangle = 14.4f;
+            for (int i = 0; i < 25; i++){
+                ShootProjectile(dangle*i,0.5f);
+            }
+            offset += 22.5f;
+            timeSinceLastShot = Time.realtimeSinceStartup;
+            
+        }
+    }
+
+    void ShootProjectile(float angle, float speedMult = 1f){
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+        GameObject projectileClone = Instantiate(projectile);
+        projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle));
+        projectileClone.GetComponent<Rigidbody2D>().velocity = transform.right * (projectileSpeed*speedMult);
+    }
+
 }

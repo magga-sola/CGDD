@@ -19,11 +19,12 @@ public class EnemyController : MonoBehaviour
     public Animator animator;
     public GameObject explosion;
     public Explosion explosionController;
+    public int[] weights = {33,33,33};
 
     void Start()
     {
         player = GameManager.instance.player.transform;
-        element = (GameManager.Element)Random.Range(0,3);
+        element = (GameManager.Element)RandomElement();
         GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
         animator.SetInteger("Element", (int)element);
@@ -121,5 +122,25 @@ public class EnemyController : MonoBehaviour
         {
                 animator.SetBool("Walking",false);
         }
-    }    
+    }
+
+    int RandomElement()
+    {
+        int randomCeiling = 0;
+        int currentNum = 0;
+        foreach(int num in weights)
+        {
+            randomCeiling += num;
+        }
+        int randomNumber = Random.Range(0,randomCeiling+1);
+        Debug.Log(randomNumber);
+        for (int i = 0; i < weights.Length; i++)
+        {
+            if (currentNum + weights[i] >= randomNumber){
+                return i;
+            }
+            currentNum += weights[i];
+        }
+        return 0;
+    }
 }

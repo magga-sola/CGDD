@@ -26,10 +26,9 @@ public class BossController : MonoBehaviour
     {
         player = GameManager.instance.player.transform;
         //element = (GameManager.Element)Random.Range(0,3);
-        element = GameManager.Element.Fire;
+        animator.SetInteger("Element", (int)element);
         //GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
-        //animator.SetInteger("Element", (int)element);
         moving = true;
     }
 

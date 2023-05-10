@@ -269,6 +269,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5312385882315743124}
     - target: {fileID: 7040221212854193505, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040221212854193505, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -370,8 +374,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7040221212854193532, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
   m_PrefabInstance: {fileID: 4001494194339809112}
   m_PrefabAsset: {fileID: 0}
---- !u!60 &1040167254
-PolygonCollider2D:
+--- !u!61 &3621213505499397184
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -383,7 +387,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -393,12 +397,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.31699538, y: -0.10007584}
-      - {x: -0.31455994, y: -0.18799019}
-      - {x: 0.31323528, y: -0.19063938}
-      - {x: 0.31284094, y: -0.10314548}
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!4 &6213782352564423206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7040221212854193534, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}

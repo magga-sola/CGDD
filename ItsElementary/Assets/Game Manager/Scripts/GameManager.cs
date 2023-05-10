@@ -94,11 +94,11 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDied(){
         gameOver = false;
-
+        /*
         if(level % 2 != 0)
         {
             level--;
-        }
+        }*/
 
         StartLevel(level);
     }

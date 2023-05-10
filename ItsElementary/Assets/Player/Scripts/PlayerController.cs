@@ -243,10 +243,8 @@ public class PlayerController : MonoBehaviour
     public void UnPause()
     {
         isPaused = false;
-        constraints = RigidbodyConstraints2D.None;
+        constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.constraints = constraints;
         playerShootingController.enabled = true;
-
-        
     }
 }

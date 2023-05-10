@@ -341,11 +341,38 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267310748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 401d2c7a65ae64bc38c042cbfce5cf6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2022887643}
+  nameText: {fileID: 435809142}
+  dialogueText: {fileID: 826155159}
+  isInDialogue: 0
+  finishedDialogue: 0
+--- !u!114 &267310756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267310748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25c80398810d420f94f8581ec05ecec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 826155159}
+  nameComponent: {fileID: 435809142}
+  lines:
+  - 'Oh, there''s my favorite student!  I knew you''d figure out where this blasted
+    chaos was coming from. '
+  - I suspect that the elemental beings everwhere have something to do with it.
+  - Do you see that fire dude? He's heading straight towards us!
+  - Move using the WASD keys and try shooting the elemental with your mouse.
+  name: The Wizard
+  textSpeed: 0.03
   player: {fileID: 2022887643}
 --- !u!1 &285348808 stripped
 GameObject:
@@ -1482,6 +1509,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &435809142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3546206407566625273, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 4001494194797047030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &482524363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1699,51 +1737,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.625}
   serializedVersion: 2
   m_Radius: 0.625
---- !u!1 &688610342
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 688610344}
-  - component: {fileID: 688610343}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &688610343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688610342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 401d2c7a65ae64bc38c042cbfce5cf6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
---- !u!4 &688610344
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688610342}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719717918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,6 +3894,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+--- !u!114 &826155159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6260180127993566729, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 4001494194797047030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853486943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6767995813211207294, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
@@ -4152,11 +4156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.84
+      value: 21.14
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.16
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15732,14 +15736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b377a40ed26214bf384e54342abe087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Wise Wizard
-    sentences:
-    - "Oh, there's my favorite student! \nI knew you'd figure out where this blasted
-      chaos was coming from. I suspect that the elemental beings everwhere have something
-      to do with it."
-    - Do you see that fire dude? He's heading straight towards us!
-    - Move using the WASD keys and try shooting the elemental with your mouse.
+  dialogueController: {fileID: 267310756}
 --- !u!1 &1554904678
 GameObject:
   m_ObjectHideFlags: 0
@@ -36996,7 +36993,7 @@ PrefabInstance:
     - target: {fileID: 634290273848007643, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 688610343}
+      objectReference: {fileID: 0}
     - target: {fileID: 634290273848007643, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
@@ -37036,6 +37033,30 @@ PrefabInstance:
     - target: {fileID: 1424725645978370314, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 49.550007
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654498734619431246, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23.699951
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654498734619431246, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802562004684139119, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802562004684139119, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 38.610016
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308469356158480243, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308469356158480243, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2330665587099829135, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_IsActive
@@ -37109,9 +37130,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4170228848353018510, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375005640083192382, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23.400024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375005640083192382, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30.720001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401761850605731022, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401761850605731022, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -99.143005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401761850605731022, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 93.265015
+      objectReference: {fileID: 0}
     - target: {fileID: 4652486279327007614, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680233600421170010, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23.700012
       objectReference: {fileID: 0}
     - target: {fileID: 5052362995545729099, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -37128,6 +37177,18 @@ PrefabInstance:
     - target: {fileID: 5670380414095431477, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114166665806522740, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114166665806522740, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -61.145264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114166665806522740, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 51.68811
       objectReference: {fileID: 0}
     - target: {fileID: 6213782352564423204, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_IsActive
@@ -37164,6 +37225,10 @@ PrefabInstance:
     - target: {fileID: 6627709335014489767, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 63.23001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256066989759851233, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_Name
+      value: dialogue
       objectReference: {fileID: 0}
     - target: {fileID: 7616859164313356319, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchorMax.x

@@ -1,22 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
     public PlayerController player;
+    //public Text nameText;
+    //public Text dialogueText;
+    public TMPro.TextMeshProUGUI nameText;
+    public TMPro.TextMeshProUGUI dialogueText;
+
+    public bool isInDialogue;
+    public bool finishedDialogue;
     
     
+    void Start()
+    {
+        //gameObject.SetActive(false);
+        sentences = new Queue<string>();
+        //player = GameManager.instance.player.transform;
+        //nameText = 
+        //dialogueText.text = string.Empty;
+    }
+
+        void Update()
+    {
+        ProcessInput();
+        gameObject.SetActive(isInDialogue);
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with: " + dialogue.name);
-        sentences.Clear();
+        nameText.text = dialogue.name;
+        isInDialogue = true;
+        gameObject.SetActive(true);
         GameManager.instance.player.Pause();
 
-        foreach (string sentence in dialogue.sentences)
+        if(!finishedDialogue)
         {
-            sentences.Enqueue(sentence);
+            foreach (string sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
         }
 
         DisplayNextSentence();
@@ -25,25 +52,38 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0){
+        if(sentences.Count > 1){
+            string sentence = sentences.Dequeue();
+            dialogueText.text = sentence;
+
+        } else 
+        {
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+
     }
 
     void EndDialogue()
     {
+        isInDialogue = false;
+        finishedDialogue = true;
         Debug.Log("end of conversation");
         GameManager.instance.player.UnPause();
+        //gameObject.SetActive(false);
         //UnpausePlayer();
     }
 
-    void Start()
+    void ProcessInput()
     {
-        sentences = new Queue<string>();
+        bool click = Input.GetMouseButtonDown(0);
+        if(click && isInDialogue)
+        {
+            DisplayNextSentence();
+        }
     }
+
+
 
     // Update is called once per frame
 

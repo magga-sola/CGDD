@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Wizard : MonoBehaviour
 {
-    public Dialogue dialogue;
+    //public DialogueManager dialogueManager;
+    //public Dialogue dialogue;
+    public DialogueController dialogueController;
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Contains("Player"))
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            dialogueController.StartDialogue();
         }
     }
 

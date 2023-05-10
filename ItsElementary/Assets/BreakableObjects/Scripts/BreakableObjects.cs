@@ -17,12 +17,11 @@ public class BreakableObjects : MonoBehaviour
     public Sprite[] elementArray;
     public SpriteRenderer spriteRenderer;
     public Sprite[] brokenArray;
-    public GameManager.Element element;
+    public GameManager.Element breakableElement;
     public bool isBroken;
     public HealingOrb healingorbcontroller;
     public GameObject healingOrb;
 
-    public EnemyController enemyController;
 
 
 
@@ -30,7 +29,7 @@ public class BreakableObjects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer.sprite = elementArray[(5*(int)element) + (int)size];
+        spriteRenderer.sprite = elementArray[(5*(int)breakableElement) + (int)size];
 
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -38,11 +37,9 @@ public class BreakableObjects : MonoBehaviour
         if (col.gameObject.name.Contains("Projectile") && !isBroken)
         {
             isBroken = true;
-            spriteRenderer.sprite = brokenArray[(5*(int)element) + (int)size];
-            //drop health orb of elemental type
-            enemyController.element = element;
+            spriteRenderer.sprite = brokenArray[(5*(int)breakableElement) + (int)size];
 
-            healingorbcontroller.element = element;
+            healingorbcontroller.element = breakableElement;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;
 

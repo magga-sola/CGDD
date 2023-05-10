@@ -90,7 +90,8 @@ public class EnemyController : MonoBehaviour
         if (elementalBar.IsHealthFinished())
         {
             // Health orbs
-            healingorbcontroller.enemyController = this;
+            //healingorbcontroller.enemyController = this;
+            healingorbcontroller.element = element;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;
 

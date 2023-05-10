@@ -123,6 +123,115 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &108288677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2261778234324350908, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274377, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_Name
+      value: Healing Orb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274378, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.889999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4355282
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 9093131674213112012, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: healing
+      value: 
+      objectReference: {fileID: 2022887642}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 883903219}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: spriteArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 26429564, guid: e732842cad3204b769a160a0164dec61, type: 3}
+    - target: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+      propertyPath: spriteArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 2087453550, guid: c4570eb48887c4878820bf99a675e7f9, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+--- !u!1 &108288678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6254495093578274377, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+  m_PrefabInstance: {fileID: 108288677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &108288679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6254495093578274381, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
+  m_PrefabInstance: {fileID: 108288677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108288678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb311783403f8454bbc8c7254ca1420c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &189466575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,11 +242,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -157,11 +266,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -220,6 +329,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+--- !u!1 &285348808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8581849176734979317, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+  m_PrefabInstance: {fileID: 971215917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &285348810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+  m_PrefabInstance: {fileID: 971215917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285348808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3380504554548a645b342cefa27e375b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &398170196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,11 +355,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -254,11 +379,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -3234,11 +3359,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3258,11 +3383,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -3352,11 +3477,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3376,11 +3501,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -3439,6 +3564,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+--- !u!114 &883903219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 963516022063510594, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 4001494194797047030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803dc06cd1403d44b82546f50a685c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &971215917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2022887643}
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 883903219}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.227538
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.95254517
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4355282
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581849176734979317, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: m_Name
+      value: Enemy Projectile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04641bc6447b27646ba4672d10700623, type: 3}
 --- !u!1001 &1000781688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3449,11 +3650,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3473,11 +3674,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -3546,11 +3747,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3570,11 +3771,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -14621,11 +14822,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -14645,11 +14846,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -14755,11 +14956,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -14779,11 +14980,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -14852,11 +15053,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -14876,11 +15077,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -33899,22 +34100,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
---- !u!1 &1798593917 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5097459792624150813, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-  m_PrefabInstance: {fileID: 4001494194797047030}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1798593918 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5097459792624150809, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-  m_PrefabInstance: {fileID: 4001494194797047030}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798593917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb311783403f8454bbc8c7254ca1420c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1832923101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33925,11 +34110,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -33949,11 +34134,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -34022,11 +34207,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -34046,11 +34231,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -35948,6 +36133,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6213782352564423206, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
   m_PrefabInstance: {fileID: 4001494194797047030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2022887642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5312385882315743124, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 4001494194797047030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204dbf948c3f942d38c49c056e5ebf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2022887643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 4001494194797047030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e84e30484bdea489e8dc717ee3a032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2049793484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35958,11 +36165,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -35982,11 +36189,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -36055,11 +36262,11 @@ PrefabInstance:
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 1282873514}
+      objectReference: {fileID: 285348808}
     - target: {fileID: 69558158, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: projectilecontroller
       value: 
-      objectReference: {fileID: 1282873517}
+      objectReference: {fileID: 285348810}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -36079,11 +36286,11 @@ PrefabInstance:
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
-      objectReference: {fileID: 1798593917}
+      objectReference: {fileID: 108288678}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingorbcontroller
       value: 
-      objectReference: {fileID: 1798593918}
+      objectReference: {fileID: 108288679}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: weights.Array.data[0]
       value: 100
@@ -36220,6 +36427,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 963516022063510595, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 963516022063510595, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.55
+      objectReference: {fileID: 0}
     - target: {fileID: 2820867167189962494, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -47,7 +47,7 @@ MonoBehaviour:
   enemyController: {fileID: 4239911944421519900}
   projectilecontroller: {fileID: 0}
   projectile: {fileID: 0}
-  projectileSpeed: 5
+  projectileSpeed: 6
 --- !u!1 &1018748839750103355
 GameObject:
   m_ObjectHideFlags: 0

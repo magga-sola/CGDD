@@ -34,7 +34,7 @@ public class BreakableObjects : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Contains("Projectile") && !isBroken)
+        if (col.gameObject.name == "Projectile(Clone)" && !isBroken)
         {
             isBroken = true;
             spriteRenderer.sprite = brokenArray[(5*(int)breakableElement) + (int)size];

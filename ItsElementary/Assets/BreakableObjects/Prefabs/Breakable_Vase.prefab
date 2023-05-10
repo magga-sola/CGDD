@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6767995813211207267}
   - component: {fileID: 6767995813211207264}
   - component: {fileID: 6767995813211207265}
+  - component: {fileID: 5688331875674525667}
   m_Layer: 0
   m_Name: Breakable_Vase
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2031502527
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -402643099, guid: ff240fc3bb42c4708b96b3b30a0501f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &6767995813211207265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +132,37 @@ MonoBehaviour:
   - {fileID: 1664689455, guid: f276b77fb61d44699bbfa5287e06bbff, type: 3}
   - {fileID: 1943301856, guid: f276b77fb61d44699bbfa5287e06bbff, type: 3}
   - {fileID: -623332249, guid: f276b77fb61d44699bbfa5287e06bbff, type: 3}
-  element: 0
+  breakableElement: 0
   isBroken: 0
   healingorbcontroller: {fileID: 0}
   healingOrb: {fileID: 0}
+--- !u!60 &5688331875674525667
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767995813211207294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1.25}
+    newSize: {x: 1, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.25, y: 0}
+      - {x: 0.4375, y: 0.3125}
+      - {x: 0, y: 0.4375}
+      - {x: -0.4375, y: 0.25}
+      - {x: -0.25, y: 0}

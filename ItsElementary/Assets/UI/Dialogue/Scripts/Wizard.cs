@@ -5,12 +5,12 @@ using UnityEngine;
 public class Wizard : MonoBehaviour
 {
     public Dialogue dialogue;
-    
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Contains("Player"))
         {
-            
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         }
     }
 
@@ -22,6 +22,7 @@ public class Wizard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //ProcessInput();
     }
+
 }

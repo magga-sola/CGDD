@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     public Rigidbody2D rb;
+    public RigidbodyConstraints2D constraints;
     private Vector2 moveDirection;
     public GameManager.Element elementalMode = GameManager.Element.Fire;
     public Camera cam;
@@ -24,11 +25,13 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public PlayerHurting hurting;
     public PlayerHealing healing;
+    public bool isPaused;
 
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
         activeColorSpriteArray = playerRedSpriteArray;
+        isPaused = false;
     }
 
     void Awake()
@@ -47,9 +50,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isPaused)
+        {
         ProcessInput();
         CheckMode();
         PlayerDirection();
+        }
     }
 
     void FixedUpdate()
@@ -216,5 +222,31 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
         cam.transform.position = target;
+    }
+
+    public void Pause()
+    {
+        // freeze player position
+        constraints = RigidbodyConstraints2D.FreezePosition;
+        rb.constraints = constraints;
+
+        // set player looking straight forward and disable animation
+        animator.SetBool("Moving", false);
+        animator.SetInteger("Direction", 0);
+
+        // disable shooting
+        playerShootingController.enabled = false;
+        isPaused = true;
+
+    }
+
+    public void UnPause()
+    {
+        isPaused = false;
+        constraints = RigidbodyConstraints2D.None;
+        rb.constraints = constraints;
+        playerShootingController.enabled = true;
+
+        
     }
 }

@@ -134,7 +134,7 @@ public class EnemyController : MonoBehaviour
             randomCeiling += num;
         }
         int randomNumber = Random.Range(0,randomCeiling+1);
-        Debug.Log(randomNumber);
+        //Debug.Log(randomNumber);
         for (int i = 0; i < weights.Length; i++)
         {
             if (currentNum + weights[i] >= randomNumber){

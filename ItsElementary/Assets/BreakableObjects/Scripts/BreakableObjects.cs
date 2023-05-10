@@ -22,6 +22,8 @@ public class BreakableObjects : MonoBehaviour
     public HealingOrb healingorbcontroller;
     public GameObject healingOrb;
 
+    public EnemyController enemyController;
+
 
 
 
@@ -33,14 +35,16 @@ public class BreakableObjects : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Contains("Projectile"))
+        if (col.gameObject.name.Contains("Projectile") && !isBroken)
         {
             isBroken = true;
             spriteRenderer.sprite = brokenArray[(5*(int)element) + (int)size];
             //drop health orb of elemental type
-            //healingorbcontroller.element = element;
-            //GameObject healingOrbClone = Instantiate(healingOrb);
-            //healingOrbClone.transform.position = transform.position;
+            enemyController.element = element;
+
+            healingorbcontroller.element = element;
+            GameObject healingOrbClone = Instantiate(healingOrb);
+            healingOrbClone.transform.position = transform.position;
 
         }
     }

@@ -13,13 +13,14 @@ public class PlayerProjectile : MonoBehaviour
     void Start()
     {
         element = playerController.elementalMode;
-        animator.SetInteger("Element",(int)element);
         if (basicAttack)
         {
+            animator.SetInteger("Element",3);
             spriteRenderer.sprite = basicAttackSprite;
         }
         else
         {
+            animator.SetInteger("Element",(int)element);
             spriteRenderer.sprite = spriteArray[(int)element];
         }
     }

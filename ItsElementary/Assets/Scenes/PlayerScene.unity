@@ -1154,11 +1154,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1365394569710669014, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1365394569710669014, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3240343858922032350, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: player
@@ -1214,7 +1214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284782799004984942, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: player

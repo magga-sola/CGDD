@@ -209,10 +209,10 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Contains("Enemy Projectile"))
+        if (col.gameObject.name.Contains("Enemy Projectile") || col.gameObject.name.Contains("Boss Projectile"))
         {
             circleAnimator.SetBool("Hit",true);
-            GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
+            //GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
         }
 
         if (col.gameObject.name.Contains("Healing Orb"))

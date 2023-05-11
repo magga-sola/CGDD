@@ -20,6 +20,8 @@ public class EnemyController : MonoBehaviour
     public GameObject explosion;
     public Explosion explosionController;
     public int[] weights = {33,33,33};
+    private bool hit;
+    private float timeSincehit;
 
     void Start()
     {
@@ -49,6 +51,11 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         MoveCharacter();
+        if (hit && Time.realtimeSinceStartup - timeSincehit > 0.2)
+        {
+            hit = false;
+            gameObject.GetComponent<SpriteRenderer>().color = new Color (255,255,255);
+        }
     }
 
     void FlipSprite()
@@ -69,6 +76,9 @@ public class EnemyController : MonoBehaviour
     }
     void TakeDamage(GameObject projectile)
     {
+        hit = true;
+        timeSincehit = Time.realtimeSinceStartup;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color (255,0,0);
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
         //int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;

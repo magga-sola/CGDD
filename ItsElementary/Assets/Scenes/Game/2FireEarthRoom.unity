@@ -284,6 +284,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4375005640083192382, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 36.279785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375005640083192382, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18.247002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401761850605731022, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -86.902405
+      objectReference: {fileID: 0}
     - target: {fileID: 5298526028447833077, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 46.4
@@ -683,9 +695,17 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1526,9 +1546,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 239202660}
     m_Modifications:
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3209,20 +3237,28 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -7.65
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.79
+      value: 2.44
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3700,9 +3736,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 239202660}
     m_Modifications:
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3867,9 +3911,17 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -40052,9 +40104,17 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -40122,9 +40182,17 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -40285,9 +40353,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 239202660}
     m_Modifications:
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -40360,9 +40436,17 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingOrb
+      value: 
+      objectReference: {fileID: 441014955}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: breakableElement
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6767995813211207265, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
+      propertyPath: healingorbcontroller
+      value: 
+      objectReference: {fileID: 441014956}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_RootOrder
       value: 1

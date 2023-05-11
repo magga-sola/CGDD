@@ -1,9 +1,9 @@
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {   public float moveSpeed;
-
+    /*
     public static PlayerController instance;
-
+    */
     public Rigidbody2D rb;
     public RigidbodyConstraints2D constraints;
     private Vector2 moveDirection;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         activeColorSpriteArray = playerRedSpriteArray;
         //isPaused = true;
     }
-
+    /*
     void Awake()
     {
         if (instance is null)
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 
     // Update is called once per frame
     void Update()

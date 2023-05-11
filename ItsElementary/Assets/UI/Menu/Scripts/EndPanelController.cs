@@ -22,12 +22,25 @@ public class EndPanelController : MonoBehaviour
     {
         endPanel.SetActive(true);
         gameOverScreen.SetActive(true);
+        gameWonScreen.SetActive(false);
+        PauseGame();
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1;
     }
 
     public void ShowGameWonScreen()
     {
         endPanel.SetActive(true);
         gameWonScreen.SetActive(true);
+        PauseGame();
     }
 
     // After game over
@@ -35,6 +48,7 @@ public class EndPanelController : MonoBehaviour
     {
         gameManager.StartGame();
         HideEndScreen();
+        UnPauseGame();
     }
 
     // After game over
@@ -42,6 +56,7 @@ public class EndPanelController : MonoBehaviour
     {
         gameManager.RestartLevel();
         HideEndScreen();
+        UnPauseGame();
     }
 
     // After game won
@@ -49,6 +64,7 @@ public class EndPanelController : MonoBehaviour
     {
         HideEndScreen();
         gameManager.PlayAgain();
+        UnPauseGame();
     }
 
     public void HideEndScreen()

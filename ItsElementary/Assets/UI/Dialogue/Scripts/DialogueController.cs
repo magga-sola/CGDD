@@ -8,7 +8,7 @@ public class DialogueController : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI nameComponent;
     public string[] lines;
-    public string name;
+    public string npcName;
     public float textSpeed;
     private int index;
     private bool isFinished;
@@ -28,7 +28,7 @@ public class DialogueController : MonoBehaviour
 
         if(!isFinished) 
         {
-            nameComponent.text = name;
+            nameComponent.text = npcName;
             index = 0;
             StartCoroutine(TypeLine());
         }

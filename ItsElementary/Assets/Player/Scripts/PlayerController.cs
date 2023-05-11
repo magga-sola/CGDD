@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public PlayerHurting hurting;
     public PlayerHealing healing;
-    public bool isPaused = true;
+    public bool isPaused;
     public GameObject Cirlce;
     public Sprite[] circleSprites;
     public Animator circleAnimator;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         elementalBars.SetElementalMode(elementalMode);
         activeColorSpriteArray = playerRedSpriteArray;
-        isPaused = true;
+        //isPaused = true;
     }
 
     void Awake()

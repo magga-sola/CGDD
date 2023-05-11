@@ -31,11 +31,11 @@ public class PlayerHurting : MonoBehaviour
 
         if (healthbar) 
         {
-            if ((GameManager.Element)(Mod(((int)projectileElement + 1),3)) == playerElement)
+            if ((GameManager.Element)Mod((int)projectileElement + 1,3) == playerElement)
             {
                 healthbar.DecreaseByStrongOpponent();
             }
-            else if ((GameManager.Element)(Mod(((int)projectileElement - 1),3)) == playerElement)
+            else if ((GameManager.Element)Mod((int)projectileElement - 1,3) == playerElement)
             {
                 healthbar.DecreaseByWeakOpponent();
             }

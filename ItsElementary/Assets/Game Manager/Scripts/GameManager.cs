@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int level = 0;
     private List<string> scenes;
     private List<Vector3> positions;
+    public bool startGame = true;
 
     public MenuController menu;
 
@@ -38,7 +39,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        menu.ShowStartScreen();
+        if(startGame)
+        {
+            menu.ShowStartScreen();
+        }
         gameOver = false;
         scenes = new List<string> ()
         {

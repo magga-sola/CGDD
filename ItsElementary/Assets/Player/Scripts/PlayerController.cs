@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayerDies()
     {
-        elementalBars.RestartHealth();
+        // Todo remove?
     }
 
     void PlayerDirection()

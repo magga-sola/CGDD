@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     private List<Vector3> positions;
     public bool startGame = true;
 
-    public MenuController menu;
-
+    public StartPanelController startPanel;
+    public EndPanelController endPanel;
 
     void Awake()
     {
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         if(startGame)
         {
-            menu.ShowStartScreen();
+            startPanel.ShowStartScreen();
         }
         gameOver = false;
         scenes = new List<string> ()
@@ -73,46 +73,58 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        level = 0;
         player.RestartPlayer();
+        player.isPaused = false;
+        StartLevel(level);
+        gameOver = false;
+    }
+
+    public void PlayAgain()
+    {
+        startPanel.ShowStartScreen();
+        level = 0;
+        player.RestartPlayer();
+        player.isPaused = false;
+        gameOver = false;
+        StartLevel(level);
+    }
+
+    public void RestartLevel()
+    {
+        player.RestartPlayer();
+        player.isPaused = false;
+        StartLevel(level);
+        gameOver = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Restart();
     }
-    /*
-    void Restart()
-    {
-        if (SceneManager.GetActiveScene().name == "EndScreen")
-        {
-            if (Input.GetKeyDown("space"))
-            {
-                SceneManager.LoadScene("SampleScene");
 
-            }
-        }
+    // TODO call function when player kills boss :)
+    public void GameWon()
+    {
+        endPanel.ShowGameWonScreen();
     }
-    */
 
     public void GoToNextLevel()
     {
         level++;
-        Debug.Log("level:" + level);
-        Debug.Log("scenes:" + scenes[level]);
-        Debug.Log("positions:" + positions[level]);
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
     }
 
     public void PlayerDied(){
         gameOver = false;
-        StartLevel(level);
+        endPanel.ShowGameOverScreen();
+        player.isPaused = true;
     }
 
     public void StartLevel(int level)
     {
-        SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
+        SceneManager.LoadScene(scenes[level]);
     }
 }

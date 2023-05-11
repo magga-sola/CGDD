@@ -26,7 +26,6 @@ public class BossProjectile : MonoBehaviour
             if (col.gameObject.name.Contains("Player"))
             {
                 player.hurting.HitByEnemyProjectile(element);
-                player.hurting.HitByEnemyProjectile(element);
             }
             
             animator.SetBool("Hit",true);

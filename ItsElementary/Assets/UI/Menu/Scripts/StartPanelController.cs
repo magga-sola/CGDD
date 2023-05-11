@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MenuController : MonoBehaviour
+public class StartPanelController : MonoBehaviour
 {
     public GameObject startPanel;
     public GameManager gameManager;

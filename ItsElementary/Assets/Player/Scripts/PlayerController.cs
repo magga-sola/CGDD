@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public Sprite[] circleSprites;
     public Animator circleAnimator;
 
+    [SerializeField] AudioSource step;
+
     private void Start()
     {
         elementalBars.SetElementalMode(elementalMode);
@@ -75,10 +77,15 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
         if (moveX != 0 || moveY != 0)
         {
+            if (!step.isPlaying)
+            {
+                step.Play();
+            }
             animator.SetBool("Moving", true);
         }
         else
         {
+            step.Stop();
             animator.SetBool("Moving", false);
         }
 

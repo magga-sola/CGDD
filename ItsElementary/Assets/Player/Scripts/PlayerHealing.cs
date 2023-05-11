@@ -7,6 +7,7 @@ public class PlayerHealing : MonoBehaviour
 
     public GameObject healingOrb;
     public ElementalBars elementalBars;
+    [SerializeField] private AudioSource healingSoundEffect;
     
     void Update()
     {
@@ -15,6 +16,7 @@ public class PlayerHealing : MonoBehaviour
 
     public void IncreaseHealthByOrb(GameManager.Element element)
     {
+        healingSoundEffect.Play();
         switch (element)
         {
             case GameManager.Element.Fire:

@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     public PlayerHurting hurting;
     public PlayerHealing healing;
     public bool isPaused;
+    public GameObject Cirlce;
+    public Sprite[] circleSprites;
 
     private void Start()
     {
@@ -108,6 +110,7 @@ public class PlayerController : MonoBehaviour
         ChangeSprites();
         animator.SetInteger("Element", (int)mode);
         elementalBars.SetElementalMode(mode);
+        Cirlce.GetComponent<SpriteRenderer>().sprite = circleSprites[(int)mode];
     }
 
     private void ChangeModeScroll(int scrollNum)

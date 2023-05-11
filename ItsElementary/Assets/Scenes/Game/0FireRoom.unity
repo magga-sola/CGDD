@@ -4099,6 +4099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+--- !u!1 &980720741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3886287814300296646, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 4001494194797047030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1000781688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37218,6 +37223,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: Cirlce
+      value: 
+      objectReference: {fileID: 980720741}
     - target: {fileID: 6627709335014489767, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 234.58002

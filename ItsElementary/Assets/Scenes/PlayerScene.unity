@@ -818,8 +818,24 @@ PrefabInstance:
       objectReference: {fileID: 313051221}
     - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: element
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: spriteArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: spriteArray.Array.data[0]
+      value: 
+      objectReference: {fileID: -2089379441, guid: 5ee693964a655418bb864dcde82cb7f0, type: 3}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: spriteArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1208960153, guid: 713f3bf5cf03a455aa48ca60beb2b23f, type: 3}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: spriteArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1875605268, guid: 2dca3787b192b418a865504108d244b8, type: 3}
     - target: {fileID: 4284782800063096861, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4

@@ -21,6 +21,8 @@ public class BossController : MonoBehaviour
     public GameObject explosion;
     public Explosion explosionController;
     public bool moving;
+    public bool finalBoss;
+    private float timeSinceLastSwitch;
 
     void Start()
     {
@@ -51,6 +53,10 @@ public class BossController : MonoBehaviour
     void FixedUpdate()
     {
         MoveCharacter();
+        if(finalBoss)
+        {
+            SwitchForms();
+        }
     }
 
     void FlipSprite()
@@ -112,5 +118,15 @@ public class BossController : MonoBehaviour
         {
             animator.SetBool("Walking",false);
         }
-    }    
+    }
+
+    void SwitchForms()
+    {
+        if (Time.realtimeSinceStartup - timeSinceLastSwitch > 10)
+        {
+            element = (GameManager.Element) Random.Range(0,3);
+            timeSinceLastSwitch = Time.realtimeSinceStartup;
+        }
+        
+    }
 }

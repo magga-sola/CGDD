@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     private List<string> scenes;
     private List<Vector3> positions;
 
+    public MenuController menu;
+
+
     void Awake()
     {
         if(instance is null)
@@ -35,8 +38,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        menu.ShowStartScreen();
         gameOver = false;
-        //player.transform.position = new Vector3((float)-7.0999999, (float)-0.5, 0);
         scenes = new List<string> ()
         {
             "0FireRoom", // 0
@@ -64,12 +67,17 @@ public class GameManager : MonoBehaviour
         };
     }
 
+    public void StartGame()
+    {
+        player.RestartPlayer();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Restart();
+        //Restart();
     }
-
+    /*
     void Restart()
     {
         if (SceneManager.GetActiveScene().name == "EndScreen")
@@ -81,6 +89,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    */
 
     public void GoToNextLevel()
     {
@@ -94,12 +103,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDied(){
         gameOver = false;
-        /*
-        if(level % 2 != 0)
-        {
-            level--;
-        }*/
-
         StartLevel(level);
     }
 

@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public PlayerHurting hurting;
     public PlayerHealing healing;
-    public bool isPaused;
+    public bool isPaused = true;
     public GameObject Cirlce;
     public Sprite[] circleSprites;
 
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         elementalBars.SetElementalMode(elementalMode);
         activeColorSpriteArray = playerRedSpriteArray;
-        isPaused = false;
+        isPaused = true;
     }
 
     void Awake()
@@ -54,9 +54,9 @@ public class PlayerController : MonoBehaviour
     {
         if(!isPaused)
         {
-        ProcessInput();
-        CheckMode();
-        PlayerDirection();
+            ProcessInput();
+            CheckMode();
+            PlayerDirection();
         }
     }
 
@@ -154,6 +154,12 @@ public class PlayerController : MonoBehaviour
                 GameManager.instance.PlayerDied();
             }
         }
+    }
+
+    public void RestartPlayer()
+    {
+        isPaused = false;
+        elementalBars.RestartHealth();
     }
 
     void PlayerDies()

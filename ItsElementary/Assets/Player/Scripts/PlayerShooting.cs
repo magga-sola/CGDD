@@ -22,32 +22,35 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        lookAngle = Mathf.Atan2(lookDirection.y - transform.position.y, lookDirection.x - transform.position.x) * Mathf.Rad2Deg;
-        firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
-        bool elementalAttack = Input.GetMouseButton(0);
-        bool basicAttack = Input.GetMouseButton(1);
-        if ( (elementalAttack || basicAttack) && Time.realtimeSinceStartup-timeSinceLastShot > 0.5)
+        if(!player.isPaused)
         {
-            playerMode = player.elementalMode;
+            lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            lookAngle = Mathf.Atan2(lookDirection.y - transform.position.y, lookDirection.x - transform.position.x) * Mathf.Rad2Deg;
+            firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
+            bool elementalAttack = Input.GetMouseButton(0);
+            bool basicAttack = Input.GetMouseButton(1);
+            if ((elementalAttack || basicAttack) && Time.realtimeSinceStartup - timeSinceLastShot > 0.5)
+            {
+                playerMode = player.elementalMode;
 
-            if (basicAttack)
-            {
-                playerProjectile.SetBasicAttack(true);
-                GameObject projectileClone = Instantiate(projectile);
-                projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
-                projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
-                timeSinceLastShot = Time.realtimeSinceStartup;
-                playerProjectile.SetBasicAttack(false);
-            }
-            // Special attack
-            else if (!elementalBars.IsHealthFinishedInElement(playerMode))
-            {
-                GameObject projectileClone = Instantiate(projectile);
-                projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
-                projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
-                timeSinceLastShot = Time.realtimeSinceStartup;
-                DecreaseHealthByAttack();
+                if (basicAttack)
+                {
+                    playerProjectile.SetBasicAttack(true);
+                    GameObject projectileClone = Instantiate(projectile);
+                    projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
+                    projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
+                    timeSinceLastShot = Time.realtimeSinceStartup;
+                    playerProjectile.SetBasicAttack(false);
+                }
+                // Special attack
+                else if (!elementalBars.IsHealthFinishedInElement(playerMode))
+                {
+                    GameObject projectileClone = Instantiate(projectile);
+                    projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
+                    projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
+                    timeSinceLastShot = Time.realtimeSinceStartup;
+                    DecreaseHealthByAttack();
+                }
             }
         }
     }

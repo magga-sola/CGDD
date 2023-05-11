@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public bool isPaused = true;
     public GameObject Cirlce;
     public Sprite[] circleSprites;
+    public Animator circleAnimator;
 
     private void Start()
     {
@@ -109,8 +110,9 @@ public class PlayerController : MonoBehaviour
         elementalMode = mode;
         ChangeSprites();
         animator.SetInteger("Element", (int)mode);
+        circleAnimator.SetInteger("Element", (int)mode);
         elementalBars.SetElementalMode(mode);
-        Cirlce.GetComponent<SpriteRenderer>().sprite = circleSprites[(int)mode];
+        //Cirlce.GetComponent<SpriteRenderer>().sprite = circleSprites[(int)mode];
     }
 
     private void ChangeModeScroll(int scrollNum)
@@ -209,6 +211,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.name.Contains("Enemy Projectile"))
         {
+            circleAnimator.SetBool("Hit",true);
             GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
         }
 

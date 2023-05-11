@@ -344,7 +344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 36.279793, y: 18.247}
+  m_AnchoredPosition: {x: 36.279785, y: 18.247002}
   m_SizeDelta: {x: 162.4, y: 48.87}
   m_Pivot: {x: 0.31009877, y: 0.62353694}
 --- !u!222 &2713947804270718033
@@ -435,6 +435,7 @@ MonoBehaviour:
   player: {fileID: 6213782352564423224}
   gameOver: 0
   level: 1
+  menu: {fileID: 0}
 --- !u!1 &4443461513556477586
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -86.90239, y: 93.26501}
+  m_AnchoredPosition: {x: -86.902405, y: 93.26501}
   m_SizeDelta: {x: -477.91, y: -113.47}
   m_Pivot: {x: 0.8595804, y: 0.5}
 --- !u!222 &880726294211437350
@@ -549,7 +550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1765326374354430788
@@ -999,6 +1000,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4001494193272379073}
     m_Modifications:
+    - target: {fileID: 2880499799142585667, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2880499799142585670, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -1032,6 +1037,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5312385882315743124}
     - target: {fileID: 7040221212854193504, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: circleAnimator
+      value: 
+      objectReference: {fileID: 7035018256424272181}
+    - target: {fileID: 7040221212854193504, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: circleSprites.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1062,6 +1071,10 @@ PrefabInstance:
     - target: {fileID: 7040221212854193532, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040221212854193533, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7040221212854193534, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_RootOrder
@@ -1107,6 +1120,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7105579202340824648, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8157700526672932417, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: enemyController
       value: 
@@ -1135,6 +1152,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 173098219593917086, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
   m_PrefabInstance: {fileID: 4001494194339809112}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &7035018256424272181
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886287814300296646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c7656969f7f1b743b81fd8248a25cc6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &5097459792624150809 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8157700526672932417, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}

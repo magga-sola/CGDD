@@ -13,6 +13,8 @@ public class PlayerShooting : MonoBehaviour
     public float lookAngle;
     private float timeSinceLastShot;
     public ElementalBars elementalBars;
+    public AudioSource audioSource;
+    public AudioClip[] attacksAudio;
 
     void Start()
     {
@@ -32,7 +34,7 @@ public class PlayerShooting : MonoBehaviour
             if ((elementalAttack || basicAttack) && Time.realtimeSinceStartup - timeSinceLastShot > 0.5)
             {
                 playerMode = player.elementalMode;
-
+                ChangeAudioClip();
                 if (basicAttack)
                 {
                     playerProjectile.SetBasicAttack(true);
@@ -53,6 +55,12 @@ public class PlayerShooting : MonoBehaviour
                 }
             }
         }
+    }
+
+    void ChangeAudioClip()
+    {
+        audioSource.clip = attacksAudio[(int)playerMode];
+        audioSource.Play();
     }
 
     void DecreaseHealthByAttack()

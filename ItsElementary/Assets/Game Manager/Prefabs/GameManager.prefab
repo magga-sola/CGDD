@@ -1253,6 +1253,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040221212854193506, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2839350743791942934}
+    - target: {fileID: 7040221212854193506, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: attacksAudio.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040221212854193506, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: attacksAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 07e24a8a4d00954499feb537a5da9a94, type: 3}
+    - target: {fileID: 7040221212854193506, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: attacksAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2397208e2d5fd1f479ead225eaee3129, type: 3}
     - target: {fileID: 7040221212854193532, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1361,6 +1377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd179a8005722df4b8a9c9b5993fecc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2839350743791942934 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1220281649495554638, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+  m_PrefabInstance: {fileID: 4001494194339809112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3886287814300296646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 173098219593917086, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
@@ -1436,7 +1457,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.121
   m_Pitch: 1
   Loop: 0
   Mute: 0

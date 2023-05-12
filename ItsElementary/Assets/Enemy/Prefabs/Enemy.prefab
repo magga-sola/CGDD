@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69558157}
   - component: {fileID: 69558158}
+  - component: {fileID: 6504780442206230668}
   m_Layer: 0
   m_Name: Fire Point
   m_TagString: Untagged
@@ -48,6 +49,107 @@ MonoBehaviour:
   projectilecontroller: {fileID: 0}
   projectile: {fileID: 0}
   projectileSpeed: 6
+  audioSource: {fileID: 6504780442206230668}
+  attacksAudio:
+  - {fileID: 8300000, guid: 07e24a8a4d00954499feb537a5da9a94, type: 3}
+  - {fileID: 8300000, guid: 2397208e2d5fd1f479ead225eaee3129, type: 3}
+  - {fileID: 8300000, guid: 2687f32a4d0dcac40a7b30df0ae1a227, type: 3}
+--- !u!82 &6504780442206230668
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69558156}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.213
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1018748839750103355
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,12 +416,7 @@ MonoBehaviour:
   healingorbcontroller: {fileID: 0}
   elementalBar: {fileID: 7606611334589113607}
   animator: {fileID: 1335788204}
-  explosion: {fileID: 6661927329507049182, guid: 86a62eea8b6f7704abea5aa897313238, type: 3}
-  explosionController: {fileID: 6661927329507049178, guid: 86a62eea8b6f7704abea5aa897313238, type: 3}
   weights: 210000002100000021000000
-  onEnemyDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &1335788204
 Animator:
   serializedVersion: 5

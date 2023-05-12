@@ -13,6 +13,8 @@ public class BossShooting : MonoBehaviour
     private int attackMode;
     private bool attacking;
     private float offset;
+    public AudioSource audioSource;
+    public AudioClip[] audioclip;
 
     // Start is called before the first frame update
     void Start()
@@ -177,6 +179,8 @@ public class BossShooting : MonoBehaviour
     }
 
     void ShootProjectile(float angle, float speedMult = 1f){
+        audioSource.clip = audioclip[(int)bossController.element];
+        audioSource.Play();
         transform.rotation = Quaternion.Euler(0, 0, angle);
         GameObject projectileClone = Instantiate(projectile);
         projectileClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, angle));

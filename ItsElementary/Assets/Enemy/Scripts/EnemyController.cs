@@ -24,7 +24,6 @@ public class EnemyController : MonoBehaviour
     private bool hit;
     private float timeSincehit;
 
-    //public UnityEvent onEnemyDeath;
     void Start()
     {
         player = GameManager.instance.player.transform;
@@ -103,7 +102,6 @@ public class EnemyController : MonoBehaviour
         {
             // Health orbs
             //healingorbcontroller.enemyController = this;
-            //onEnemyDeath.Invoke();
             healingorbcontroller.element = element;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;

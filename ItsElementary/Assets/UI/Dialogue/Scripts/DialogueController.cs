@@ -20,17 +20,20 @@ public class DialogueController : MonoBehaviour
     NPC npcController;
     EnemyController enemyController;
 
+    public UnityEvent onFinished;
+
     void Start()
     {
    
         if (GameObject.FindWithTag("NPC").TryGetComponent(out NPC script))
         {
             // FIND NPC GAMEOBJECT AND LISTEN IN ON DIALOGUE TRIGGER
+            
             npcController = GameObject.FindWithTag("NPC").GetComponent<NPC>();
-            npcController.dialogueTrigger.AddListener(DialogueTrigger);
+            //npcController.dialogueTrigger.AddListener(DialogueTrigger);
 
-            enemyController = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
-            enemyController.onEnemyDeath.AddListener(SecondDialogueTrigger);
+            //enemyController = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
+            //enemyController.onEnemyDeath.AddListener(SecondDialogueTrigger);
 
         } 
 
@@ -89,6 +92,7 @@ public class DialogueController : MonoBehaviour
 
         } else
         {
+            if (onFinished != null) { onFinished.Invoke();}
             textComponent.text = lines[index];
             isFinished = true;
             gameObject.SetActive(false);

@@ -1273,14 +1273,6 @@ PrefabInstance:
       propertyPath: attacksAudio.Array.size
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 7040221212854193506, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
-      propertyPath: attacksAudio.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 07e24a8a4d00954499feb537a5da9a94, type: 3}
-    - target: {fileID: 7040221212854193506, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
-      propertyPath: attacksAudio.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2397208e2d5fd1f479ead225eaee3129, type: 3}
     - target: {fileID: 7040221212854193532, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: m_Name
       value: Player

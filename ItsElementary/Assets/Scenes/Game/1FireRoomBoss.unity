@@ -3118,11 +3118,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 963516022063510595, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.6
+      value: 26.04
       objectReference: {fileID: 0}
     - target: {fileID: 963516022063510595, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.62
+      value: 6.51
       objectReference: {fileID: 0}
     - target: {fileID: 1654498734619431246, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5401,6 +5401,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1365394570951578441, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4284782799004984937, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5457,10 +5461,6 @@ PrefabInstance:
       propertyPath: exitRoom
       value: 
       objectReference: {fileID: 507600332}
-    - target: {fileID: 5264506595418643197, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
-      propertyPath: projectileSpeed
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
 --- !u!1 &2075663940

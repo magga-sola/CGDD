@@ -51,7 +51,7 @@ public class DialogueController : MonoBehaviour
             
             if(!isFinished) 
             {
-                nameComponent.text = npc.name;
+                nameComponent.text = npc.npcName;
                 index = 0;
                 lines = npc.sentences;
                 StartCoroutine(TypeLine());

@@ -19,6 +19,10 @@ public class Room0 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject newWizard = GameObject.Find("Wizard2");
+        newWizard.SetActive(false);
+
+        
         firstTrigger = npc.dialogueTrigger;
         firstTrigger.AddListener(dialogueController.DialogueTrigger);
 

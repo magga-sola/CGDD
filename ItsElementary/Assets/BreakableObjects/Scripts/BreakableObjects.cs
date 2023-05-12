@@ -37,6 +37,9 @@ public class BreakableObjects : MonoBehaviour
         if (col.gameObject.name == "Projectile(Clone)" && !isBroken)
         {
             isBroken = true;
+            
+
+            GetComponent<Collider2D>().enabled = false;
             spriteRenderer.sprite = brokenArray[(5*(int)breakableElement) + (int)size];
 
             healingorbcontroller.element = breakableElement;

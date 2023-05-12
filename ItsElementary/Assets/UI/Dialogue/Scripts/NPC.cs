@@ -11,7 +11,6 @@ public class NPC : MonoBehaviour
     public string[] sentences;
 
     public UnityAction<Collider2D> secondListener;
-    //public void secondListener(Collider2D col) {}
 
     public UnityEvent<Collider2D> dialogueTrigger;
 
@@ -22,6 +21,7 @@ public class NPC : MonoBehaviour
             if(dialogueTrigger != null)
             {
                 dialogueTrigger.Invoke(col);
+                
             }
         }
     }

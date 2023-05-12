@@ -18,7 +18,7 @@ public class DialogueController : MonoBehaviour
 
     private GameObject npc;
     NPC npcController;
-    EnemyController enemyController;
+    
 
     public UnityEvent onFinished;
 
@@ -48,10 +48,12 @@ public class DialogueController : MonoBehaviour
         if (this != null){
             gameObject.SetActive(true);
             GameManager.instance.player.Pause();
+            nameComponent.text = npc.npcName;
             
             if(!isFinished) 
             {
-                nameComponent.text = npc.npcName;
+                
+                //nameComponent.text = npc.npcName;
                 index = 0;
                 lines = npc.sentences;
                 StartCoroutine(TypeLine());
@@ -68,23 +70,43 @@ public class DialogueController : MonoBehaviour
              
     }
 
-    public void SecondDialogueTrigger()
-    {
-        Debug.Log("Wow! good job!");
-    }
-
     IEnumerator TypeLine()
     {
-        foreach(char c in lines[index].ToCharArray())
+        char[] newArray = lines[index].ToCharArray();
+        for (int i = 0; i < (newArray.Length); i++)
         {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            if (newArray[i] == '<')
+            {
+                if (newArray[i+1] == 'b')
+                {
+                    //<b>
+                    textComponent.text += newArray[i];
+                    textComponent.text += newArray[i+1];
+                    textComponent.text += newArray[i+2];
+                    i = i + 2;
+                    yield return new WaitForSeconds(textSpeed);
+
+                } else 
+                {
+                    // </b>
+                    textComponent.text += newArray[i];
+                    textComponent.text += newArray[i+1];
+                    textComponent.text += newArray[i+2];
+                    textComponent.text += newArray[i+3];
+                    i = i + 3;
+                    yield return new WaitForSeconds(textSpeed);
+                }
+            } else 
+            {
+                textComponent.text += newArray[i];
+                yield return new WaitForSeconds(textSpeed);
+            }
         }
     }
 
     void NextLine()
     {
-        if(index < lines.Length - 1)
+        if(index < (lines.Length - 1))
         {
             index++;
             textComponent.text = string.Empty;
@@ -92,12 +114,10 @@ public class DialogueController : MonoBehaviour
 
         } else
         {
-            if (onFinished != null) { onFinished.Invoke();}
             textComponent.text = lines[index];
             isFinished = true;
             gameObject.SetActive(false);
             GameManager.instance.player.UnPause();
-            
         }
 
     }
@@ -115,6 +135,8 @@ public class DialogueController : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+            
+        
         
     }
 }

@@ -19,6 +19,8 @@ public class StartPanelController : MonoBehaviour
 
     public void ShowStartScreen()
     {
+        //BackgroundMusic musicScript = grid.GetComponent<BackgroundMusic>();
+        //musicScript.Play = true;
         startPanel.SetActive(true);
     }
 

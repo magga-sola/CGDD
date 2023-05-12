@@ -14,6 +14,7 @@ public class PlayerProjectile : MonoBehaviour
     public Explosion explosionController;
     void Start()
     {
+
         element = playerController.elementalMode;
         if (basicAttack)
         {

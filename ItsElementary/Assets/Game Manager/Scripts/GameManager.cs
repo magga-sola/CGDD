@@ -16,13 +16,18 @@ public class GameManager : MonoBehaviour
 
     public bool gameOver;
     public int level = 0;
-    private List<string> scenes;
+    public List<string> scenes;
     private List<Vector3> positions;
     public bool startGame = true;
 
     public StartPanelController startPanel;
     public EndPanelController endPanel;
+    public AudioSource audioSource;
+    public MusicManager backgroundMusic;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
 
+    (AudioClip, AudioClip) clips;
     void FixedUpdate()
     {
         
@@ -47,6 +52,7 @@ public class GameManager : MonoBehaviour
         if(startGame)
         {
             startPanel.ShowStartScreen();
+            backgroundMusic.PauseMusic(audioSource1, audioSource2);
         }
         gameOver = false;
         scenes = new List<string> ()
@@ -116,6 +122,8 @@ public class GameManager : MonoBehaviour
     public void GameWon()
     {
         endPanel.ShowGameWonScreen();
+        backgroundMusic.PauseMusic(audioSource1, audioSource2);
+
     }
 
     public void GoToNextLevel()
@@ -123,17 +131,34 @@ public class GameManager : MonoBehaviour
         level++;
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
+
+        clips = backgroundMusic.LoadMusicByScene(level);
+
+        audioSource1.clip = clips.Item1;
+        audioSource2.clip = clips.Item2;
+
+        backgroundMusic.PlayMusic(audioSource1, audioSource2);
+
     }
 
     public void PlayerDied(){
         gameOver = false;
         endPanel.ShowGameOverScreen();
         player.isPaused = true;
+        backgroundMusic.PauseMusic(audioSource1, audioSource2);
     }
 
     public void StartLevel(int level)
     {
         player.transform.position = positions[level];
         SceneManager.LoadScene(scenes[level]);
+        clips = backgroundMusic.LoadMusicByScene(level);
+
+        audioSource1.clip = clips.Item1;
+        audioSource2.clip = clips.Item2;
+        
+        Debug.Log(audioSource1 + " and "+ audioSource2);
+        backgroundMusic.PlayMusic(audioSource1, audioSource2);
+        
     }
 }

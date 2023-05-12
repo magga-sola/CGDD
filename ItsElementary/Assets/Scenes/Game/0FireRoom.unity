@@ -1499,7 +1499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -61.145264, y: 51.698105}
+  m_AnchoredPosition: {x: -61.145264, y: 51.69812}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.52913994, y: 0.5}
 --- !u!114 &469214305
@@ -15471,7 +15471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1070823838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15486,7 +15486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: 
   sentences:
-  - You... you're GLOWING.
+  - You... you're GLOWING RED.
   - looks like you managed to absorb it's life force somehow. I'll have to study
     this IMMEDIATELY. Perhaps this gives you more magical powers in general? try
     shooting again but with the left click this time.
@@ -15495,6 +15495,10 @@ MonoBehaviour:
 '
   - Get rid of these manifestations of chaos and find out who's responsible for it!
   - oh.. and uh good luck!
+  - 'How did this happen?! '
+  - ...elementals you say?
+  - ...glowing magical energy?
+  - well you must've been on one hell of an adventurue
   dialogueTrigger:
     m_PersistentCalls:
       m_Calls: []
@@ -16008,7 +16012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82.100006, y: -115.39502}
+  m_AnchoredPosition: {x: 82.099976, y: -115.39502}
   m_SizeDelta: {x: -199.8, y: -299.99002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480856709
@@ -16107,7 +16111,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1527588812}
   - component: {fileID: 1527588811}
-  - component: {fileID: 1527588814}
   - component: {fileID: 1527588813}
   m_Layer: 0
   m_Name: Grid (1)
@@ -16162,105 +16165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 1527588814}
-  Play: 0
-  introDone: 0
---- !u!82 &1527588814
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527588810}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bbe9496f3f4df4c9f89a0487a4f5a35f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.508
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  loopMusic: {fileID: 0}
 --- !u!1 &1553065435
 GameObject:
   m_ObjectHideFlags: 0
@@ -16304,7 +16209,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4940944, y: 2.6528316}
+  m_Size: {x: 3.02, y: 9.91}
   m_EdgeRadius: 0
 --- !u!212 &1553065437
 SpriteRenderer:
@@ -16365,14 +16270,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553065435}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.52, y: 0.03000009, z: 0.0000076293945}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 19.81, y: 0.03000009, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1553065439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16385,15 +16290,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b377a40ed26214bf384e54342abe087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: The Wizard
   sentences:
-  - Oh there's my favorite student! I knew you would find where all this magical
-    chaos was coming from.
-  - I have a sneaking suspicion that these elementals have something to do with it.
-  - 'Do you see that fire dude? He''s heading straight to us!
+  - Oh there's my favorite student!
+  - You... you're GLOWING RED!
+  - HOW DID THIS HAPPEN?!
+  - '... <b>elementals</b> you say?
 
-'
-  - Use WASD to move and try shooting with right click.
+    ... <b>glowing magical energy</b>?'
+  - Well you must've had one hell of an adventure.
+  - hmmmm...... if I'm not mistaken.... I think...
+  - I think you can use this magical aura as a <b>lifesource<b>!
+  - 'This aura around you should also work as a some sort of <b>shield<b>. '
+  - How do you feel? Does your magic feel different?
+  - ...Interesting.... interesting....
+  - You're power is coming from life itself so using it drains you. You'll have to
+    be careful not to overuse this magic.
+  - ...I've heard terrible things about those who've used up all of their magic.
+    <b>Terrible things.<b>
+  - I'm sure you know what to do now.
+  - ...Well  you need to figure out where all of this life magic is coming from.
+  - ...
+  - ME?! No I'm not going near these elementals!
+  - Besides, you're stronger now. You've got control over multiple elements. You
+    can use that to your advantage.
+  - Do you remember our lessons? It's elementary really.
+  - '<b>Water</b> beats <b>Fire</b>
+
+    <b>Fire</b> beats <b>Earth</b>
+
+    <b>Earth</b>
+    beats <b>Water</b>'
+  - Go on, make me proud...
+  - Find whoever it is that's unleashed this powerful magic unto the world.
   dialogueTrigger:
     m_PersistentCalls:
       m_Calls: []
@@ -35177,11 +35106,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1601252609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6213782352564423204, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-  m_PrefabInstance: {fileID: 4001494194797047030}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627726777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35294,7 +35218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 145, y: 276.60004}
+  m_AnchoredPosition: {x: 145, y: 276.60007}
   m_SizeDelta: {x: 331.21, y: 348.41}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1708617183
@@ -37778,7 +37702,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5312385882315743124, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
   m_PrefabInstance: {fileID: 4001494194797047030}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601252609}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 204dbf948c3f942d38c49c056e5ebf44, type: 3}
@@ -37789,108 +37713,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
   m_PrefabInstance: {fileID: 4001494194797047030}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601252609}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63e84e30484bdea489e8dc717ee3a032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &2022887651
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601252609}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2352822feb4caa14ebdbc0c713289f8d, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.391
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 122
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &2049793484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38342,6 +38170,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -115.390045
       objectReference: {fileID: 0}
+    - target: {fileID: 3651728384545799066, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4001494193272379072, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: menu
       value: 
@@ -38501,7 +38333,7 @@ PrefabInstance:
     - target: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: step
       value: 
-      objectReference: {fileID: 2022887651}
+      objectReference: {fileID: 0}
     - target: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: Cirlce
       value: 
@@ -38511,10 +38343,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6213782352564423226, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -38533,10 +38361,6 @@ PrefabInstance:
     - target: {fileID: 6627709335014489767, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 63.23001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6787529060296165326, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-      propertyPath: m_Volume
-      value: 0.121
       objectReference: {fileID: 0}
     - target: {fileID: 6894328535400714800, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_IsActive

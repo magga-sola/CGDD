@@ -26,8 +26,17 @@ public class BackgroundMusic : MonoBehaviour
         
     }
 
-    void StartMusic()
+    void UnPauseMusic()
     {
+        if (introMusic != null && !introDone)
+        {
+            introMusic.Play();
+            loopMusic.PlayDelayed((float)(introMusic.clip.length - 0.1));
+            introDone = true;
+        } else 
+        {
+            loopMusic.Play();
+        }
 
     }
 

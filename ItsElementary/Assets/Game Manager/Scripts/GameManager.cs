@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         if(startGame)
         {
             startPanel.ShowStartScreen();
+            backgroundMusic.PauseMusic(audioSource1, audioSource2);
         }
         gameOver = false;
         scenes = new List<string> ()
@@ -121,6 +122,7 @@ public class GameManager : MonoBehaviour
     public void GameWon()
     {
         endPanel.ShowGameWonScreen();
+        backgroundMusic.PauseMusic(audioSource1, audioSource2);
 
     }
 

@@ -44,7 +44,7 @@ public class MusicManager : MonoBehaviour
 
     public void PauseMusic(AudioSource introMusic, AudioSource loopMusic)
     {
-        Debug.Log("im here");
+        
         if (introMusic != null && !introDone)
         {
             introMusic.Stop();

@@ -8,8 +8,9 @@ public class BackgroundMusic : MonoBehaviour
 
     public AudioSource loopMusic;
     AudioClip m_AudioClip;
-    bool m_Play;
-    bool m_ToggleChange;
+    public bool Play;
+
+    public bool introDone;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,19 +18,41 @@ public class BackgroundMusic : MonoBehaviour
         {
             introMusic.Play();
             loopMusic.PlayDelayed((float)(introMusic.clip.length - 0.1));
+            introDone = true;
         } else 
         {
             loopMusic.Play();
         }
-
         
+    }
+
+    void StartMusic()
+    {
+
+    }
+
+
+    void PauseMusic()
+    {
+        if (introMusic != null && !introDone)
+        {
+            introMusic.Pause();
+        } else 
+        {
+            loopMusic.Pause();
+        }
+        
+
     }
 
     // Update is called once per frame
 
         void Update()
     { 
-
+        if (!Play)
+        {
+            PauseMusic();
+        }
     
     }
 }

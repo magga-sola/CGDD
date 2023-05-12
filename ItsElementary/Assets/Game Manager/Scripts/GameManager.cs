@@ -97,6 +97,10 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        if(level % 2 != 0)
+        {
+            level--;
+        }
         player.RestartPlayer();
         player.isPaused = false;
         StartLevel(level);

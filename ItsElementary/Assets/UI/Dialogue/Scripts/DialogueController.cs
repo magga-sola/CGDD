@@ -52,7 +52,7 @@ public class DialogueController : MonoBehaviour
             
             if(!isFinished) 
             {
-                Debug.Log("name: "+ npc.npcName);
+                
                 //nameComponent.text = npc.npcName;
                 index = 0;
                 lines = npc.sentences;

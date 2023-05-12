@@ -16209,7 +16209,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4940944, y: 2.6528316}
+  m_Size: {x: 3.02, y: 9.91}
   m_EdgeRadius: 0
 --- !u!212 &1553065437
 SpriteRenderer:
@@ -16290,14 +16290,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b377a40ed26214bf384e54342abe087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: The Wizard
   sentences:
-  - Oh there's my favorite student! I knew you would find where all this magical
-    chaos was coming from.
-  - I have a sneaking suspicion that these elementals have something to do with it.
-  - 'Do you see that fire dude? He''s heading straight to us!
+  - Oh there's my favorite student!
+  - You... you're GLOWING RED!
+  - HOW DID THIS HAPPEN?!
+  - '... <b>elementals</b> you say?
 
-'
+    ... glowing <b>magical energy</b>?'
+  - Well you must've had one hell of an adventure.
+  - hmmmm...... if I'm not mistaken.... I think...
+  - 'I think you can use this magical aura as a lifesource! '
+  - Use WASD to move and try shooting with right click.
   - Use WASD to move and try shooting with right click.
   dialogueTrigger:
     m_PersistentCalls:

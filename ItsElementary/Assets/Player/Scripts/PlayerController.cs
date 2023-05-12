@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
                 ChangeMode(element);
                 break;
             }
-            Debug.Log("ASDASD");
+            //Debug.Log("ASDASD");
             element = (GameManager.Element) Mod((int)element + scrollNum, 3);
         }
     }

@@ -16163,6 +16163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
   loopMusic: {fileID: 1527588814}
+  Play: 0
+  introDone: 0
 --- !u!82 &1527588814
 AudioSource:
   m_ObjectHideFlags: 0

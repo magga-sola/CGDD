@@ -25,10 +25,7 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(level == 7)
-        {
-            GameWon();
-        }
+        
     }
 
     void Awake()

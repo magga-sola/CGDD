@@ -6,7 +6,7 @@ using System;
 
 public class NPC : MonoBehaviour
 {
-    public string name;
+    public string npcName;
     [TextArea(3, 10)]
     public string[] sentences;
 

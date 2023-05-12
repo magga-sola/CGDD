@@ -77,15 +77,16 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
         if (moveX != 0 || moveY != 0)
         {
+            /*
             if (!step.isPlaying)
             {
                 step.Play();
-            }
+            }*/
             animator.SetBool("Moving", true);
         }
         else
         {
-            step.Stop();
+            //step.Stop();
             animator.SetBool("Moving", false);
         }
 
@@ -127,7 +128,6 @@ public class PlayerController : MonoBehaviour
         ChangeMode((GameManager.Element) (Mod((int) elementalMode + scrollNum, 3)));
         GameManager.Element element = (GameManager.Element) Mod((int)elementalMode + scrollNum, 3);
         for (int i = 0; i < 3; i++){
-            Debug.Log(element);
             if (!elementalBars.IsHealthFinishedInElement(element)){
                 ChangeMode(element);
                 break;

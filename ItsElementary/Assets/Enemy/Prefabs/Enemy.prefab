@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 803557928111636958}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,6 +317,9 @@ MonoBehaviour:
   explosion: {fileID: 6661927329507049182, guid: 86a62eea8b6f7704abea5aa897313238, type: 3}
   explosionController: {fileID: 6661927329507049178, guid: 86a62eea8b6f7704abea5aa897313238, type: 3}
   weights: 210000002100000021000000
+  onEnemyDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1335788204
 Animator:
   serializedVersion: 5

@@ -2,57 +2,73 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEditor.Events;
 using TMPro;
 public class DialogueController : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI nameComponent;
-
-    private NPC npc;
-    private string[] lines;
-    private string name;
+    public string[] lines;
+    public string npcName;
     public float textSpeed;
     private int index;
     private bool isFinished;
-    public PlayerController player;
+    //public PlayerController player;
 
-    //private UnityAction<Collider2D> onTheOtherTriggerEnterMethod;
-    
+    private GameObject npc;
+    NPC npcController;
+    EnemyController enemyController;
+
     void Start()
     {
-        //npc = GameObject.Find("NPC").GetComponent<NPC>();
+   
+        if (GameObject.FindWithTag("NPC").TryGetComponent(out NPC script))
+        {
+            // FIND NPC GAMEOBJECT AND LISTEN IN ON DIALOGUE TRIGGER
+            npcController = GameObject.FindWithTag("NPC").GetComponent<NPC>();
+            npcController.dialogueTrigger.AddListener(DialogueTrigger);
 
+            enemyController = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
+            enemyController.onEnemyDeath.AddListener(SecondDialogueTrigger);
+
+        } 
+
+        // INITIALIZE THE PANEL
         gameObject.SetActive(false);
         textComponent.text = string.Empty;
-        //npc.dialogueTrigger.AddListener(testListener);
+        nameComponent.text = string.Empty;
     }
 
     public void StartDialogue(NPC npc)
     {
-        gameObject.SetActive(true);
-        player.Pause();
-
-        if(!isFinished) 
-        {
-            nameComponent.text = npc.name;
-            index = 0;
-            lines = npc.sentences;
-            StartCoroutine(TypeLine());
+        if (this != null){
+            gameObject.SetActive(true);
+            GameManager.instance.player.Pause();
+            
+            if(!isFinished) 
+            {
+                nameComponent.text = npc.name;
+                index = 0;
+                lines = npc.sentences;
+                StartCoroutine(TypeLine());
+            }
         }
-
     } 
-     void testListener(Collider2D col)
+
+     public void DialogueTrigger(Collider2D col)
     {
-        Debug.Log("hello");
         if(col.gameObject.name == "Player")
         {
-            //StartDialogue(npc);
-            Debug.Log("Start Dialogue");
+            StartDialogue(npcController);
         }
              
     }
 
+    public void SecondDialogueTrigger()
+    {
+        Debug.Log("Wow! good job!");
+    }
 
     IEnumerator TypeLine()
     {
@@ -76,12 +92,12 @@ public class DialogueController : MonoBehaviour
             textComponent.text = lines[index];
             isFinished = true;
             gameObject.SetActive(false);
-            player.UnPause();
+            GameManager.instance.player.UnPause();
+            
         }
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0))

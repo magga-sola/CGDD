@@ -141,6 +141,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 698457382}
+    - target: {fileID: 2480569023179814292, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 343526598}
     - target: {fileID: 8581849176734979316, guid: 04641bc6447b27646ba4672d10700623, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -365,6 +373,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6213782352564423206, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
   m_PrefabInstance: {fileID: 698457380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &698457382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6213782352564423224, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 698457380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e84e30484bdea489e8dc717ee3a032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &819747292
 GameObject:
   m_ObjectHideFlags: 0

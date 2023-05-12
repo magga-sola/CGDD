@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,8 @@ public class EnemyController : MonoBehaviour
     public Sprite[] spriteArray;
     public GameObject healingOrb;
     public HealingOrb healingorbcontroller;
+    public GameObject trace;
+    public ElementalTrace elementalTrace;
     public EnemyEnergyBar elementalBar;
     public Animator animator;
     public int[] weights = {33,33,33};
@@ -100,9 +103,19 @@ public class EnemyController : MonoBehaviour
             healingorbcontroller.element = element;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;
+            LeaveTrace();
 
             Destroy(gameObject);
         }
+    }
+
+    public void LeaveTrace()
+    {
+        print("setting as:" + element);
+        elementalTrace.SetElement(element);
+        Transform newParent = new GameObject("Trace").transform;
+        trace.transform.SetParent(newParent);
+        trace.SetActive(true);
     }
 
     void CalculateMovement()
@@ -140,7 +153,6 @@ public class EnemyController : MonoBehaviour
             randomCeiling += num;
         }
         int randomNumber = Random.Range(0,randomCeiling+1);
-        //Debug.Log(randomNumber);
         for (int i = 0; i < weights.Length; i++)
         {
             if (currentNum + weights[i] >= randomNumber){

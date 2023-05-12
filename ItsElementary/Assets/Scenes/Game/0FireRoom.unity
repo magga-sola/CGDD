@@ -16016,7 +16016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82.099976, y: -115.395035}
+  m_AnchoredPosition: {x: 82.099976, y: -115.39502}
   m_SizeDelta: {x: -199.8, y: -299.99002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480856709
@@ -38214,6 +38214,14 @@ PrefabInstance:
     - target: {fileID: 634290273848007643, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 963516022063510594, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: trace
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 963516022063510594, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: elementalTrace
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 963516022063510595, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.x

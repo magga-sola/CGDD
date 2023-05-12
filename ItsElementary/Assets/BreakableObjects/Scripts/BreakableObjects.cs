@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BreakableObjects : MonoBehaviour
 {
-        public enum Size
+    public enum Size
     {
         Large = 0,
         Big = 1,
@@ -22,22 +22,17 @@ public class BreakableObjects : MonoBehaviour
     public HealingOrb healingorbcontroller;
     public GameObject healingOrb;
 
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer.sprite = elementArray[(5*(int)breakableElement) + (int)size];
-
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Projectile(Clone)" && !isBroken)
         {
-            isBroken = true;
-            
+            isBroken = true;            
 
             GetComponent<Collider2D>().enabled = false;
             spriteRenderer.sprite = brokenArray[(5*(int)breakableElement) + (int)size];
@@ -45,10 +40,8 @@ public class BreakableObjects : MonoBehaviour
             healingorbcontroller.element = breakableElement;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;
-
         }
     }
-
 
     // Update is called once per frame
     void Update()

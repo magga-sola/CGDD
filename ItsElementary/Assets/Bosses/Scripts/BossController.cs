@@ -23,13 +23,12 @@ public class BossController : MonoBehaviour
     public bool moving;
     public bool finalBoss;
     private float timeSinceLastSwitch;
+    public ExitRoomScript exitRoom;
 
     void Start()
     {
         player = GameManager.instance.player.transform;
-        //element = (GameManager.Element)Random.Range(0,3);
         animator.SetInteger("Element", (int)element);
-        //GetComponent<SpriteRenderer>().sprite = spriteArray[(int)element];
         elementalBar.Initialize(element, health, health);
         moving = true;
     }
@@ -38,7 +37,6 @@ public class BossController : MonoBehaviour
     {
         if (col.gameObject.name == "Projectile(Clone)")
         {
-            //GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
             TakeDamage(col.gameObject);
         }
     }
@@ -75,11 +73,11 @@ public class BossController : MonoBehaviour
     {
         return (x%p + p)%p; 
     }
+
     void TakeDamage(GameObject projectile)
     {
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
-        //int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
         if (basicAttack || (GameManager.Element)Mod((int)projectileElement - 1,3) == element){
             elementalBar.DecreaseByWeakOpponent();
         }
@@ -96,6 +94,7 @@ public class BossController : MonoBehaviour
         }
         if (elementalBar.IsHealthFinished())
         {
+            exitRoom.isBossKilled = true;
             Destroy(gameObject);
         }
 
@@ -111,8 +110,8 @@ public class BossController : MonoBehaviour
     void MoveCharacter(){
         FlipSprite();
         if (moving && distanceFromPlayer > 4){   
-                animator.SetBool("Walking",true);
-                rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
+            animator.SetBool("Walking",true);
+            rb.MovePosition((Vector2)transform.position+(direction*moveSpeed*Time.deltaTime));
         }
         else
         {
@@ -127,6 +126,5 @@ public class BossController : MonoBehaviour
             element = (GameManager.Element) Random.Range(0,3);
             timeSinceLastSwitch = Time.realtimeSinceStartup;
         }
-        
     }
 }

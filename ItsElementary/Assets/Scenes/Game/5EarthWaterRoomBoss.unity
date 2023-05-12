@@ -422,6 +422,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3090743016780935615, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -115.390045
+      objectReference: {fileID: 0}
     - target: {fileID: 4001494193272379072, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: level
       value: 5
@@ -2982,6 +2986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc28cca72ad218f458b30ab17e73ebd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBossKilled: 0
 --- !u!61 &703346460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5421,6 +5426,14 @@ PrefabInstance:
       propertyPath: element
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: exitRoom
+      value: 
+      objectReference: {fileID: 703346459}
+    - target: {fileID: 4284782800063096860, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1875605268, guid: 2dca3787b192b418a865504108d244b8, type: 3}
     - target: {fileID: 5264506595418643197, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: projectileSpeed
       value: 8

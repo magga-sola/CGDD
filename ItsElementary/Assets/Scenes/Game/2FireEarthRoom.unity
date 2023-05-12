@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3108,7 +3108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.41
+      value: -13.68
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3258,7 +3258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.44
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3432,6 +3432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc28cca72ad218f458b30ab17e73ebd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBossKilled: 1
 --- !u!61 &975640105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3757,7 +3758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.76
+      value: -10.4
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3928,11 +3929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.9
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.3
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 6767995813211207267, guid: 2d9b7960042174177951ea9e0224cd05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15746,8 +15747,8 @@ Tilemap:
   - first: {x: -25, y: 26, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 119
-      m_TileSpriteIndex: 21
+      m_TileIndex: 122
+      m_TileSpriteIndex: 36
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -18523,13 +18524,13 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4ab180277ab4b425c8ac67e1a38b986b, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: d51c102ba631c4f35a02768dff85a1e9, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: 65e9f6a69490a4ed89da9c89a409e6fe, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 2488ee8df537e48b0a6098becb358a6f, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: d8dc32e47de2149518155942f0c294cc, type: 2}
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: 72925647939f0427ca18a07c27b1cea9, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: a0fd60366b287483d9943be8527f2896, type: 2}
@@ -18778,7 +18779,7 @@ Tilemap:
     m_Data: {fileID: -1089428585, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 1420638413, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 14
     m_Data: {fileID: 2064757486, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 26509623, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
@@ -18808,7 +18809,7 @@ Tilemap:
     m_Data: {fileID: 193557687, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 325029437, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {fileID: 237539912, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 733644653, guid: 239846c8a580c4eff9d636a4ac1d5c29, type: 3}

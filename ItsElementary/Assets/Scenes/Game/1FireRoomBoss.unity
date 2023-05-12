@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc28cca72ad218f458b30ab17e73ebd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBossKilled: 0
 --- !u!61 &507600333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2937,15 +2938,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4001494193272379073, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.004688
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4001494193272379073, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7918465
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4001494193272379073, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4355282
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4001494193272379073, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3013,11 +3014,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213782352564423206, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.25
+      value: -6.85
       objectReference: {fileID: 0}
     - target: {fileID: 6213782352564423206, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.52
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 6894328535400714800, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_IsActive
@@ -5182,7 +5183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284782799004984937, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9722948
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 4284782799004984937, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5228,6 +5229,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 912407546}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: exitRoom
+      value: 
+      objectReference: {fileID: 507600332}
     - target: {fileID: 5264506595418643197, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: projectileSpeed
       value: 6

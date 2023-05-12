@@ -10,6 +10,8 @@ public class PlayerProjectile : MonoBehaviour
     public Sprite[] spriteArray;
     public Sprite basicAttackSprite;
     public Animator animator;
+    public GameObject explosion;
+    public Explosion explosionController;
     void Start()
     {
         element = playerController.elementalMode;
@@ -45,5 +47,12 @@ public class PlayerProjectile : MonoBehaviour
         {
             Destroy(gameObject);      
         }
+    }
+
+    public void Explode()
+    {
+        explosionController.element = element;
+        GameObject explosionClone = Instantiate(explosion);
+        explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
     }
 }

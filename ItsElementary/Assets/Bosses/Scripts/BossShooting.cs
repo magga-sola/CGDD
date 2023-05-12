@@ -32,7 +32,7 @@ public class BossShooting : MonoBehaviour
     {
         if (bossController.element == GameManager.Element.Fire)
         {
-            FireShootingMode();
+            WaterShootingMode();
         }
         else if (bossController.element == GameManager.Element.Earth)
         {
@@ -40,7 +40,7 @@ public class BossShooting : MonoBehaviour
         }
         if (bossController.element == GameManager.Element.Water)
         {
-            WaterShootingMode();
+            FireShootingMode();
         }
     }
 
@@ -73,7 +73,7 @@ public class BossShooting : MonoBehaviour
         if (attackMode == 0 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
         {
             bossController.moving = false;
-            FlameThrower();
+            EarthThrower();
         }
         else if (attackMode == 1 && Time.realtimeSinceStartup - timeSinceLastAttack < 4)
         {
@@ -115,6 +115,13 @@ public class BossShooting : MonoBehaviour
     }
     void FlameThrower(){
         if (Time.realtimeSinceStartup-timeSinceLastShot > 0.1){
+            ShootProjectile(bossController.angle);
+            timeSinceLastShot = Time.realtimeSinceStartup;
+        }
+    }
+
+    void EarthThrower(){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 0.2){
             ShootProjectile(bossController.angle);
             timeSinceLastShot = Time.realtimeSinceStartup;
         }

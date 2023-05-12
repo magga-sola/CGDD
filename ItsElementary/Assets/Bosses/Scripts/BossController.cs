@@ -18,8 +18,6 @@ public class BossController : MonoBehaviour
     public HealingOrb healingorbcontroller;
     public EnemyEnergyBar elementalBar;
     public Animator animator;
-    public GameObject explosion;
-    public Explosion explosionController;
     public bool moving;
     public bool finalBoss;
     private float timeSinceLastSwitch;
@@ -29,6 +27,7 @@ public class BossController : MonoBehaviour
     {
         player = GameManager.instance.player.transform;
         animator.SetInteger("Element", (int)element);
+        animator.SetBool("Final Boss", finalBoss);
         elementalBar.Initialize(element, health, health);
         moving = true;
     }
@@ -83,9 +82,7 @@ public class BossController : MonoBehaviour
         }
         else if ((GameManager.Element)Mod((int)projectileElement + 1,3) == element){
             elementalBar.DecreaseByStrongOpponent();
-            explosionController.element = projectileElement;
-            GameObject explosionClone = Instantiate(explosion);
-            explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+            projectile.GetComponent<PlayerProjectile>().Explode();
         }
         
         else if (projectileElement == element){
@@ -124,6 +121,7 @@ public class BossController : MonoBehaviour
         if (Time.realtimeSinceStartup - timeSinceLastSwitch > 10)
         {
             element = (GameManager.Element) Random.Range(0,3);
+            animator.SetInteger("Element", (int)element);
             timeSinceLastSwitch = Time.realtimeSinceStartup;
         }
     }

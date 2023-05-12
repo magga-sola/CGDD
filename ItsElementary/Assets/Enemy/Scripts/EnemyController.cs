@@ -18,8 +18,6 @@ public class EnemyController : MonoBehaviour
     public HealingOrb healingorbcontroller;
     public EnemyEnergyBar elementalBar;
     public Animator animator;
-    public GameObject explosion;
-    public Explosion explosionController;
     public int[] weights = {33,33,33};
     private bool hit;
     private float timeSincehit;
@@ -88,9 +86,7 @@ public class EnemyController : MonoBehaviour
         }
         else if ((GameManager.Element)Mod((int)projectileElement + 1,3) == element){
             elementalBar.DecreaseByStrongOpponent();
-            explosionController.element = projectileElement;
-            GameObject explosionClone = Instantiate(explosion);
-            explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+            projectile.GetComponent<PlayerProjectile>().Explode();
         }
         
         else if (projectileElement == element){

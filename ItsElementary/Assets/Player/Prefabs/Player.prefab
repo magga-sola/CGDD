@@ -2054,6 +2054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7040221211469355414}
+  - component: {fileID: 2131822859652712110}
   m_Layer: 0
   m_Name: Fire Point
   m_TagString: Untagged
@@ -2077,6 +2078,102 @@ Transform:
   m_Father: {fileID: 7040221212854193534}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2131822859652712110
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7040221211469355413}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7040221212854193532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,9 +2390,9 @@ MonoBehaviour:
   elementalBars: {fileID: 2880499799946057853}
   audioSource: {fileID: 0}
   attacksAudio:
-  - {fileID: 8300000, guid: 07e24a8a4d00954499feb537a5da9a94, type: 3}
-  - {fileID: 8300000, guid: 2397208e2d5fd1f479ead225eaee3129, type: 3}
-  - {fileID: 8300000, guid: 2687f32a4d0dcac40a7b30df0ae1a227, type: 3}
+  - {fileID: 8300000, guid: 8bcf09225cd7dd44c85f141ef74bd786, type: 3}
+  - {fileID: 8300000, guid: e073c9ab5af34c24e9b5141a20ef9798, type: 3}
+  - {fileID: 8300000, guid: e07befd3f472005468b2e92ea1e8e423, type: 3}
 --- !u!114 &9093131674213112012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3609,9 +3706,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2131822859652712110}
+    - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 7040221212854193504}
+    - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 77028a24370e45b42ac3bdc869ad4a43, type: 3}
+    - target: {fileID: 6157575426671919733, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f6d66006e6bfb64da9e34734841a71f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 896ced734d32c9d449ddfb6199dd739a, type: 3}
 --- !u!4 &8254409238209153248 stripped

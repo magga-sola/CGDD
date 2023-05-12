@@ -16012,7 +16012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82.099976, y: -115.39502}
+  m_AnchoredPosition: {x: 82.099976, y: -115.395035}
   m_SizeDelta: {x: -199.8, y: -299.99002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480856709
@@ -35198,7 +35198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 145, y: 276.60007}
+  m_AnchoredPosition: {x: 145, y: 276.6001}
   m_SizeDelta: {x: 331.21, y: 348.41}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1708617183
@@ -38222,6 +38222,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4001494193333950928, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: attacksAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bcf09225cd7dd44c85f141ef74bd786, type: 3}
+    - target: {fileID: 4001494193333950928, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: attacksAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e073c9ab5af34c24e9b5141a20ef9798, type: 3}
+    - target: {fileID: 4001494193333950928, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: attacksAudio.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: e07befd3f472005468b2e92ea1e8e423, type: 3}
     - target: {fileID: 4170228848353018510, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -38254,6 +38266,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartOverGame
       objectReference: {fileID: 0}
+    - target: {fileID: 4973562453049823164, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5faf03f793c1f0343a46ebceeab3bba2, type: 3}
+    - target: {fileID: 4973562453049823164, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5faf03f793c1f0343a46ebceeab3bba2, type: 3}
+    - target: {fileID: 4973562453049823164, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5faf03f793c1f0343a46ebceeab3bba2, type: 3}
     - target: {fileID: 5052362995545729099, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25.000015
@@ -38385,6 +38409,14 @@ PrefabInstance:
     - target: {fileID: 8100909238833174530, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170770278476984707, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837921355076186896, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6074196067744051974, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}

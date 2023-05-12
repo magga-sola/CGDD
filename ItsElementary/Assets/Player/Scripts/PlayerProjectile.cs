@@ -12,6 +12,8 @@ public class PlayerProjectile : MonoBehaviour
     public Animator animator;
     public GameObject explosion;
     public Explosion explosionController;
+    public AudioSource audioSource;
+    public AudioClip[] audioClips;
     void Start()
     {
 
@@ -32,6 +34,8 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
         {
+            audioSource.clip = audioClips[(int)element];
+            audioSource.Play();
             animator.SetBool("Hit",true);
             GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
         }

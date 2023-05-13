@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public Sprite[] circleSprites;
     public Animator circleAnimator;
     public AudioSource hitAudioSource;
+    public AudioSource deathAudioSource;
 
     [SerializeField] AudioSource step;
 
@@ -134,6 +135,7 @@ public class PlayerController : MonoBehaviour
             }
             else {
                 // PLAYER IS DEAD
+                deathAudioSource.Play();
                 GameManager.instance.PlayerDied();
             }
         }

@@ -84,8 +84,12 @@ public class GameManager : MonoBehaviour
     }
 
     // From level 0
-    public void StartGame()
+    public void StartGame(bool playAgain)
     {
+        if (playAgain)
+        {
+            startPanel.ShowStartScreen();
+        }
         level = 0;
         player.RestartPlayerBeginning();
         player.isPaused = false;

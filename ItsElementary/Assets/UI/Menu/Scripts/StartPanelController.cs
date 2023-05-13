@@ -19,14 +19,12 @@ public class StartPanelController : MonoBehaviour
 
     public void ShowStartScreen()
     {
-        //BackgroundMusic musicScript = grid.GetComponent<BackgroundMusic>();
-        //musicScript.Play = true;
         startPanel.SetActive(true);
     }
 
     public void HideStartScreen()
     {
         startPanel.SetActive(false);
-        gameManager.StartGame();
+        gameManager.StartGame(false);
     }
 }

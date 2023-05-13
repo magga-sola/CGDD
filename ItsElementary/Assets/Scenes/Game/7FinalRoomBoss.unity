@@ -1500,7 +1500,6 @@ MonoBehaviour:
   endPanel: {fileID: 663619962}
   gameOverScreen: {fileID: 1853199328}
   gameWonScreen: {fileID: 812119887}
-  gameManager: {fileID: 163392716}
   startPanelController: {fileID: 2132608178}
 --- !u!114 &663619965
 MonoBehaviour:
@@ -11444,7 +11443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1829618935
 MonoBehaviour:
   m_ObjectHideFlags: 0

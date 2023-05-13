@@ -1082,15 +1082,19 @@ PrefabInstance:
       objectReference: {fileID: 1577642671975326239}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1201777731125872800, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519889, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519889, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: player
@@ -1201,6 +1205,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 4001494193272379072}
+    - target: {fileID: 4030354578148879093, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: startPanelController
+      value: 
+      objectReference: {fileID: 1127536726627304733}
     - target: {fileID: 4048165869807354437, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: gameManager
       value: 

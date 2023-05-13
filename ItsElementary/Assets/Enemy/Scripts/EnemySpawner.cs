@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
 
     void RandomTime()
     {
-        randomTimeInterval = Random.Range(10,40);
+        randomTimeInterval = Random.Range(15,40);
     }
 
     void spawn()

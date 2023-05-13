@@ -3,7 +3,6 @@ using UnityEngine;
 public class HealingOrb : MonoBehaviour
 {
     public GameManager.Element element;
-    public EnemyController enemyController;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     public PlayerHealing healing;
@@ -11,10 +10,6 @@ public class HealingOrb : MonoBehaviour
 
     void Start()
     {
-        
-        //element = enemyController.element;
-        
-        //Debug.Log(element);
         animator.SetInteger("Element",(int)element);
         spriteRenderer.sprite = spriteArray[(int)element];
         healing = GameManager.instance.player.GetComponent<PlayerHealing>();    

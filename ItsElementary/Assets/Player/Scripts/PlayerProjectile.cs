@@ -14,6 +14,7 @@ public class PlayerProjectile : MonoBehaviour
     public Explosion explosionController;
     public AudioSource audioSource;
     public AudioClip[] audioClips;
+    public AudioClip explosionAudio;
     void Start()
     {
 
@@ -32,7 +33,7 @@ public class PlayerProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
+        if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb") && !col.gameObject.name.Contains("Wizard"))
         {
             audioSource.clip = audioClips[(int)element];
             audioSource.Play();
@@ -56,6 +57,8 @@ public class PlayerProjectile : MonoBehaviour
 
     public void Explode()
     {
+        audioSource.clip = explosionAudio;
+        audioSource.Play();
         explosionController.element = element;
         GameObject explosionClone = Instantiate(explosion);
         explosionClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));

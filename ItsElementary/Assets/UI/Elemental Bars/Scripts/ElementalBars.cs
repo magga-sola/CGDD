@@ -71,9 +71,11 @@ public class ElementalBars : MonoBehaviour
         earthBar.Initialize(100, 50);
     }
 
-    int mod(int x, int p)
+    public void RestartHealthBeginning()
     {
-        return (x%p + p)%p; 
+        fireBar.Initialize(100, 100);
+        waterBar.Initialize(100, 100);
+        earthBar.Initialize(100, 100);
     }
 
     public EnergyBar GetBarByElement(GameManager.Element element)

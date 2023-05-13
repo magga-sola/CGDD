@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
@@ -14,14 +15,17 @@ public class BossController : MonoBehaviour
     public GameManager.Element element;
     public Rigidbody2D rb;
     public Sprite[] spriteArray;
-    public GameObject healingOrb;
-    public HealingOrb healingorbcontroller;
     public EnemyEnergyBar elementalBar;
     public Animator animator;
     public bool moving;
     public bool finalBoss;
     private float timeSinceLastSwitch;
+    //public GameManager gameManager;
+    public GameObject[] healingOrbs;
+    public GameObject trace;
+    public ElementalTrace elementalTrace;
     public ExitRoomScript exitRoom;
+    public EndPanelController endPanel;
 
     void Start()
     {
@@ -91,11 +95,35 @@ public class BossController : MonoBehaviour
         }
         if (elementalBar.IsHealthFinished())
         {
-            exitRoom.isBossKilled = true;
-            Destroy(gameObject);
+            LeaveTraces();
+            if (!finalBoss)
+            {
+                exitRoom.isBossKilled = true;
+                Destroy(gameObject);
+            }
+            else
+            {
+                print("Game won. Boss controller");
+                endPanel.ShowGameWonScreen();
+                GameManager.instance.GameWon();
+            }
         }
-
     }
+
+    void LeaveTraces()
+    {
+        elementalTrace.SetElement(element);
+        Transform newParent = new GameObject("Trace").transform;
+        trace.transform.SetParent(newParent);
+        trace.SetActive(true);
+
+        foreach (GameObject orb in healingOrbs)
+        {
+            orb.transform.SetParent(newParent);
+            orb.SetActive(true);
+        }
+    }
+
     void CalculateMovement()
     {
         direction = player.position - transform.position;
@@ -121,6 +149,7 @@ public class BossController : MonoBehaviour
         if (Time.realtimeSinceStartup - timeSinceLastSwitch > 10)
         {
             element = (GameManager.Element) Random.Range(0,3);
+            elementalBar.ChangeMode(element);
             animator.SetInteger("Element", (int)element);
             timeSinceLastSwitch = Time.realtimeSinceStartup;
         }

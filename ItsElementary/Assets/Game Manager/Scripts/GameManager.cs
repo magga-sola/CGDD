@@ -49,8 +49,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(startGame)
+        if (startGame)
         {
+            player.RestartPlayerBeginning();
             startPanel.ShowStartScreen();
             backgroundMusic.PauseMusic(audioSource1, audioSource2);
         }
@@ -77,25 +78,31 @@ public class GameManager : MonoBehaviour
             new Vector3((float)-5.63847637,(float)-0.879456997,0), // 3
             new Vector3((float)-29.7999992,(float)42.7999992,0), // 4
             new Vector3((float)-5.5, (float)-0.699999988, 0), // 5
-            new Vector3(-0.460000008f,3.68000007f,0), // 6
+            new Vector3((float)-0.460000008,(float)3.68000007,0), // 6
             new Vector3((float)-9.63000011,(float)-1.47000003, 0), // 7
         };
     }
 
-    public void StartGame()
+    // From level 0
+    public void StartGame(bool playAgain)
     {
+        if (playAgain)
+        {
+            startPanel.ShowStartScreen();
+        }
         level = 0;
-        player.RestartPlayer();
+        player.RestartPlayerBeginning();
         player.isPaused = false;
         StartLevel(level);
         gameOver = false;
     }
 
+    // From start screen
     public void PlayAgain()
     {
-        startPanel.ShowStartScreen();
+        //startPanel.ShowStartScreen();
         level = 0;
-        player.RestartPlayer();
+        player.RestartPlayerBeginning();
         player.isPaused = false;
         gameOver = false;
         StartLevel(level);
@@ -107,7 +114,14 @@ public class GameManager : MonoBehaviour
         {
             level--;
         }
-        player.RestartPlayer();
+        if(level == 0)
+        {
+            player.RestartPlayerBeginning();
+        }
+        else
+        {
+            player.RestartPlayer();
+        }
         player.isPaused = false;
         StartLevel(level);
         gameOver = false;
@@ -118,12 +132,9 @@ public class GameManager : MonoBehaviour
     {
     }
 
-    // TODO call function when player kills boss :)
     public void GameWon()
     {
-        endPanel.ShowGameWonScreen();
         backgroundMusic.PauseMusic(audioSource1, audioSource2);
-
     }
 
     public void GoToNextLevel()
@@ -138,7 +149,6 @@ public class GameManager : MonoBehaviour
         audioSource2.clip = clips.Item2;
 
         backgroundMusic.PlayMusic(audioSource1, audioSource2);
-
     }
 
     public void PlayerDied(){
@@ -150,15 +160,15 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel(int level)
     {
-        player.transform.position = positions[level];
+        print(scenes.Count);
         SceneManager.LoadScene(scenes[level]);
+        player.transform.position = positions[level];
         clips = backgroundMusic.LoadMusicByScene(level);
 
         audioSource1.clip = clips.Item1;
         audioSource2.clip = clips.Item2;
         
         Debug.Log(audioSource1 + " and "+ audioSource2);
-        backgroundMusic.PlayMusic(audioSource1, audioSource2);
-        
+        backgroundMusic.PlayMusic(audioSource1, audioSource2);        
     }
 }

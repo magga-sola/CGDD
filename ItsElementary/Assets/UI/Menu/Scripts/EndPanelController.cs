@@ -5,7 +5,8 @@ public class EndPanelController : MonoBehaviour
     public GameObject endPanel;
     public GameObject gameOverScreen;
     public GameObject gameWonScreen;
-    public GameManager gameManager;
+    //public GameManager gameManager;
+    public StartPanelController startPanelController;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,7 @@ public class EndPanelController : MonoBehaviour
     // After game over
     public void StartOverGame()
     {
-        gameManager.StartGame();
+        GameManager.instance.StartGame(false);
         HideEndScreen();
         UnPauseGame();
     }
@@ -54,7 +55,7 @@ public class EndPanelController : MonoBehaviour
     // After game over
     public void RestartLevel()
     {
-        gameManager.RestartLevel();
+        GameManager.instance.RestartLevel();
         HideEndScreen();
         UnPauseGame();
     }
@@ -62,9 +63,14 @@ public class EndPanelController : MonoBehaviour
     // After game won
     public void PlayAgain()
     {
+        GameManager.instance.StartGame(true);
         HideEndScreen();
-        gameManager.PlayAgain();
         UnPauseGame();
+        /*
+        HideEndScreen();
+        startPanelController.ShowStartScreen();
+        gameManager.PlayAgain();
+        UnPauseGame();*/
     }
 
     public void HideEndScreen()

@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,8 @@ public class EnemyController : MonoBehaviour
     public Sprite[] spriteArray;
     public GameObject healingOrb;
     public HealingOrb healingorbcontroller;
+    public GameObject trace;
+    public ElementalTrace elementalTrace;
     public EnemyEnergyBar elementalBar;
     public Animator animator;
     public int[] weights = {33,33,33};
@@ -35,7 +38,6 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.name == "Projectile(Clone)")
         {
-            //GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
             TakeDamage(col.gameObject);
         }
     }
@@ -80,7 +82,6 @@ public class EnemyController : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color (255,0,0);
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
-        //int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
         if (basicAttack || (GameManager.Element)Mod((int)projectileElement - 1,3) == element){
             elementalBar.DecreaseByWeakOpponent();
         }
@@ -100,9 +101,18 @@ public class EnemyController : MonoBehaviour
             healingorbcontroller.element = element;
             GameObject healingOrbClone = Instantiate(healingOrb);
             healingOrbClone.transform.position = transform.position;
+            LeaveTrace();
 
             Destroy(gameObject);
         }
+    }
+
+    public void LeaveTrace()
+    {
+        elementalTrace.SetElement(element);
+        Transform newParent = new GameObject("Trace").transform;
+        trace.transform.SetParent(newParent);
+        trace.SetActive(true);
     }
 
     void CalculateMovement()
@@ -140,7 +150,6 @@ public class EnemyController : MonoBehaviour
             randomCeiling += num;
         }
         int randomNumber = Random.Range(0,randomCeiling+1);
-        //Debug.Log(randomNumber);
         for (int i = 0; i < weights.Length; i++)
         {
             if (currentNum + weights[i] >= randomNumber){

@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 8300000, guid: bbe9496f3f4df4c9f89a0487a4f5a35f, type: 3}
+  loopMusic: {fileID: 8300000, guid: 3b43f2509fa34c944929c30cae1cd4ce, type: 3}
 --- !u!114 &8494680130348413818
 MonoBehaviour:
   m_ObjectHideFlags: 0

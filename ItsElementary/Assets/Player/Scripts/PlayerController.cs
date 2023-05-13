@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Cirlce;
     public Sprite[] circleSprites;
     public Animator circleAnimator;
+    public AudioSource hitAudioSource;
 
     [SerializeField] AudioSource step;
 
@@ -193,6 +194,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.name.Contains("Enemy Projectile") || col.gameObject.name.Contains("Boss Projectile"))
         {
+            hitAudioSource.Play();
             circleAnimator.SetBool("Hit",true);
             //GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
         }

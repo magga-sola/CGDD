@@ -21230,6 +21230,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1233932958}
     - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: element
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: healingOrb
       value: 
       objectReference: {fileID: 1233932959}

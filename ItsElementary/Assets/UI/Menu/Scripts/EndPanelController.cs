@@ -26,16 +26,6 @@ public class EndPanelController : MonoBehaviour
         PauseGame();
     }
 
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-    }
-
-    public void UnPauseGame()
-    {
-        Time.timeScale = 1;
-    }
-
     public void ShowGameWonScreen()
     {
         endPanel.SetActive(true);
@@ -72,5 +62,29 @@ public class EndPanelController : MonoBehaviour
         endPanel.SetActive(false); ;
         gameOverScreen.SetActive(false);
         gameWonScreen.SetActive(false);
+    }
+    public void PauseGame()
+    {
+        foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
+        {
+            //if (i != music)
+            //{
+            i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
+            //}
+        }
+
+        Time.timeScale = 0;
+    }
+
+    public void UnPauseGame()
+    {
+        foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
+        {
+            //if (i != music)
+            //{
+            i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
+            //}
+        }
+        Time.timeScale = 1;
     }
 }

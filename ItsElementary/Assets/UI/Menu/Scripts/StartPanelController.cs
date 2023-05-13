@@ -38,11 +38,27 @@ public class StartPanelController : MonoBehaviour
 
     public void PauseGame()
     {
+        foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
+        {
+            //if (i != music)
+            //{
+                i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
+            //}
+        }
+
         Time.timeScale = 0;
     }
 
     public void UnPauseGame()
     {
+        foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
+        {
+            //if (i != music)
+            //{
+                i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
+            //}
+        }
+
         Time.timeScale = 1;
     }
 }

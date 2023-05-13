@@ -54,11 +54,11 @@ MonoBehaviour:
   musicByScene:
   - {fileID: 6648598114443897191}
   - {fileID: 8494680130348413818}
-  - {fileID: 6648598114443897191}
+  - {fileID: 4060612693840225507}
   - {fileID: 8494680130348413818}
   - {fileID: 6648598114443897191}
   - {fileID: 8494680130348413818}
-  - {fileID: 6648598114443897191}
+  - {fileID: 4060612693840225507}
   - {fileID: 8494680130348413818}
 --- !u!114 &6648598114443897191
 MonoBehaviour:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 0}
+  loopMusic: {fileID: 8300000, guid: 746fb4d5cd2794d4194a6d80a00170b9, type: 3}
 --- !u!114 &2111154427470543831
 MonoBehaviour:
   m_ObjectHideFlags: 0

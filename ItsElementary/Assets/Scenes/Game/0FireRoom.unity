@@ -138,10 +138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healing Orb
       objectReference: {fileID: 0}
-    - target: {fileID: 6254495093578274378, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -16216,7 +16212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82.099976, y: -115.39502}
+  m_AnchoredPosition: {x: 82.099976, y: -115.395035}
   m_SizeDelta: {x: -199.8, y: -299.99002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480856709
@@ -16503,15 +16499,15 @@ MonoBehaviour:
   - '... <b>elementals</b> you say?
 
     ... <b>glowing magical energy</b>?'
-  - If what you say is true, the orbs are a <b>lifesource</b>
+  - If what you say is true... the orbs must be a <b>lifesource!</b>
   - 'And the barrier around you looks like some sort of <b>shield<b>. '
   - "The magic all over this dungeon it's... unnatural... chaotic... \n"
   - This is serious.
-  - You must be <b>careful.</b> We don't know how this magic will affect you.
+  - You must be <b>careful.</b> We don't know how it will affect you.
   - ...I've heard terrible things about those who've used up all of their magic.
-    <b>Terrible things.<b>
-  - "You need to figure out where all of this strange, chaotic magic is coming from.
-    \n<b>Balance must be restored.</b>"
+    <b>Terrible things.</b>
+  - You need to figure out where this strange, chaotic magic is coming from. <b>Balance
+    must be restored.</b>
   - ...
   - ME?! No I'm not going near these elementals!
   - Besides, you're stronger now. You've got control over multiple elements. You
@@ -16523,8 +16519,8 @@ MonoBehaviour:
 
     <b>Earth</b>
     beats <b>Water</b>'
-  - Find  what has unleashed this unnatural magic unto the world and <b>destroy it.<b/>
-    We must protect magic at all costs!
+  - Find  what has unleashed this chaotic magic unto the world, <b>destroy it and
+    bring balance back to the world.</b>
   dialogueTrigger:
     m_PersistentCalls:
       m_Calls: []
@@ -35583,7 +35579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 145, y: 276.60007}
+  m_AnchoredPosition: {x: 145, y: 276.6001}
   m_SizeDelta: {x: 331.21, y: 348.41}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1708617183

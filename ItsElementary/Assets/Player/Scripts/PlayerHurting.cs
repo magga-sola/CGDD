@@ -17,7 +17,15 @@ public class PlayerHurting : MonoBehaviour
     }
     void Update()
     {
-        
+        healthbar = elementalBars.GetBarByElement(player.elementalMode);
+        if (!healthbar.IsHealthLow() && player.circleAnimator.GetBool(animatorParameters[(int)player.elementalMode]))
+        {
+            player.circleAnimator.SetBool(animatorParameters[(int)player.elementalMode],false);
+        }
+        else if (healthbar.IsHealthLow() && !player.circleAnimator.GetBool(animatorParameters[(int)player.elementalMode]))
+        {
+            player.circleAnimator.SetBool(animatorParameters[(int)player.elementalMode],true);
+        }
     }
 
     int Mod(int x, int p)
@@ -43,14 +51,6 @@ public class PlayerHurting : MonoBehaviour
             else if (projectileElement == playerElement)
             {
                 healthbar.DecreaseBySameOpponent();
-            }
-            if (healthbar.IsHealthLow())
-            {
-                player.circleAnimator.SetBool(animatorParameters[(int)playerElement],true);
-            }
-            else
-            {
-                player.circleAnimator.SetBool(animatorParameters[(int)playerElement],false);
             }
         }
         

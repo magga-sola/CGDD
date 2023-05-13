@@ -16216,7 +16216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82.099976, y: -115.395035}
+  m_AnchoredPosition: {x: 82.099976, y: -115.39502}
   m_SizeDelta: {x: -199.8, y: -299.99002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480856709
@@ -16499,7 +16499,7 @@ MonoBehaviour:
   npcName: The Wizard
   sentences:
   - Oh there's my favorite student!
-  - You... you're GLOWING RED!
+  - You... you're GLOWING!
   - HOW DID THIS HAPPEN?!
   - '... <b>elementals</b> you say?
 

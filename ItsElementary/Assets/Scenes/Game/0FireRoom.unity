@@ -4526,11 +4526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.14
+      value: 24.19
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.06
+      value: -10.05
       objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16216,7 +16216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82.099976, y: -115.39505}
+  m_AnchoredPosition: {x: 82.099976, y: -115.395035}
   m_SizeDelta: {x: -199.8, y: -299.99002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480856709
@@ -16383,6 +16383,7 @@ GameObject:
   - component: {fileID: 1553065437}
   - component: {fileID: 1553065436}
   - component: {fileID: 1553065439}
+  - component: {fileID: 1553065440}
   m_Layer: 0
   m_Name: Wizard1
   m_TagString: NPC
@@ -16531,6 +16532,27 @@ MonoBehaviour:
   dialogueTrigger:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &1553065440
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553065435}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 658ad701c4b241c4eaa46345da7ac80b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1554904678
 GameObject:
   m_ObjectHideFlags: 0
@@ -35448,11 +35470,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591851998}
   m_CullTransparentMesh: 1
---- !u!1 &1601252609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6213782352564423204, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-  m_PrefabInstance: {fileID: 4001494194797047030}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627726777
 PrefabInstance:
   m_ObjectHideFlags: 0

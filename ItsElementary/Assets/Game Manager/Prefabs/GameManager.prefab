@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 8300000, guid: bbe9496f3f4df4c9f89a0487a4f5a35f, type: 3}
+  loopMusic: {fileID: 8300000, guid: 3b43f2509fa34c944929c30cae1cd4ce, type: 3}
 --- !u!114 &8494680130348413818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
-  loopMusic: {fileID: 0}
+  loopMusic: {fileID: 8300000, guid: 927740bae80e348889599cd2831b7a93, type: 3}
 --- !u!114 &8835274072063579544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -299,7 +299,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0

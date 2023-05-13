@@ -38457,11 +38457,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170770278476984707, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8837921355076186896, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6074196067744051974, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}

@@ -16503,15 +16503,15 @@ MonoBehaviour:
   - '... <b>elementals</b> you say?
 
     ... <b>glowing magical energy</b>?'
-  - If what you say is true, the orbs are a <b>lifesource</b>
+  - If what you say is true... the orbs must be a <b>lifesource!</b>
   - 'And the barrier around you looks like some sort of <b>shield<b>. '
   - "The magic all over this dungeon it's... unnatural... chaotic... \n"
   - This is serious.
-  - You must be <b>careful.</b> We don't know how this magic will affect you.
+  - You must be <b>careful.</b> We don't know how it will affect you.
   - ...I've heard terrible things about those who've used up all of their magic.
-    <b>Terrible things.<b>
-  - "You need to figure out where all of this strange, chaotic magic is coming from.
-    \n<b>Balance must be restored.</b>"
+    <b>Terrible things.</b>
+  - You need to figure out where this strange, chaotic magic is coming from. <b>Balance
+    must be restored.</b>
   - ...
   - ME?! No I'm not going near these elementals!
   - Besides, you're stronger now. You've got control over multiple elements. You
@@ -16523,8 +16523,8 @@ MonoBehaviour:
 
     <b>Earth</b>
     beats <b>Water</b>'
-  - Find  what has unleashed this unnatural magic unto the world and <b>destroy it.<b/>
-    We must protect magic at all costs!
+  - Find  what has unleashed this chaotic magic unto the world, <b>destroy it and
+    bring balance back to the world.</b>
   dialogueTrigger:
     m_PersistentCalls:
       m_Calls: []

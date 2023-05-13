@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
 
     public (AudioClip, AudioClip) LoadMusicByScene(int level)
     {
-        print("level in loadmusic:" + level);
+        
         return (musicByScene[level].introMusic, musicByScene[level].loopMusic);
         
     }
@@ -41,11 +41,12 @@ public class MusicManager : MonoBehaviour
         } else 
         {
             introDone = true;
+            Debug.Log(loopMusic);
             loopMusic.Play();
         }
     }
 
-    public void PauseMusic(AudioSource introMusic, AudioSource loopMusic)
+    public void PauseMusic(AudioSource loopMusic, AudioSource introMusic = null)
     {        
         if (introMusic != null && !introDone)
         {

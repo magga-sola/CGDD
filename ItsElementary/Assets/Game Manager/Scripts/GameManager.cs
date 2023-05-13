@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
             startPanel.ShowStartScreen();
         }
         level = 0;
+        backgroundMusic.PauseMusic(panelAudioSource);
         player.RestartPlayerBeginning();
         player.isPaused = false;
         StartLevel(level);
@@ -186,6 +187,7 @@ public class GameManager : MonoBehaviour
     public void PlayerDied(){
         panelAudioSource.clip = backgroundMusic.LoseMusic.loopMusic;
         backgroundMusic.PlayMusic(panelAudioSource);
+        Debug.Log(panelAudioSource.isPlaying);
         gameOver = false;
         endPanel.ShowGameOverScreen();
         player.isPaused = true;

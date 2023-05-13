@@ -24,6 +24,7 @@ public class EndPanelController : MonoBehaviour
         gameOverScreen.SetActive(true);
         gameWonScreen.SetActive(false);
         AudioSource music = GameManager.instance.panelAudioSource;
+        Debug.Log("music: "+ music);
         PauseGame(music);
     }
 
@@ -65,12 +66,14 @@ public class EndPanelController : MonoBehaviour
         gameOverScreen.SetActive(false);
         gameWonScreen.SetActive(false);
     }
-    public void PauseGame(AudioSource music)
+    public async void PauseGame(AudioSource music)
     {
         foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
         {
             if (i != music)
             {
+            Debug.Log(i.clip);
+            //Debug.Log("music" + music.clip);
             i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
             }
         }

@@ -43,8 +43,7 @@ public class MusicManager : MonoBehaviour
     }
 
     public void PauseMusic(AudioSource introMusic, AudioSource loopMusic)
-    {
-        
+    {        
         if (introMusic != null && !introDone)
         {
             introMusic.Stop();

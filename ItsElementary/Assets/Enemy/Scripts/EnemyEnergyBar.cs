@@ -5,7 +5,6 @@ using static GameManager;
 
 public class EnemyEnergyBar : MonoBehaviour
 {
-
     public Element elementalMode;
 
     public int startingHealth;
@@ -32,6 +31,12 @@ public class EnemyEnergyBar : MonoBehaviour
         elementalMode = element;
         slider.maxValue = maxHealth;
         slider.value = startingHealth;
+        fillImage.color = colors[(int)element];
+    }
+
+    public void ChangeMode(Element element)
+    {
+        elementalMode = element;
         fillImage.color = colors[(int)element];
     }
 

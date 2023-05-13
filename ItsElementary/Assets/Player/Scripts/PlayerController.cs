@@ -1,9 +1,6 @@
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {   public float moveSpeed;
-    /*
-    public static PlayerController instance;
-    */
     public Rigidbody2D rb;
     public RigidbodyConstraints2D constraints;
     private Vector2 moveDirection;
@@ -36,21 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         elementalBars.SetElementalMode(elementalMode);
         activeColorSpriteArray = playerRedSpriteArray;
-        //isPaused = true;
     }
-    /*
-    void Awake()
-    {
-        if (instance is null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }*/
 
     // Update is called once per frame
     void Update()
@@ -77,16 +60,10 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
         if (moveX != 0 || moveY != 0)
         {
-            /*
-            if (!step.isPlaying)
-            {
-                step.Play();
-            }*/
             animator.SetBool("Moving", true);
         }
         else
         {
-            //step.Stop();
             animator.SetBool("Moving", false);
         }
 
@@ -109,8 +86,7 @@ public class PlayerController : MonoBehaviour
         }
         if ((int)Input.mouseScrollDelta.y != 0){
             ChangeModeScroll((int)Input.mouseScrollDelta.y);
-        }
-        
+        }   
     }
 
     private void ChangeMode(GameManager.Element mode)
@@ -120,7 +96,6 @@ public class PlayerController : MonoBehaviour
         animator.SetInteger("Element", (int)mode);
         circleAnimator.SetInteger("Element", (int)mode);
         elementalBars.SetElementalMode(mode);
-        //Cirlce.GetComponent<SpriteRenderer>().sprite = circleSprites[(int)mode];
     }
 
     private void ChangeModeScroll(int scrollNum)
@@ -132,7 +107,6 @@ public class PlayerController : MonoBehaviour
                 ChangeMode(element);
                 break;
             }
-            //Debug.Log("ASDASD");
             element = (GameManager.Element) Mod((int)element + scrollNum, 3);
         }
     }
@@ -159,21 +133,22 @@ public class PlayerController : MonoBehaviour
             }
             else {
                 // PLAYER IS DEAD
-                PlayerDies();
                 GameManager.instance.PlayerDied();
             }
         }
     }
 
-    public void RestartPlayer()
+    public void RestartPlayerBeginning()
     {
         isPaused = false;
-        elementalBars.RestartHealth();
+        elementalBars.RestartHealthBeginning();
     }
 
-    void PlayerDies()
+    public void RestartPlayer()
     {
-        // Todo remove?
+        print("restart player");
+        isPaused = false;
+        elementalBars.RestartHealth();
     }
 
     void PlayerDirection()

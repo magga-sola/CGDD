@@ -7871,6 +7871,10 @@ PrefabInstance:
       value: BossObj
       objectReference: {fileID: 0}
     - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284782800063096857, guid: e515e9bdc79366c468dbb070474ab98a, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 912407546}

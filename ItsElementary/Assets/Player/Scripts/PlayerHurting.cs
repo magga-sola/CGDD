@@ -9,6 +9,7 @@ public class PlayerHurting : MonoBehaviour
     public ElementalBars elementalBars;
     private GameManager.Element playerElement;
     private EnergyBar healthbar;
+    private string[] animatorParameters = {"Red Cracked", "Green Cracked", "Blue Cracked"};
     void Start()
     {
         player = GameManager.instance.player;
@@ -42,6 +43,14 @@ public class PlayerHurting : MonoBehaviour
             else if (projectileElement == playerElement)
             {
                 healthbar.DecreaseBySameOpponent();
+            }
+            if (healthbar.IsHealthLow())
+            {
+                player.circleAnimator.SetBool(animatorParameters[(int)playerElement],true);
+            }
+            else
+            {
+                player.circleAnimator.SetBool(animatorParameters[(int)playerElement],false);
             }
         }
         

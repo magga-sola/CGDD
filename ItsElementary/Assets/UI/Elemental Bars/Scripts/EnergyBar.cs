@@ -147,4 +147,18 @@ public class EnergyBar : MonoBehaviour
         slider.value = health;
     }
 
+    public float GetHealth()
+    {
+        return slider.value;
+    }
+
+    public bool IsHealthLow()
+    {
+        if (slider.value <= 30)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }

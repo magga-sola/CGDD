@@ -44,7 +44,6 @@ public class DialogueController : MonoBehaviour
         if (this != null) {
             gameObject.SetActive(true);
             GameManager.instance.player.Pause();
-            //pause time here
             nameComponent.text = npc.npcName;
             
             if(!isFinished) 

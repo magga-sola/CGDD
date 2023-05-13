@@ -34,9 +34,9 @@ public class PlayerShooting : MonoBehaviour
             if ((elementalAttack || basicAttack) && Time.realtimeSinceStartup - timeSinceLastShot > 0.5)
             {
                 playerMode = player.elementalMode;
-                ChangeAudioClip();
                 if (basicAttack)
                 {
+                    BasicAttackAudioClip();
                     playerProjectile.SetBasicAttack(true);
                     GameObject projectileClone = Instantiate(projectile);
                     projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
@@ -47,6 +47,7 @@ public class PlayerShooting : MonoBehaviour
                 // Special attack
                 else if (!elementalBars.IsHealthFinishedInElement(playerMode))
                 {
+                    ChangeAudioClip();
                     GameObject projectileClone = Instantiate(projectile);
                     projectileClone.transform.SetPositionAndRotation(firePoint.position, Quaternion.Euler(0, 0, lookAngle));
                     projectileClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * projectileSpeed;
@@ -60,6 +61,12 @@ public class PlayerShooting : MonoBehaviour
     void ChangeAudioClip()
     {
         audioSource.clip = attacksAudio[(int)playerMode];
+        audioSource.Play();
+    }
+
+    void BasicAttackAudioClip()
+    {
+        audioSource.clip = attacksAudio[3];
         audioSource.Play();
     }
 

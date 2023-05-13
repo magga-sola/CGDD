@@ -38763,10 +38763,6 @@ PrefabInstance:
       propertyPath: hitAudioSource
       value: 
       objectReference: {fileID: 2022887660}
-    - target: {fileID: 6213782352564423226, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6213782353094651677, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_SortingLayer
       value: 0

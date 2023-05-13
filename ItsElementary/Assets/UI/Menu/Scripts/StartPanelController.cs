@@ -20,11 +20,29 @@ public class StartPanelController : MonoBehaviour
     public void ShowStartScreen()
     {
         startPanel.SetActive(true);
+        PauseGame();
     }
 
-    public void HideStartScreen()
+    public void StartGame()
     {
         startPanel.SetActive(false);
         gameManager.StartGame(false);
+        UnPauseGame();
+    }
+    public void StartTutorial()
+    {
+        startPanel.SetActive(false);
+        gameManager.StartTutorial();
+        UnPauseGame();
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1;
     }
 }

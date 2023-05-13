@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
 
     public (AudioClip, AudioClip) LoadMusicByScene(int level)
     {
-
+        print("level in loadmusic:" + level);
         return (musicByScene[level].introMusic, musicByScene[level].loopMusic);
         
     }

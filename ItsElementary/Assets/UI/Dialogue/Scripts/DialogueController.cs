@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEditor.Events;
 using TMPro;
+
 public class DialogueController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -14,17 +13,15 @@ public class DialogueController : MonoBehaviour
     public float textSpeed;
     private int index;
     private bool isFinished;
-    //public PlayerController player;
+    public GameObject skipButton;
 
     private GameObject npc;
-    NPC npcController;
-    
+    NPC npcController;    
 
     public UnityEvent onFinished;
 
     void Start()
     {
-   
         if (GameObject.FindWithTag("NPC").TryGetComponent(out NPC script))
         {
             // FIND NPC GAMEOBJECT AND LISTEN IN ON DIALOGUE TRIGGER
@@ -34,7 +31,6 @@ public class DialogueController : MonoBehaviour
 
             //enemyController = GameObject.FindWithTag("Enemy").GetComponent<EnemyController>();
             //enemyController.onEnemyDeath.AddListener(SecondDialogueTrigger);
-
         } 
 
         // INITIALIZE THE PANEL
@@ -45,14 +41,13 @@ public class DialogueController : MonoBehaviour
 
     public void StartDialogue(NPC npc)
     {
-        if (this != null){
+        if (this != null) {
             gameObject.SetActive(true);
             GameManager.instance.player.Pause();
             nameComponent.text = npc.npcName;
             
             if(!isFinished) 
             {
-                
                 //nameComponent.text = npc.npcName;
                 index = 0;
                 lines = npc.sentences;
@@ -61,13 +56,12 @@ public class DialogueController : MonoBehaviour
         }
     } 
 
-     public void DialogueTrigger(Collider2D col)
+    public void DialogueTrigger(Collider2D col)
     {
         if(col.gameObject.name == "Player")
         {
             StartDialogue(npcController);
-        }
-             
+        }             
     }
 
     IEnumerator TypeLine()
@@ -79,7 +73,6 @@ public class DialogueController : MonoBehaviour
             {
                 if (newArray[i+1] == 'b')
                 {
-                    //<b>
                     textComponent.text += newArray[i];
                     textComponent.text += newArray[i+1];
                     textComponent.text += newArray[i+2];
@@ -88,7 +81,6 @@ public class DialogueController : MonoBehaviour
 
                 } else 
                 {
-                    // </b>
                     textComponent.text += newArray[i];
                     textComponent.text += newArray[i+1];
                     textComponent.text += newArray[i+2];
@@ -111,15 +103,15 @@ public class DialogueController : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
-
-        } else
+        } 
+        else
         {
             textComponent.text = lines[index];
             isFinished = true;
             gameObject.SetActive(false);
             GameManager.instance.player.UnPause();
+            skipButton.SetActive(false);
         }
-
     }
 
     void Update()
@@ -129,14 +121,22 @@ public class DialogueController : MonoBehaviour
             if (textComponent.text == lines[index])
             {
                 NextLine();
-            } else
+            } 
+            else
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
         }
-            
-        
-        
+    }
+
+    public void SkipDialogue()
+    {
+        index = lines.Length - 1;
+        textComponent.text = lines[index];
+        isFinished = true;
+        gameObject.SetActive(false);
+        GameManager.instance.player.UnPause();
+        skipButton.SetActive(false);        
     }
 }

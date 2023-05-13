@@ -38,7 +38,6 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.name == "Projectile(Clone)")
         {
-            //GameManager.Element projectileElement = col.gameObject.GetComponent<PlayerProjectile>().element;
             TakeDamage(col.gameObject);
         }
     }
@@ -83,7 +82,6 @@ public class EnemyController : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color (255,0,0);
         GameManager.Element projectileElement = projectile.GetComponent<PlayerProjectile>().element;
         bool basicAttack = projectile.GetComponent<PlayerProjectile>().basicAttack;
-        //int enum_length = System.Enum.GetValues(typeof(GameManager.Element)).Length;
         if (basicAttack || (GameManager.Element)Mod((int)projectileElement - 1,3) == element){
             elementalBar.DecreaseByWeakOpponent();
         }
@@ -111,7 +109,6 @@ public class EnemyController : MonoBehaviour
 
     public void LeaveTrace()
     {
-        print("setting as:" + element);
         elementalTrace.SetElement(element);
         Transform newParent = new GameObject("Trace").transform;
         trace.transform.SetParent(newParent);

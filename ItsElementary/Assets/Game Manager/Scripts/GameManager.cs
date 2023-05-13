@@ -26,8 +26,10 @@ public class GameManager : MonoBehaviour
     public MusicManager backgroundMusic;
     public AudioSource audioSource1;
     public AudioSource audioSource2;
+    public AudioSource panelAudioSource;
 
     (AudioClip, AudioClip) clips;
+    Music panelclips;
     void FixedUpdate()
     {
         
@@ -51,10 +53,13 @@ public class GameManager : MonoBehaviour
     {
         if (startGame)
         {
+            panelAudioSource.clip = backgroundMusic.StartMusic.loopMusic;
+            backgroundMusic.PlayMusic(panelAudioSource);
+
             player.isPaused = true;
             player.RestartPlayerBeginning();
             startPanel.ShowStartScreen();
-            backgroundMusic.PauseMusic(audioSource1, audioSource2);
+            //backgroundMusic.PauseMusic(audioSource1, audioSource2);
         }
         gameOver = false;
         scenes = new List<string> ()
@@ -101,6 +106,8 @@ public class GameManager : MonoBehaviour
     {
         if (playAgain)
         {
+            panelAudioSource.clip = backgroundMusic.StartMusic.loopMusic;
+            backgroundMusic.PlayMusic(panelAudioSource);
             startPanel.ShowStartScreen();
         }
         level = 0;
@@ -155,6 +162,8 @@ public class GameManager : MonoBehaviour
         if(level == scenes.Count - 1)
         {
             level = 0;
+            panelAudioSource.clip = backgroundMusic.StartMusic.loopMusic;
+            backgroundMusic.PlayMusic(panelAudioSource);
             startPanel.ShowStartScreen();
         }
         else
@@ -175,10 +184,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void PlayerDied(){
+        panelAudioSource.clip = backgroundMusic.LoseMusic.loopMusic;
+        backgroundMusic.PlayMusic(panelAudioSource);
         gameOver = false;
         endPanel.ShowGameOverScreen();
         player.isPaused = true;
-        backgroundMusic.PauseMusic(audioSource1, audioSource2);
+        //backgroundMusic.PauseMusic(audioSource1, audioSource2);
+
     }
 
     public void StartLevel(int level)

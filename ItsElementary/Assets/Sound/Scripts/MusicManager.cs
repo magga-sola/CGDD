@@ -13,6 +13,9 @@ public class MusicManager : MonoBehaviour
     
     public List<Music> musicByScene;
 
+    public Music StartMusic;
+    public Music WinMusic;
+    public Music LoseMusic;
     void Start()
     {
         scenes = gameManager.scenes;
@@ -28,9 +31,9 @@ public class MusicManager : MonoBehaviour
     }
 
 
-    public void PlayMusic(AudioSource introMusic, AudioSource loopMusic)
+    public void PlayMusic(AudioSource loopMusic, AudioSource introMusic = null)
     {
-        if (introMusic.clip != null)
+        if (introMusic != null && introMusic.clip != null)
         {
             introMusic.Play();
             loopMusic.PlayDelayed((float)(introMusic.clip.length - 0.1));

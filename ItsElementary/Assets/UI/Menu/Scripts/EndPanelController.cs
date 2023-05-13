@@ -23,14 +23,16 @@ public class EndPanelController : MonoBehaviour
         endPanel.SetActive(true);
         gameOverScreen.SetActive(true);
         gameWonScreen.SetActive(false);
-        PauseGame();
+        AudioSource music = GameManager.instance.panelAudioSource;
+        PauseGame(music);
     }
 
     public void ShowGameWonScreen()
     {
         endPanel.SetActive(true);
         gameWonScreen.SetActive(true);
-        PauseGame();
+        AudioSource music = GameManager.instance.panelAudioSource;
+        PauseGame(music);
     }
 
     // After game over
@@ -63,14 +65,14 @@ public class EndPanelController : MonoBehaviour
         gameOverScreen.SetActive(false);
         gameWonScreen.SetActive(false);
     }
-    public void PauseGame()
+    public void PauseGame(AudioSource music)
     {
         foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
         {
-            //if (i != music)
-            //{
+            if (i != music)
+            {
             i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
-            //}
+            }
         }
 
         Time.timeScale = 0;

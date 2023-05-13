@@ -5,6 +5,8 @@ public class StartPanelController : MonoBehaviour
     public GameObject startPanel;
     public GameManager gameManager;
 
+    AudioSource music;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,8 @@ public class StartPanelController : MonoBehaviour
     public void ShowStartScreen()
     {
         startPanel.SetActive(true);
-        PauseGame();
+        AudioSource music = GameManager.instance.panelAudioSource;
+        PauseGame(music);
     }
 
     public void StartGame()
@@ -36,14 +39,14 @@ public class StartPanelController : MonoBehaviour
         UnPauseGame();
     }
 
-    public void PauseGame()
+    public void PauseGame(AudioSource music)
     {
         foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
         {
-            //if (i != music)
-            //{
+            if (i != music)
+            {
                 i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
-            //}
+            }
         }
 
         Time.timeScale = 0;

@@ -33,7 +33,7 @@ public class PlayerProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
+        if (col.gameObject.name != "Player" && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb") && !col.gameObject.name.Contains("Wizard"))
         {
             audioSource.clip = audioClips[(int)element];
             audioSource.Play();

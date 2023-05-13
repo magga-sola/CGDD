@@ -20,7 +20,7 @@ public class EnemyProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.gameObject.name.Contains("Enemy") && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb"))
+        if (!col.gameObject.name.Contains("Enemy") && !col.gameObject.name.Contains("Projectile") && !col.gameObject.name.Contains("Healing Orb") &&  !col.gameObject.name.Contains("Wizard"))
         {
             if (col.gameObject.name.Contains("Player"))
             {

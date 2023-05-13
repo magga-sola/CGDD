@@ -147,7 +147,6 @@ public class PlayerController : MonoBehaviour
 
     public void RestartPlayer()
     {
-        print("restart player");
         isPaused = false;
         elementalBars.RestartHealth();
     }

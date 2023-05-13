@@ -72,14 +72,14 @@ public class GameManager : MonoBehaviour
         };
         positions = new List<Vector3>()
         {
-            new Vector3((float)10.2200003,(float)-0.300000012,1), // 0
-            new Vector3((float)-6.8,(float)-0.81,0), // 1
-            new Vector3((float)-9.5,(float)50.2999992,0), // 2
-            new Vector3((float)-5.63847637,(float)-0.879456997,0), // 3
-            new Vector3((float)-29.7999992,(float)42.7999992,0), // 4
-            new Vector3((float)-5.5, (float)-0.699999988, 0), // 5
-            new Vector3((float)-0.460000008,(float)3.68000007,0), // 6
-            new Vector3((float)-9.63000011,(float)-1.47000003, 0), // 7
+            new Vector3(10.2f,-0.3f,1), // 0
+            new Vector3(-6.8f,-4.6f,0),
+            new Vector3(-9.5f,50.3f,0), // 2
+            new Vector3(-5.6f,-0.8f,0), // 3
+            new Vector3(-29.8f,42.8f,0), // 4
+            new Vector3(-5.5f,-0.7f,0), // 5
+            new Vector3(-0.4f,3.7f,0), // 6
+            new Vector3(-9.6f,-1.5f, 0), // 7
         };
     }
 

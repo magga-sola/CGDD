@@ -138,10 +138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Healing Orb
       objectReference: {fileID: 0}
-    - target: {fileID: 6254495093578274378, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6254495093578274379, guid: a6dacdb587e9447ee9d42b26f070ec6b, type: 3}
       propertyPath: m_RootOrder
       value: 19

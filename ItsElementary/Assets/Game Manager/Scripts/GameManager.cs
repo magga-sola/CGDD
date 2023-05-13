@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     {
         if (startGame)
         {
+            player.isPaused = true;
             player.RestartPlayerBeginning();
             startPanel.ShowStartScreen();
             backgroundMusic.PauseMusic(audioSource1, audioSource2);
@@ -68,19 +69,31 @@ public class GameManager : MonoBehaviour
             "5EarthWaterRoomBoss", // 5
 
             "6FinalRoom", // 6
-            "7FinalRoomBoss" // 7
+            "7FinalRoomBoss", // 8
+            "-1PlayRoom" // 7
         };
         positions = new List<Vector3>()
         {
             new Vector3(10.2f,-0.3f,1), // 0
-            new Vector3(-6.8f,-4.6f,0),
+            new Vector3(-6.8f,-4.6f,0), // 1
             new Vector3(-9.5f,50.3f,0), // 2
             new Vector3(-5.6f,-0.8f,0), // 3
             new Vector3(-29.8f,42.8f,0), // 4
             new Vector3(-5.5f,-0.7f,0), // 5
             new Vector3(-0.4f,3.7f,0), // 6
             new Vector3(-9.6f,-1.5f, 0), // 7
+            new Vector3(-41f, 0, 0), // 8
         };
+    }
+
+    // From level 8 (-1)
+    public void StartTutorial()
+    {
+        level = 8;
+        player.RestartPlayerBeginning();
+        player.isPaused = false;
+        StartLevel(level);
+        gameOver = false;
     }
 
     // From level 0
@@ -100,7 +113,6 @@ public class GameManager : MonoBehaviour
     // From start screen
     public void PlayAgain()
     {
-        //startPanel.ShowStartScreen();
         level = 0;
         player.RestartPlayerBeginning();
         player.isPaused = false;
@@ -139,7 +151,18 @@ public class GameManager : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        level++;
+        // If at tutorial
+        if(level == scenes.Count - 1)
+        {
+            level = 0;
+            startPanel.ShowStartScreen();
+        }
+        else
+        {
+            level++;
+
+        }
+        print("level" + level);
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
 
@@ -160,7 +183,6 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel(int level)
     {
-        print(scenes.Count);
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
         clips = backgroundMusic.LoadMusicByScene(level);

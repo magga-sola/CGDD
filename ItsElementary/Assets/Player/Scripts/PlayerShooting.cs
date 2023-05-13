@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!player.isPaused)
+        if(!GameManager.instance.player.isPaused)
         {
             lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             lookAngle = Mathf.Atan2(lookDirection.y - transform.position.y, lookDirection.x - transform.position.x) * Mathf.Rad2Deg;

@@ -897,6 +897,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04641bc6447b27646ba4672d10700623, type: 3}
+--- !u!114 &494986577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1127536726627304733, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+  m_PrefabInstance: {fileID: 698457380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd179a8005722df4b8a9c9b5993fecc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &497076277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1625,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 613677170335251575, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 494986577}
+    - target: {fileID: 613677170335251575, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2820867167189962494, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1677,6 +1696,14 @@ PrefabInstance:
     - target: {fileID: 4001494193272379075, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258502219456030408, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 494986577}
+    - target: {fileID: 4258502219456030408, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 5670380414095431477, guid: 5c7dc253eb0693143ac7fd69680532be, type: 3}
       propertyPath: m_AnchorMax.x

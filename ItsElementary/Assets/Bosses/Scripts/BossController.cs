@@ -103,7 +103,6 @@ public class BossController : MonoBehaviour
             }
             else
             {
-                print("Game won. Boss controller");
                 endPanel.ShowGameWonScreen();
                 GameManager.instance.GameWon();
             }

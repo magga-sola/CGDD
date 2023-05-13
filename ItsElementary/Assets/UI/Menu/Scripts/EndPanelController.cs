@@ -5,7 +5,6 @@ public class EndPanelController : MonoBehaviour
     public GameObject endPanel;
     public GameObject gameOverScreen;
     public GameObject gameWonScreen;
-    //public GameManager gameManager;
     public StartPanelController startPanelController;
 
     // Start is called before the first frame update
@@ -66,11 +65,6 @@ public class EndPanelController : MonoBehaviour
         GameManager.instance.StartGame(true);
         HideEndScreen();
         UnPauseGame();
-        /*
-        HideEndScreen();
-        startPanelController.ShowStartScreen();
-        gameManager.PlayAgain();
-        UnPauseGame();*/
     }
 
     public void HideEndScreen()

@@ -73,9 +73,9 @@ public class ElementalBars : MonoBehaviour
 
     public void RestartHealthBeginning()
     {
-        fireBar.Initialize(100, 100);
-        waterBar.Initialize(100, 100);
-        earthBar.Initialize(100, 100);
+        fireBar.Initialize(100, 70);
+        waterBar.Initialize(100, 70);
+        earthBar.Initialize(100, 70);
     }
 
     public EnergyBar GetBarByElement(GameManager.Element element)

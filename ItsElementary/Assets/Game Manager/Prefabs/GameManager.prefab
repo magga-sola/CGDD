@@ -1205,6 +1205,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 4001494193272379072}
+    - target: {fileID: 4030354578148879093, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
+      propertyPath: startPanelController
+      value: 
+      objectReference: {fileID: 1127536726627304733}
     - target: {fileID: 4048165869807354437, guid: 96b8feb281f3cb24ca5d9b693f5de0e7, type: 3}
       propertyPath: gameManager
       value: 

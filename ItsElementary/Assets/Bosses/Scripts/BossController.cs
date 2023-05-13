@@ -20,7 +20,7 @@ public class BossController : MonoBehaviour
     public bool moving;
     public bool finalBoss;
     private float timeSinceLastSwitch;
-    public GameManager gameManager;
+    //public GameManager gameManager;
     public GameObject[] healingOrbs;
     public GameObject trace;
     public ElementalTrace elementalTrace;
@@ -103,8 +103,9 @@ public class BossController : MonoBehaviour
             }
             else
             {
+                print("Game won. Boss controller");
                 endPanel.ShowGameWonScreen();
-                gameManager.GameWon();
+                GameManager.instance.GameWon();
             }
         }
     }

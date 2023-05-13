@@ -513,6 +513,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 56820984607835745}
   gameWonScreen: {fileID: 2885872462005511804}
   gameManager: {fileID: 0}
+  startPanelController: {fileID: 4048165869807354437}
 --- !u!1 &1911936427010459574
 GameObject:
   m_ObjectHideFlags: 0

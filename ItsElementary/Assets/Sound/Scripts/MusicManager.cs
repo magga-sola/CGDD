@@ -51,7 +51,5 @@ public class MusicManager : MonoBehaviour
         {
             loopMusic.Stop();
         }
-
     }
-
 }

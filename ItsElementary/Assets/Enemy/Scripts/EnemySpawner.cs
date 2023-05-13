@@ -8,6 +8,9 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemy;
     private float timeSinceLastSpawn;
     private float randomTimeInterval;
+    public int startInterval = 10;
+    public int endInterval = 30;
+    public int maxEnemies = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +26,12 @@ public class EnemySpawner : MonoBehaviour
 
     void RandomTime()
     {
-        randomTimeInterval = Random.Range(10,30);
+        randomTimeInterval = Random.Range(startInterval,endInterval);
     }
 
     void spawn()
     {
-        if (Time.realtimeSinceStartup - timeSinceLastSpawn > randomTimeInterval && GameObject.FindGameObjectsWithTag("Enemy").Length < 6)
+        if (Time.realtimeSinceStartup - timeSinceLastSpawn > randomTimeInterval && GameObject.FindGameObjectsWithTag("Enemy").Length <= maxEnemies)
         {
             GameObject enemyClone = Instantiate(enemy);
             enemyClone.SetActive(true);

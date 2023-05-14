@@ -11,25 +11,25 @@ In this top-down shooter & dungeon crawler you play as a sorcerer's apprentice r
 magical world. You hold the power of all three elements and is set out on a journey to bring order to the elemental chaos caused by something within the dungeon.
 
 ## Controls
-You move with WASD or Arrow keys
+You move with **WASD** or **Arrow keys**
 
 You aim with your mouse and shoot with the right and left click
 
-- Right click: Basic Attack
+- **Right click**: Basic Attack
 
-- Left click:  Magical Attack
+- **Left click**:  Magical Attack
 
     Fire --(burns)--> Earth --(drains)--> Water --(extinguishes)--> Fire
 
 You switch elemental modes with
 
-- 1: Fire
+- **1**: Fire
 
-- 2: Earth
+- **2**: Earth
 
-- 3: Water
+- **3**: Water
 
-- or with the scroll wheel
+- or with the **Scroll wheel**
 
 ## Sprites Created
 - Fire, Earth, Water icons in elemental health bar

@@ -198,14 +198,13 @@ public class GameManager : MonoBehaviour
         else
         {
             level++;
+            clips = backgroundMusic.LoadMusicByScene(level);
+            audioSource1.clip = clips.Item1;
+            audioSource2.clip = clips.Item2;
+            backgroundMusic.PlayMusic(audioSource1, audioSource2);
         }
         SceneManager.LoadScene(scenes[level]);
         player.transform.position = positions[level];
-
-        clips = backgroundMusic.LoadMusicByScene(level);
-
-        audioSource1.clip = clips.Item1;
-        audioSource2.clip = clips.Item2;
     }
 
     public void PlayerDied(){

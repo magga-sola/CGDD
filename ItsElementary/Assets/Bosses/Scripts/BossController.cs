@@ -105,6 +105,7 @@ public class BossController : MonoBehaviour
             else
             {
                 animator.SetBool("Dead",true);
+                gameObject.GetComponent<AudioSource>().Play();
                 //endPanel.ShowGameWonScreen();
                 //GameManager.instance.GameWon();
             }

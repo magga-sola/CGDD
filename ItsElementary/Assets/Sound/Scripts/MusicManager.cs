@@ -41,7 +41,6 @@ public class MusicManager : MonoBehaviour
         } else 
         {
             introDone = true;
-            Debug.Log(loopMusic);
             loopMusic.Play();
         }
     }

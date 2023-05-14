@@ -4,19 +4,19 @@ Welcome to the github of our game **It's Elementary**!
 
 This was a game made in the span of 2 weeks for the Course: T-624-CGDD at Reykjavík University in 2023.
 
-### About the Game
+## About the Game
 
 
-### Controls
+## Controls
 
 
-### How to Play
+## How to Play
 
 
-### Attribution list
+## Attribution list
 The following are resources & assets used in **It's Elementary**:
 
-## Environment (Tilemap, objects etc.)
+### Environment (Tilemap, objects etc.)
 
 UI Border → https://drunkenimpgamestudio.itch.io/pixel-ui-borders
 	Designed by: Drunken Imp Game Studio
@@ -39,7 +39,7 @@ Projectiles & Explosions → https://foozlecc.itch.io/pixel-magic-sprite-effects
 Tutorial Icons →https://greenpixels.itch.io/pixel-art-asset-3
     Designed by: greenpixels_
 
-## Player & NPCs
+### Player & NPCs
 
 Player Sprites → https://cyberrumor.itch.io/16-bit-assassin
 	Designed by: Cyber Rumor
@@ -56,7 +56,7 @@ Fire, Earth & Water Bosses → https://luizmelo.itch.io/fantasy-creatures
 Small Enemy Sprites → https://deepdivegamestudio.itch.io/magical-asset-pack
 	Designed by: Deep Dive Game Studio
 
-## Music & Sound Effects
+### Music & Sound Effects
 
 Game Over Sound → https://pixabay.com/sound-effects/pixel-death-66829/
 	By: HappyParakeet

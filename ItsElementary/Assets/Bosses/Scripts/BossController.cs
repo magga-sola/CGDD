@@ -118,6 +118,7 @@ public class BossController : MonoBehaviour
         {
             endPanel.ShowGameWonScreen();
             GameManager.instance.GameWon();
+            animator.SetBool("End", false);
         }
     }
     void LeaveTraces()

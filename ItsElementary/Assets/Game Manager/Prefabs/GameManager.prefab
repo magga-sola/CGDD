@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4060612693840225507}
   - component: {fileID: 2111154427470543831}
   - component: {fileID: 8835274072063579544}
+  - component: {fileID: 5109464778255340733}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MonoBehaviour:
   - {fileID: 4060612693840225507}
   - {fileID: 8494680130348413818}
   StartMusic: {fileID: 8835274072063579544}
-  WinMusic: {fileID: 8835274072063579544}
+  WinMusic: {fileID: 5109464778255340733}
   LoseMusic: {fileID: 2111154427470543831}
 --- !u!114 &6648598114443897191
 MonoBehaviour:
@@ -133,6 +134,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introMusic: {fileID: 0}
   loopMusic: {fileID: 8300000, guid: 296629ba51f179a45bd2aef86f05cb7a, type: 3}
+--- !u!114 &5109464778255340733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616411855406780504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0c99f49260a45f19bdd8896f27914e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introMusic: {fileID: 0}
+  loopMusic: {fileID: 8300000, guid: 5ee83ed2dfa8a884584f8501d206c119, type: 3}
 --- !u!1 &4001494193272379075
 GameObject:
   m_ObjectHideFlags: 0

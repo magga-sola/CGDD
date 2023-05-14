@@ -55,12 +55,14 @@ public class GameManager : MonoBehaviour
         if (startGame)
         {
             print("in if startGame");
-            panelAudioSource.clip = backgroundMusic.StartMusic.loopMusic;
-            backgroundMusic.PlayMusic(panelAudioSource);
+
+            StartPanelMusic(backgroundMusic.StartMusic);
 
             player.Pause();
             player.RestartPlayerBeginning();
             startPanel.ShowStartScreen();
+            backgroundMusic.PauseMusic(audioSource1);
+            backgroundMusic.PauseMusic(audioSource2);
             //backgroundMusic.PauseMusic(audioSource1, audioSource2);
         }
         gameOver = false;
@@ -187,6 +189,8 @@ public class GameManager : MonoBehaviour
         if(level == scenes.Count - 1)
         {
             level = 0;
+            backgroundMusic.PauseMusic(audioSource1);
+            backgroundMusic.PauseMusic(audioSource2);
             StartPanelMusic(backgroundMusic.StartMusic);
             player.Pause();
             startPanel.ShowStartScreen();
@@ -202,8 +206,6 @@ public class GameManager : MonoBehaviour
 
         audioSource1.clip = clips.Item1;
         audioSource2.clip = clips.Item2;
-
-        backgroundMusic.PlayMusic(audioSource1, audioSource2);
     }
 
     public void PlayerDied(){

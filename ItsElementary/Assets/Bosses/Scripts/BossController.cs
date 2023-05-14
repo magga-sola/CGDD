@@ -47,6 +47,7 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckEnd();
         CalculateMovement();
         distanceFromPlayer = Vector3.Distance (player.transform.position, transform.position);
     }
@@ -103,12 +104,21 @@ public class BossController : MonoBehaviour
             }
             else
             {
-                endPanel.ShowGameWonScreen();
-                GameManager.instance.GameWon();
+                animator.SetBool("Dead",true);
+                //endPanel.ShowGameWonScreen();
+                //GameManager.instance.GameWon();
             }
         }
     }
 
+    void CheckEnd()
+    {
+        if (animator.GetBool("End"))
+        {
+            endPanel.ShowGameWonScreen();
+            GameManager.instance.GameWon();
+        }
+    }
     void LeaveTraces()
     {
         elementalTrace.SetElement(element);

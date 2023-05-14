@@ -97,8 +97,15 @@ public class GameManager : MonoBehaviour
         level = 8;
         player.RestartPlayerBeginning();
         player.isPaused = false;
+        backgroundMusic.PauseMusic(panelAudioSource);
         StartLevel(level);
         gameOver = false;
+    }
+
+    public void StartPanelMusic(Music panelMusic)
+    {
+        panelAudioSource.clip = panelMusic.loopMusic;
+        backgroundMusic.PlayMusic(panelAudioSource);
     }
 
     // From level 0
@@ -106,11 +113,11 @@ public class GameManager : MonoBehaviour
     {
         if (playAgain)
         {
-            panelAudioSource.clip = backgroundMusic.StartMusic.loopMusic;
-            backgroundMusic.PlayMusic(panelAudioSource);
+            StartPanelMusic(backgroundMusic.StartMusic);
             startPanel.ShowStartScreen();
         }
         level = 0;
+        // stop Startmenu music
         backgroundMusic.PauseMusic(panelAudioSource);
         player.RestartPlayerBeginning();
         player.isPaused = false;
@@ -125,6 +132,7 @@ public class GameManager : MonoBehaviour
         player.RestartPlayerBeginning();
         player.isPaused = false;
         gameOver = false;
+        backgroundMusic.PauseMusic(panelAudioSource);
         StartLevel(level);
     }
 
@@ -143,6 +151,7 @@ public class GameManager : MonoBehaviour
             player.RestartPlayer();
         }
         player.isPaused = false;
+        backgroundMusic.PauseMusic(panelAudioSource);
         StartLevel(level);
         gameOver = false;
     }
@@ -154,7 +163,10 @@ public class GameManager : MonoBehaviour
 
     public void GameWon()
     {
-        backgroundMusic.PauseMusic(audioSource1, audioSource2);
+        backgroundMusic.PauseMusic(audioSource1);
+        backgroundMusic.PauseMusic(audioSource2);
+        StartPanelMusic(backgroundMusic.WinMusic);
+        
     }
 
     public void GoToNextLevel()
@@ -163,8 +175,7 @@ public class GameManager : MonoBehaviour
         if(level == scenes.Count - 1)
         {
             level = 0;
-            panelAudioSource.clip = backgroundMusic.StartMusic.loopMusic;
-            backgroundMusic.PlayMusic(panelAudioSource);
+            StartPanelMusic(backgroundMusic.StartMusic);
             startPanel.ShowStartScreen();
         }
         else
@@ -185,13 +196,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void PlayerDied(){
-        panelAudioSource.clip = backgroundMusic.LoseMusic.loopMusic;
-        backgroundMusic.PlayMusic(panelAudioSource);
-        Debug.Log(panelAudioSource.isPlaying);
+        backgroundMusic.PauseMusic(audioSource1);
+        backgroundMusic.PauseMusic(audioSource2);
+
+        StartPanelMusic(backgroundMusic.LoseMusic);
         gameOver = false;
         endPanel.ShowGameOverScreen();
         player.isPaused = true;
-        //backgroundMusic.PauseMusic(audioSource1, audioSource2);
+        
 
     }
 
@@ -203,8 +215,7 @@ public class GameManager : MonoBehaviour
 
         audioSource1.clip = clips.Item1;
         audioSource2.clip = clips.Item2;
-        
-        Debug.Log(audioSource1 + " and "+ audioSource2);
+
         backgroundMusic.PlayMusic(audioSource1, audioSource2);        
     }
 }

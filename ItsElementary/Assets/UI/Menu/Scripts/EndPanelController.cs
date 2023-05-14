@@ -69,20 +69,29 @@ public class EndPanelController : MonoBehaviour
 
     public void PauseGame(AudioSource music)
     {
-        foreach (AudioSource i in FindObjectsOfType<AudioSource>())
-        {
-            if (i != music)
-            {
-                Debug.Log(i.clip);
-                i.volume = i.volume > 0 ? 0 : 1; // or just i.voume = 0 or something    
-            }
-        }
+        // foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
+        // {
+        //     Debug.Log(i.clip);
+        //     if (i != music)
+        //     {
+        //     //Debug.Log("music" + music.clip);
+        //     i.volume = i.volume > 0 ? 0 : (float)0.08; // or just i.voume = 0 or something    
+        //     }
+        // }
 
         Time.timeScale = 0;
     }
 
     public void UnPauseGame()
     {
+        foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
+        {
+            //if (i != music)
+            //{
+                
+            //i.volume = i.volume > 0 ? 0 : (float)0.08; // or just i.voume = 0 or something    
+            //}
+        }
         Time.timeScale = 1;
     }
 }

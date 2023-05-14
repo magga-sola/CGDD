@@ -8,6 +8,7 @@ TagManager:
   - DialoguePanel
   - Enemy
   - Level
+  - Boss
   layers:
   - Default
   - TransparentFX

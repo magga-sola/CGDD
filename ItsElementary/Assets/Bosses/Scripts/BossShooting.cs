@@ -106,7 +106,7 @@ public class BossShooting : MonoBehaviour
             WaterRing();
             
         }
-        else if(Time.realtimeSinceStartup - timeSinceLastAttack > 5){
+        else if(Time.realtimeSinceStartup - timeSinceLastAttack > 6){
             attackMode = Random.Range(0,2);
             timeSinceLastAttack = Time.realtimeSinceStartup;
         }
@@ -143,7 +143,7 @@ public class BossShooting : MonoBehaviour
     }
 
     void EarthRing(){
-        if (Time.realtimeSinceStartup-timeSinceLastShot > 1){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 1.5){
             projectilecontroller.bossController = bossController;
             float dangle = 45f;
             for (int i = 0; i < 16; i++){

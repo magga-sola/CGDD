@@ -881,6 +881,18 @@ PrefabInstance:
       propertyPath: healingorbcontroller
       value: 
       objectReference: {fileID: 665303647}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[2]
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9585,6 +9597,18 @@ PrefabInstance:
       propertyPath: healingorbcontroller
       value: 
       objectReference: {fileID: 665303647}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[0]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10060,6 +10084,18 @@ PrefabInstance:
       propertyPath: healingorbcontroller
       value: 
       objectReference: {fileID: 665303647}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[1]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239911944421519900, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
+      propertyPath: weights.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239911944421519901, guid: ae20faa739ab69543b296c6e60b41635, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12032,8 +12068,12 @@ PrefabInstance:
       value: Enemy Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 1556919801940802890, guid: 3f113a528512aaf4bbbbeeddbb6b1d8e, type: 3}
-      propertyPath: maxEnemies
+      propertyPath: tutorial
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556919801940802890, guid: 3f113a528512aaf4bbbbeeddbb6b1d8e, type: 3}
+      propertyPath: maxEnemies
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1556919801940802890, guid: 3f113a528512aaf4bbbbeeddbb6b1d8e, type: 3}
       propertyPath: endInterval

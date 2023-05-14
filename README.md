@@ -4,16 +4,39 @@ Welcome to the github of our game **It's Elementary**!
 
 This was a game made in the span of 2 weeks for the Course: T-624-CGDD at Reykjavík University in 2023.
 
-## About the Game
+You can play it here: https://bjarkithor.itch.io/its-elementary
 
+## About the Game
+In this top-down shooter & dungeon crawler you play as a sorcerer's apprentice ready to bring back balance to the world. It takes place in an elemental
+magical world. You hold the power of all three elements and is set out on a journey to bring order to the elemental chaos caused by something within the dungeon.
 
 ## Controls
+You move with WASD or Arrow keys
 
+You aim with your mouse and shoot with the right and left click
 
-## How to Play
+- Right click: Basic Attack
 
+- Left click:  Magical Attack
 
-## Attribution list
+    Fire --(burns)--> Earth --(drains)--> Water --(extinguishes)--> Fire
+
+You switch elemental modes with
+
+- 1: Fire
+
+- 2: Earth
+
+- 3: Water
+
+- or with the scroll wheel
+
+## Sprites Created
+- Fire, Earth, Water icons in elemental health bar
+- Fire, Earth, Water elemental traces when elemental enemy dies
+- Player's elemental shield
+
+## Attribution List
 The following are resources & assets used in **It's Elementary**:
 
 ### Environment (Tilemap, objects etc.)

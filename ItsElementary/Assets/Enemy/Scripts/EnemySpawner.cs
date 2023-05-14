@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     public int startInterval = 10;
     public int endInterval = 30;
     public int maxEnemies = 5;
+    public bool tutorial = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +32,17 @@ public class EnemySpawner : MonoBehaviour
 
     void spawn()
     {
-        if (Time.realtimeSinceStartup - timeSinceLastSpawn > randomTimeInterval && GameObject.FindGameObjectsWithTag("Enemy").Length < maxEnemies && GameObject.FindGameObjectsWithTag("Boss").Length > 0)
+        if (Time.realtimeSinceStartup - timeSinceLastSpawn > randomTimeInterval && GameObject.FindGameObjectsWithTag("Enemy").Length < maxEnemies)
         {
-            GameObject enemyClone = Instantiate(enemy);
-            enemyClone.SetActive(true);
-            enemyClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
-            timeSinceLastSpawn = Time.realtimeSinceStartup;
-            RandomTime();
+            if (GameObject.FindGameObjectsWithTag("Boss").Length > 0 || tutorial)
+            {
+                GameObject enemyClone = Instantiate(enemy);
+                enemyClone.SetActive(true);
+                enemyClone.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+                timeSinceLastSpawn = Time.realtimeSinceStartup;
+                RandomTime();
+            }
+            
         }
     }
 }

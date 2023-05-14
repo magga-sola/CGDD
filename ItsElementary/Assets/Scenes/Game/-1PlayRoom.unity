@@ -12068,8 +12068,12 @@ PrefabInstance:
       value: Enemy Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 1556919801940802890, guid: 3f113a528512aaf4bbbbeeddbb6b1d8e, type: 3}
-      propertyPath: maxEnemies
+      propertyPath: tutorial
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556919801940802890, guid: 3f113a528512aaf4bbbbeeddbb6b1d8e, type: 3}
+      propertyPath: maxEnemies
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1556919801940802890, guid: 3f113a528512aaf4bbbbeeddbb6b1d8e, type: 3}
       propertyPath: endInterval

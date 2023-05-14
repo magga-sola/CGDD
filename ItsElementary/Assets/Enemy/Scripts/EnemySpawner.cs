@@ -31,7 +31,7 @@ public class EnemySpawner : MonoBehaviour
 
     void spawn()
     {
-        if (Time.realtimeSinceStartup - timeSinceLastSpawn > randomTimeInterval && GameObject.FindGameObjectsWithTag("Enemy").Length <= maxEnemies)
+        if (Time.realtimeSinceStartup - timeSinceLastSpawn > randomTimeInterval && GameObject.FindGameObjectsWithTag("Enemy").Length < maxEnemies && GameObject.FindGameObjectsWithTag("Boss").Length > 0)
         {
             GameObject enemyClone = Instantiate(enemy);
             enemyClone.SetActive(true);

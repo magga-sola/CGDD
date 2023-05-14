@@ -66,7 +66,8 @@ public class EndPanelController : MonoBehaviour
         gameOverScreen.SetActive(false);
         gameWonScreen.SetActive(false);
     }
-    public async void PauseGame(AudioSource music)
+
+    public void PauseGame(AudioSource music)
     {
         // foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
         // {

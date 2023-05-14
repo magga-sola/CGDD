@@ -143,7 +143,7 @@ public class BossShooting : MonoBehaviour
     }
 
     void EarthRing(){
-        if (Time.realtimeSinceStartup-timeSinceLastShot > 1.5){
+        if (Time.realtimeSinceStartup-timeSinceLastShot > 2){
             projectilecontroller.bossController = bossController;
             float dangle = 45f;
             for (int i = 0; i < 16; i++){

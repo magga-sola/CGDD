@@ -197,7 +197,6 @@ public class PlayerController : MonoBehaviour
         {
             hitAudioSource.Play();
             circleAnimator.SetBool("Hit",true);
-            //GameManager.Element projectileElement = col.gameObject.GetComponent<EnemyProjectile>().element;
         }
 
         if (col.gameObject.name.Contains("Healing Orb"))

@@ -51,11 +51,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print("start");
         if (startGame)
         {
-            print("in if startGame");
-
             StartPanelMusic(backgroundMusic.StartMusic);
 
             player.Pause();
@@ -63,7 +60,6 @@ public class GameManager : MonoBehaviour
             startPanel.ShowStartScreen();
             backgroundMusic.PauseMusic(audioSource1);
             backgroundMusic.PauseMusic(audioSource2);
-            //backgroundMusic.PauseMusic(audioSource1, audioSource2);
         }
         gameOver = false;
         scenes = new List<string> ()
@@ -116,10 +112,8 @@ public class GameManager : MonoBehaviour
     // From level 0
     public void StartGame(bool playAgain)
     {
-        print("start game in game managaer");
         if (playAgain)
         {
-            print("start game, play again");
             player.Pause();
             StartPanelMusic(backgroundMusic.StartMusic);
             startPanel.ShowStartScreen();
@@ -142,7 +136,6 @@ public class GameManager : MonoBehaviour
         level = 0;
         player.RestartPlayerBeginning();
         player.UnPause();
-        //player.isPaused = false;
         gameOver = false;
         backgroundMusic.PauseMusic(panelAudioSource);
         StartLevel(level);
@@ -163,7 +156,6 @@ public class GameManager : MonoBehaviour
             player.RestartPlayer();
         }
         player.UnPause();
-        //player.isPaused = false;
         backgroundMusic.PauseMusic(panelAudioSource);
         StartLevel(level);
         gameOver = false;
@@ -216,7 +208,6 @@ public class GameManager : MonoBehaviour
         endPanel.ShowGameOverScreen();
 
         player.Pause();
-        //player.isPaused = true;
     }
 
     public void StartLevel(int level)

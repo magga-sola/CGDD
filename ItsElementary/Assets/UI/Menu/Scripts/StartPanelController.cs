@@ -23,7 +23,7 @@ public class StartPanelController : MonoBehaviour
     {
         startPanel.SetActive(true);
         AudioSource music = GameManager.instance.panelAudioSource;
-        PauseGame(music);
+        PauseGame();
     }
 
     public void StartGame()
@@ -39,29 +39,13 @@ public class StartPanelController : MonoBehaviour
         UnPauseGame();
     }
 
-    public void PauseGame(AudioSource music)
+    public void PauseGame()
     {
-        // foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
-        // {
-        //     if (i != music)
-        //     {
-        //         i.volume = i.volume > 0 ? 0 : (float)0.02; // or just i.voume = 0 or something    
-        //     }
-        // }
-
         Time.timeScale = 0;
     }
 
     public void UnPauseGame()
     {
-        // foreach (AudioSource i in GameObject.FindObjectsOfType<AudioSource>())
-        // {
-        //     //if (i != music)
-        //     //{
-        //         i.volume = i.volume > 0 ? 0 : (float)0.02; // or just i.voume = 0 or something    
-        //     //}
-        // }
-
         Time.timeScale = 1;
     }
 }

@@ -88,7 +88,16 @@ public class PlayerController : MonoBehaviour
         }
         if ((int)Input.mouseScrollDelta.y != 0){
             ChangeModeScroll((int)Input.mouseScrollDelta.y);
-        }   
+            Debug.Log((int)Input.mouseScrollDelta.y);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ChangeModeScroll(1);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ChangeModeScroll(-1);
+        } 
     }
 
     private void ChangeMode(GameManager.Element mode)

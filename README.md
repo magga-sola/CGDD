@@ -42,42 +42,42 @@ The following are resources & assets used in **It's Elementary**:
 ### Environment (Tilemap, objects etc.)
 
 UI Border → [Link](https://drunkenimpgamestudio.itch.io/pixel-ui-borders)
-	Designed by: Drunken Imp Game Studio
+	Designed By: Drunken Imp Game Studio
 
 UI Font → [Link](https://fonts.google.com/specimen/Silkscreen/about?query=silkscreen)
-	Designed by: Jason Kottke
+	Designed By: Jason Kottke
 
 UI HealthBars → [Link](https://github.com/Brackeys/Health-Bar)
-	Designed by: Brackeys
+	Designed By: Brackeys
 
 Tilemap → [Link](https://szadiart.itch.io/rogue-fantasy-catacombs)
-	Designed by: Szadi Art
+	Designed By: Szadi Art
 
 More environmental objects → [Link](https://cainos.itch.io/pixel-art-platformer-village-props)
-	Designed by: Cainos
+	Designed By: Cainos
 
 Projectiles & Explosions → [Link](https://foozlecc.itch.io/pixel-magic-sprite-effects)
-	Designed by: Foozle
+	Designed By: Foozle
 
 Tutorial Icons → [Link](https://greenpixels.itch.io/pixel-art-asset-3)
-    Designed by: greenpixels_
+    Designed By: greenpixels_
 
 ### Player & NPCs
 
 Player Sprites → [Link](https://cyberrumor.itch.io/16-bit-assassin)
-	Designed by: Cyber Rumor
+	Designed By: Cyber Rumor
 
 Wizard Sprites → [Link](https://hajileee.itch.io/hajileees-fantasy-characters-pack-magic-set)
-	Designed by: Hajileees
+	Designed By: Hajileees
 
 Final Boss Sprites → [Link](https://luizmelo.itch.io/evil-wizard-2)
-	Designed by: Luiz Melo
+	Designed By: Luiz Melo
 
 Fire, Earth & Water Bosses → [Link](https://luizmelo.itch.io/fantasy-creatures)
-	Designed by: Luiz Melo
+	Designed By: Luiz Melo
 
 Small Enemy Sprites → [Link](https://deepdivegamestudio.itch.io/magical-asset-pack)
-	Designed by: Deep Dive Game Studio
+	Designed By: Deep Dive Game Studio
 
 ### Music & Sound Effects
 
@@ -96,7 +96,10 @@ Fire Explosion Effect → [Link](https://freesound.org/people/HighPixel/sounds/4
 Water Sound Effect → [Link](https://freesound.org/people/InspectorJ/sounds/421184/)
 	By: InspectorJ
 
-Game Level 2 & 4 Music → MonPlaisir by Free Music
+Game Level 2 & 4 Music → Soundtrack by Monplaisir
+[Link](https://www.youtube.com/watch?v=Ddrs6FXIJ-g)
+
+Win Game Music → Night Shade by Adhesive Wombat
 [Link](https://www.youtube.com/watch?v=Ddrs6FXIJ-g)
 
 Game Level 1 & 3 Music → An Ugly Heart But It Does Beats by Pix
@@ -105,9 +108,9 @@ Game Level 1 & 3 Music → An Ugly Heart But It Does Beats by Pix
 Start Screen & Win Game Music → Persona by Pix
 [Link](https://www.youtube.com/watch?v=XP26BCigqn0&list=PLdsGes2mFh92eHpOZVJQgoubb6rF0CcvU&index=18)
 
-Game Over Music → A Lonely Cherry Tree by Pix
+Game Over Music → A Lonely Cherry Tree By: Pix
 [Link](https://www.youtube.com/watch?v=D5L36JDKxR0)
 
-Healing & Hit Sound Effect → By: leohpaz
+Healing & Hit Sound Effect → By:leohpaz
 [Link](https://assetstore.unity.com/packages/audio/sound-fx/rpg-essentials-sound-effects-free-227708)
 
